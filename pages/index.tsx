@@ -10,7 +10,7 @@ const Home: NextPage = () => {
             a new version pretty soon.
           </h1>
           <p className='my-4 text-xl'>
-            In the meantime, if you are planning to contact me. I'm available at
+            In the meantime, if you are planning to contact me. I'm available at{' '}
             <a
               className='cursor-pointer hover:text-white transition-all duration-150 delay-75 ease-in'
               href='mailto:ittisafur@gmail.com'
