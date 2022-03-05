@@ -1,41 +1,27 @@
-import styles from '../styles/Home.module.css';
-import Card from '../components/card';
-import fs from 'fs';
-import matter from 'gray-matter';
-import { ArticleMeta } from '../interfaces/article';
-import { NextPage } from 'next';
+import type { NextPage } from 'next';
 
-interface IProps {
-  articles: ArticleMeta[];
-}
-
-const Home: NextPage<IProps> = ({ articles }) => {
+const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
-      {articles.map((article, i) => (
-        <Card key={i} article={article} />
-      ))}
+    <div className='px-3 lg:px-0 container mx-auto'>
+      <div className='h-screen text-secondary flex justify-center items-center '>
+        <div className='text-center'>
+          <h1 className='text-4xl'>
+            <span className='font-bold'>Welcome</span>, I'm working on bringing
+            a new version pretty soon.
+          </h1>
+          <p className='my-4 text-xl'>
+            In the meantime, if you are planning to contact me. I'm available at
+            <a
+              className='cursor-pointer hover:text-white transition-all duration-150 delay-75 ease-in'
+              href='mailto:ittisafur@gmail.com'
+            >
+              ittisafur@gmail.com
+            </a>
+          </p>
+        </div>
+      </div>
     </div>
   );
 };
-
-export async function getStaticProps() {
-  const files = fs.readdirSync('uploads');
-
-  let articles = files.map((file) => {
-    const data = fs.readFileSync(`uploads/${file}`).toString();
-
-    return {
-      ...matter(data).data,
-      slug: file.split('.')[0],
-    };
-  });
-
-  return {
-    props: {
-      articles: articles,
-    },
-  };
-}
 
 export default Home;
