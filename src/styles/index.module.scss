@@ -12,13 +12,15 @@
         @apply flex;
         @apply justify-center;
         @apply items-center;
+        @apply h-full;
         > div {
             @apply text-center;
             h1 {
-                @apply text-6xl;
+                @apply text-4xl;
+                @apply lg:text-6xl;
                 @apply uppercase;
                 @apply font-GentonaExtraBoldItalic;
-                @apply max-w-xs;
+                @apply max-w-sm;
                 @apply mx-auto;
                 @apply tracking-widest;
             }
