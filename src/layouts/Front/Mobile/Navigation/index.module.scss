@@ -3,17 +3,17 @@
     @apply flex-col;
     @apply justify-center;
     @apply items-center;
-    @apply fixed;
-    @apply top-0;
-    @apply left-0;
-    @apply h-full;
-    @apply z-50;
     @apply cursor-pointer;
-    @apply w-[5.333333%];
+    @apply fixed;
+    @apply bottom-0;
+    @apply left-0;
+    @apply w-full;
+    @apply z-50;
 
     .navigation {
         @apply flex;
-        @apply flex-col;
-        @apply space-y-4;
+        @apply justify-center;
+        @apply items-center;
+        @apply space-x-5;
     }
 }

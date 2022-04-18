@@ -3,9 +3,11 @@
     @apply mx-auto;
     @apply px-3;
     @apply lg:px-0;
-
+    @apply h-screen;
+    &.isMobile {
+        @apply h-full;
+    }
     .content {
-        @apply h-screen;
         @apply text-secondary;
         @apply flex;
         @apply justify-center;
@@ -17,6 +19,7 @@
                 @apply uppercase;
                 @apply font-GentonaExtraBoldItalic;
                 @apply max-w-xs;
+                @apply mx-auto;
                 @apply tracking-widest;
             }
         }
