@@ -1,0 +1,24 @@
+.wrapper {
+    @apply container;
+    @apply mx-auto;
+    @apply px-3;
+    @apply lg:px-0;
+
+    .content {
+        @apply h-screen;
+        @apply text-secondary;
+        @apply flex;
+        @apply justify-center;
+        @apply items-center;
+        > div {
+            @apply text-center;
+            h1 {
+                @apply text-6xl;
+                @apply uppercase;
+                @apply font-GentonaExtraBoldItalic;
+                @apply max-w-xs;
+                @apply tracking-widest;
+            }
+        }
+    }
+}

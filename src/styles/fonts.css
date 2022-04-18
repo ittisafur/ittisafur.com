@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'GentonaBook';
+    src: url('/assets/fonts/Gentona Book.otf') format('opentype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GentonaExtraBold';
+    src: url('/assets/fonts/Gentona ExtraBold.otf') format('opentype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GentonaExtraBoldItalic';
+    src: url('/assets/fonts/Gentona ExtraBold Italic.otf') format('opentype');
+    font-display: swap;
+}
