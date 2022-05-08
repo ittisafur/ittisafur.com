@@ -1,6 +1,16 @@
 {
-    "extends": "next/core-web-vitals",
+    "extends": ["eslint:recommended", "next"],
     "rules": {
-        "react/no-unescaped-entities": 0
+        "react/display-name": "off",
+        "@next/next/no-page-custom-font": "off",
+        "sort-keys": [
+            "error",
+            "asc",
+            {
+                "caseSensitive": true,
+                "natural": false,
+                "minKeys": 2
+            }
+        ]
     }
 }
