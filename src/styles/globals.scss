@@ -4,5 +4,6 @@
 @tailwind utilities;
 
 body {
-    @apply bg-primary;
+    background: linear-gradient(123.55deg, #232931 36.46%, #393e46 100%);
+    @apply text-website-100;
 }

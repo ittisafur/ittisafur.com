@@ -10,6 +10,11 @@ const moduleExports = withPlugins([withImages, { silent: false }], {
     },
     experimental: {
         outputStandalone: true,
+        modularizeImports: {
+            lodash: {
+                transform: 'lodash/{{member}}',
+            },
+        },
     },
     sassOptions: {
         includePaths: [path.join(__dirname, 'styles')],

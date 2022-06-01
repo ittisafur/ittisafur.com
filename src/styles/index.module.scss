@@ -1,9 +1,9 @@
 .wrapper {
-    @apply container;
+    @apply h-screen;
     @apply mx-auto;
     @apply px-3;
     @apply lg:px-0;
-    @apply h-screen;
+
     &.isMobile {
         @apply h-full;
     }
@@ -25,5 +25,14 @@
                 @apply tracking-widest;
             }
         }
+    }
+
+    .slide {
+        @apply flex;
+        @apply justify-center;
+        @apply items-center;
+        @apply text-2xl;
+        @apply text-secondary;
+        @apply h-[50vh];
     }
 }

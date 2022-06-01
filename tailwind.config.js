@@ -8,8 +8,20 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                primary: '#1A1A1A',
-                secondary: '#FDF1E4',
+                primary: '#232931',
+                secondary: '#e9eaea',
+                website: {
+                    50: '#f4f4f5',
+                    100: '#e9eaea',
+                    200: '#c8cacc',
+                    300: '#a7a9ad',
+                    400: '#65696f',
+                    500: '#232931',
+                    600: '#20252c',
+                    700: '#1a1f25',
+                    800: '#15191d',
+                    900: '#111418',
+                },
             },
             fontFamily: {
                 Gentona: ['GentonaBook', 'sans-serif'],
