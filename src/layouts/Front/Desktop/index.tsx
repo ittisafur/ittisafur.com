@@ -9,7 +9,7 @@ const FrontLayout = ({ children }: { children: any }) => {
     return (
         <div className={cx('wrapper')}>
             <Navigation />
-            {children}
+            <div className={cx('main')}>{children}</div>
         </div>
     );
 };

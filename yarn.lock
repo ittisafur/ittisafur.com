@@ -427,6 +427,7 @@ __metadata:
     react: 18.1.0
     react-device-detect: 2.2.2
     react-dom: 18.1.0
+    react-masonry-css: 1.0.16
     react-spring: 9.4.4
     react-syntax-highlighter: 15.4.5
     sass: 1.49.0
@@ -4248,6 +4249,15 @@ __metadata:
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
   checksum: f7a19ac3496de32ca9ae12aa030f00f14a3d45374f1ceca0af707c831b2a6098ef0d6bdae51bd437b0a306d7f01d4677fcc8de7c0d331eb47ad0f46130e53c5f
+  languageName: node
+  linkType: hard
+
+"react-masonry-css@npm:1.0.16":
+  version: 1.0.16
+  resolution: "react-masonry-css@npm:1.0.16"
+  peerDependencies:
+    react: ">=16.0.0"
+  checksum: 3fbffac31535b049b3117b952b112dce31f8e2a84031191a926ad21b782cf20d07761fb90134dded339498be40360e0864af6bc0696f1606c7a4cb5a6aa1ad18
   languageName: node
   linkType: hard
 

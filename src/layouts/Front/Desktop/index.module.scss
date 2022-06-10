@@ -1,7 +1,12 @@
 .wrapper {
     @apply flex;
-    @apply flex-1;
     @apply justify-center;
     @apply items-center;
     @apply px-3;
+}
+
+.main {
+    @apply container;
+    @apply mx-auto;
+    @apply w-11/12;
 }

@@ -1,46 +1,36 @@
 import Switcher from '@/layouts/Front';
 import bindClassNames from 'classnames/bind';
+import { shuffle } from 'lodash';
 import type { NextPage } from 'next';
-// import { isMobile } from 'react-device-detect';
-// import { animated, useSpring } from 'react-spring';
-// import { Autoplay, FreeMode } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import Image from 'next/image';
+import Masonry from 'react-masonry-css';
+import { Portfolio } from 'utils/portfolio';
 
 import styles from '@/styles/index.module.scss';
 
 const cx = bindClassNames.bind(styles);
 const Home: NextPage = () => {
-    // const springProps = useSpring({
-    //     config: { duration: 1000 },
-    //     from: { opacity: 0, scale: 0.8 },
-    //     to: { opacity: 1, scale: 1 },
-    // });
-
+    const ShuffledPortfolio = shuffle(Portfolio);
     return (
         <Switcher>
-            {/* <animated.div style={springProps} className={cx('wrapper', { isMobile: isMobile })}> */}
-            {/* <div className={cx('content')}> */}
-            {/*     <animated.div style={springProps}> */}
-            {/*         <h1>Creative FullStack Developer</h1> */}
-            {/*     </animated.div> */}
-            {/* </div> */}
-
-            {/* </animated.div> */}
-
-            <Swiper
-                autoplay={{
-                    delay: 3000,
-                    disableOnInteraction: false,
-                }}
-                loop={true}
-                className="flex"
-            >
-                <SwiperSlide className="flex flex-row">
-                    <div className={cx('slide')}>
-                        <h1>Hello World</h1>
-                    </div>
-                </SwiperSlide>
-            </Swiper>
+            <div className={cx('wrapper')}>
+                <Masonry breakpointCols={3} className={cx('masonry')} columnClassName={cx('masonry-column')}>
+                    {ShuffledPortfolio.map((item, index: number) => (
+                        <div key={index} className={cx('item')}>
+                            <span className={cx('image-container')}>
+                                <Image
+                                    src={item.image}
+                                    layout="fill"
+                                    objectFit="cover"
+                                    objectPosition="center"
+                                    className={cx('image')}
+                                />
+                            </span>
+                            <h1 className={cx('title')}>{item.title}</h1>
+                        </div>
+                    ))}
+                </Masonry>
+            </div>
         </Switcher>
     );
 };
