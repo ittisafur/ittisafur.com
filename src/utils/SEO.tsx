@@ -20,10 +20,10 @@ const SEO = ({ title, description, keywords }: SEOProps) => {
             description={description}
             canonical={CurrentPath}
             openGraph={{
-              description: description,
-              site_name: BrandName,
-              title: title,
-              url: CurrentPath,
+                description: description,
+                site_name: BrandName,
+                title: title,
+                url: CurrentPath,
             }}
             additionalMetaTags={[
                 {

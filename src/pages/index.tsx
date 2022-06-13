@@ -4,7 +4,7 @@ import SEO from 'utils/SEO';
 const Home: NextPage = () => {
     return (
         <div className="px-3 lg:px-0 container mx-auto">
-            <SEO title="Welcome" description='If you are planning to contact'/>
+            <SEO title="Welcome" description="If you are planning to contact" />
             <div className="h-screen text-secondary flex justify-center items-center ">
                 <div className="text-center">
                     <h1 className="text-4xl">
