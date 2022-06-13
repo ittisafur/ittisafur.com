@@ -10,7 +10,4 @@ interface ArticleInfo {
     content: string;
 }
 
-export type {
-    ArticleMeta,
-    ArticleInfo
-}
+export type { ArticleMeta, ArticleInfo };
