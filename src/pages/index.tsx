@@ -1,16 +1,23 @@
 import type { NextPage } from 'next';
 import SEO from 'utils/SEO';
 
+import bindClassNames from 'classnames/bind';
+
+import styles from '@/styles/home.module.scss';
+const cx = bindClassNames.bind(styles);
+
 const Home: NextPage = () => {
     return (
-        <div className="px-3 lg:px-0 container mx-auto">
+        <div className={cx('wrapper')}>
             <SEO title="Welcome" description="If you are planning to contact" />
-            <div className="h-screen text-secondary flex justify-center items-center ">
+            <div className={cx('container')}>
                 <div className="text-center">
+
                     <h1 className="text-4xl">
                         <span className="font-bold">Welcome</span>, I'm working on bringing a new
                         version pretty soon.
                     </h1>
+
                     <p className="my-4 text-xl">
                         In the meantime, if you are planning to contact me. I'm available at{' '}
                         <a

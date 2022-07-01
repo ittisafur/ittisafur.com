@@ -7,6 +7,9 @@ module.exports = {
     ],
     theme: {
         extend: {
+            fontFamily: {
+                GentonaExtraBold: ['Gentona ExtraBold DEMO'],
+            },
             colors: {
                 primary: '#1A1A1A',
                 secondary: '#FDF1E4',

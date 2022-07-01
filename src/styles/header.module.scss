@@ -1,0 +1,54 @@
+.wrapper {
+    @apply relative;
+    @apply font-GentonaExtraBold;
+    @apply container;
+    @apply mx-auto;
+    @apply px-4;
+    @apply md:px-2;
+}
+
+.menu {
+    @apply flex;
+    @apply justify-between;
+    @apply items-center;
+    @apply md:space-x-10;
+}
+
+.left {
+    @apply flex;
+    @apply justify-start;
+    @apply lg:w-0;
+    @apply lg:flex-1;
+}
+
+.right {
+    @apply hidden;
+    @apply md:flex;
+    @apply space-x-10;
+}
+
+.mobile {
+    @apply absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden;
+}
+
+.icon {
+    @apply h-6 w-6 text-secondary;
+}
+
+.screen-reader {
+    @apply sr-only;
+}
+
+.link {
+    @apply font-GentonaExtraBold;
+    @apply text-secondary;
+    @apply tracking-wider;
+    @apply text-sm;
+    @apply tracking-wider;
+    @apply uppercase;
+    @apply transition-colors;
+    @apply duration-300;
+    @apply ease-in;
+    @apply hover:text-opacity-70;
+    @apply lg:text-base;
+}

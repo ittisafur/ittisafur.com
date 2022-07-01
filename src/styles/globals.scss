@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-
-body{
-  @apply bg-primary;
+html, body {
+    @apply text-secondary;
+    background: linear-gradient(123.55deg, #232931 36.46%, #393E46 100%);
 }

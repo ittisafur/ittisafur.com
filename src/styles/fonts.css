@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Gentona ExtraBold DEMO';
+    src: url('/assets/fonts/Gentona-ExtraBoldDEMO.woff2') format('woff2'),
+        url('/assets/fonts/Gentona-ExtraBoldDEMO.woff') format('woff'),
+        url('/assets/fonts/GentonaExtraBold.otf') format('otf');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
