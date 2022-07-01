@@ -4,7 +4,6 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import Link from 'next/link';
 import Image from 'next/image';
 
-
 import styles from '@/styles/header.module.scss';
 import bindClassNames from 'classnames/bind';
 

@@ -1,14 +1,14 @@
 .wrapper {
-  @apply container;
-  @apply mx-auto;
-  @apply px-3;
-  @apply lg:px-0;
+    @apply container;
+    @apply mx-auto;
+    @apply px-3;
+    @apply lg:px-0;
 }
 
 .container {
-  @apply text-secondary;
-  @apply flex;
-  @apply justify-center;
-  @apply items-center;
-  height: calc(100vh - 9.90rem);
+    @apply text-secondary;
+    @apply flex;
+    @apply justify-center;
+    @apply items-center;
+    height: calc(100vh - 9.9rem);
 }

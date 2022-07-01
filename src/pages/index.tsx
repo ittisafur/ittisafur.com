@@ -12,7 +12,6 @@ const Home: NextPage = () => {
             <SEO title="Welcome" description="If you are planning to contact" />
             <div className={cx('container')}>
                 <div className="text-center">
-
                     <h1 className="text-4xl">
                         <span className="font-bold">Welcome</span>, I'm working on bringing a new
                         version pretty soon.
