@@ -26,7 +26,7 @@ const SEO = ({ title, description, keywords, image }: SEOProps) => {
                 url: CurrentPath,
                 images: [
                     {
-                        url: image ,
+                        url: image,
                         alt: title,
                     },
                 ],
