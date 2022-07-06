@@ -4,11 +4,11 @@ import { useRouter } from 'next/router';
 interface SEOProps {
     title: string;
     description: string;
-    keywords?: string;
-    image?: string;
+    keywords: string;
+    image: string;
 }
 
-const SEO = ({ title, description, keywords }: SEOProps) => {
+const SEO = ({ title, description, keywords, image }: SEOProps) => {
     const router = useRouter();
     const primaryDomain = process.env.NEXT_PUBLIC_SITE_ADDRESS;
     const CurrentPath = `${primaryDomain}${router.asPath}`;
@@ -26,7 +26,7 @@ const SEO = ({ title, description, keywords }: SEOProps) => {
                 url: CurrentPath,
                 images: [
                     {
-                        url: `https://images.unsplash.com/photo-1655083607502-db391c40652e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1223&q=80`,
+                        url: image ,
                         alt: title,
                     },
                 ],

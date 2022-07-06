@@ -9,7 +9,9 @@ const cx = bindClassNames.bind(styles);
 const Home: NextPage = () => {
     return (
         <div className={cx('wrapper')}>
-            <SEO title="Welcome" description="If you are planning to contact" />
+
+            <SEO title="Welcome, Home" description="Your go to guy for business solution" image="/assets/svg/logo-white.svg" keywords="web design, website design, website builder, wordpress, web developer, web designer, website creator, responsive web design"  />
+
             <div className={cx('container')}>
                 <div className="text-center">
                     <h1 className="text-4xl">
@@ -28,6 +30,7 @@ const Home: NextPage = () => {
                     </p>
                 </div>
             </div>
+
         </div>
     );
 };
