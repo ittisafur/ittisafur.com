@@ -19,7 +19,6 @@ const Home: NextPage = () => {
             <div className="font-ProximaNova">
                 <h1>Welcome to Home, 'Hi'</h1>
             </div>
-
         </div>
     );
 };
