@@ -1,3 +1,4 @@
+import '../styles/fonts.css';
 import '../styles/globals.scss';
 import type { AppProps } from 'next/app';
 import Header from 'components/Header';

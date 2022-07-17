@@ -1,9 +1,26 @@
+
 @font-face {
-    font-family: 'Gentona ExtraBold DEMO';
-    src: url('/assets/fonts/Gentona-ExtraBoldDEMO.woff2') format('woff2'),
-        url('/assets/fonts/Gentona-ExtraBoldDEMO.woff') format('woff'),
-        url('/assets/fonts/GentonaExtraBold.otf') format('otf');
-    font-weight: bold;
+    font-family: 'gentonabook';
+    src: url('/assets/fonts/gentona_book-webfont.woff2'),
+         url('/assets/fonts/gentona_book-webfont.woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'gentonaextrabold_demo';
+    src: url('/assets/fonts/gentona_extrabold-webfont.woff2'),
+         url('/assets/fonts/gentona_extrabold-webfont.woff');
+    font-weight: extra-bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ProximaNova';
+    src: url('/assets/fonts/ProximaNova-Regular.otf') format('opentype');
+    font-weight: normal;
     font-style: normal;
     font-display: swap;
 }

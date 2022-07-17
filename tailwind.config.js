@@ -8,7 +8,9 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                GentonaExtraBold: ['Gentona ExtraBold DEMO'],
+                Gentona: ['Gentona', 'serif'],
+                GentonaExtraBold: ['gentonaextrabold_demo'],
+                ProximaNova: ['ProximaNova', 'sans-serif'],
             },
             colors: {
                 primary: '#1A1A1A',

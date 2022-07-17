@@ -16,24 +16,10 @@ const Home: NextPage = () => {
                 keywords="web design, website design, website builder, wordpress, web developer, web designer, website creator, responsive web design"
             />
 
-            <div className={cx('container')}>
-                <div className="text-center">
-                    <h1 className="text-4xl">
-                        <span className="font-bold">Welcome</span>, I'm working on bringing a new
-                        version pretty soon.
-                    </h1>
-
-                    <p className="my-4 text-xl">
-                        In the meantime, if you are planning to contact me. I'm available at{' '}
-                        <a
-                            className="cursor-pointer hover:text-white transition-all duration-150 delay-75 ease-in"
-                            href="mailto:ittisafur@gmail.com"
-                        >
-                            ittisafur@gmail.com
-                        </a>
-                    </p>
-                </div>
+            <div className="font-ProximaNova">
+                <h1>Welcome to Home, 'Hi'</h1>
             </div>
+
         </div>
     );
 };
