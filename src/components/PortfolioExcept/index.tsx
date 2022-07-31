@@ -23,7 +23,7 @@ const PortfolioExcerpt = memo(() => {
                 <SwiperSlide key={index}>
                     <Link href={`/portfolio/${item.slug}`} passHref>
                         <a className={cx('link')}>
-                            <div >
+                            <div>
                                 {item.images.map((image, index) => {
                                     return (
                                         <div className="relative" key={index}>
@@ -70,13 +70,13 @@ const PortfolioExcerpt = memo(() => {
                         width: 320,
                         slidesPerView: 1,
                         spaceBetween: 0,
-                        centeredSlides: true
+                        centeredSlides: true,
                     },
                     425: {
                         width: 425,
                         slidesPerView: 2,
                         spaceBetween: 5,
-                        centeredSlides: true
+                        centeredSlides: true,
                     },
                     768: {
                         width: 768,
