@@ -7,7 +7,6 @@ module.exports = {
     ],
     theme: {
         extend: {
-            
             fontFamily: {
                 Gentona: ['Gentona', 'serif'],
                 GentonaExtraBold: ['gentonaextrabold_demo'],
@@ -18,8 +17,7 @@ module.exports = {
                 primary: '#1A1A1A',
                 secondary: '#FDF1E4',
                 cyan: '#00FFFF',
-            }
-
+            },
         },
     },
     plugins: [],

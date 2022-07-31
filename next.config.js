@@ -8,6 +8,6 @@ module.exports = {
         includePaths: [path.join(__dirname, 'styles')],
     },
     images: {
-        domains: ['images.unsplash.com'],
+        domains: ['images.unsplash.com', 'res.cloudinary.com'],
     },
 };

@@ -8,7 +8,7 @@
     "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint --fix",
-    "prettier": "prettier --write --config .prettierrc '**/*.{js,jsx,ts,tsx,css,scss}'",
+    "prettier": "prettier --write --config .prettierrc './src/**/*.{js,jsx,ts,tsx,css,scss}'",
     "prepare": "husky prepare"
   },
   "dependencies": {
@@ -25,6 +25,7 @@
     "@types/marked": "^4.0.3",
     "axios": "^0.27.2",
     "classnames": "^2.3.1",
+    "firebase": "^9.9.1",
     "gray-matter": "^4.0.3",
     "gsap": "^3.10.4",
     "marked": "^4.0.17",
@@ -33,8 +34,11 @@
     "next-sitemap": "^3.0.5",
     "react": "18.1.0",
     "react-dom": "18.1.0",
+    "react-lottie": "^1.2.3",
+    "react-masonry-css": "^1.0.16",
     "react-syntax-highlighter": "^15.5.0",
-    "swiper": "^8.3.1"
+    "swiper": "^8.3.1",
+    "typewriter-effect": "^2.19.0"
   },
   "devDependencies": {
     "@types/gsap": "^3.0.0",

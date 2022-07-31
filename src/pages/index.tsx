@@ -1,5 +1,8 @@
 import type { NextPage } from 'next';
 import SEO from 'utils/SEO';
+import Typewriter from 'typewriter-effect';
+import Lottie from 'react-lottie';
+import FadingArrow from '../assets/lottie/fading-arrow.json';
 
 import bindClassNames from 'classnames/bind';
 
@@ -8,6 +11,7 @@ import styles from '@/styles/home.module.scss';
 // Import Swiper styles
 import 'swiper/css';
 import { memo } from 'react';
+import PortfolioExcerpt from 'components/PortfolioExcept';
 const cx = bindClassNames.bind(styles);
 
 const Home: NextPage = () => {
@@ -19,42 +23,107 @@ const Home: NextPage = () => {
                 image="/assets/svg/logo-white.svg"
                 keywords="web design, website design, website builder, wordpress, web developer, web designer, website creator, responsive web design"
             />
-           
-            <Intro />
 
+            <Intro />
+            <RecentWorks />
         </div>
     );
 };
 
 const Intro = memo(() => {
     return (
-        <div className="max-w-xl mx-auto">
-          <h1 className="font-ProximaNovaBold text-3xl text-center uppercase text-cyan tracking-wider ">Hi, I'm Ittisafur</h1>
-          <p className="tracking-wide mt-2">
-            I'm a web developer and designer based in Dhaka, Bangladesh.
-          </p>
-          <p>
-            Primarily focused on building modern, responsive websites and web accessibility websites.
-          </p>
-          <p>
-            Love to experiment with new technologies and build awesome stuff.
-          </p>
-
-     <p>
-
-      Diehard fan of <a href="https://www.vim.org/" target="_blank" rel="noopener noreferrer" className="text-cyan font-bold">Vim</a>, {' '}
-      <a href="">i3wm</a>{' '}
-      <a href="">tmux</a>{' '}
-      Checkout my dotfiles 
-      </p>       
-          <p>
-            Take a look at my portfolio and get in touch if you have any questions.
-          </p>
+        <div className={cx('intro')}>
+            <div className="mt-16">
+                <div className="font-ProximaNovaBold text-3xl text-cyan ">
+                    <h4 className="my-2">Hi, I'm Ittisafur Rahman. I specialize in</h4>
+                    <Typewriter
+                        options={{
+                            strings: ['React.js/Next.js', 'TypeScript', 'Firebase'],
+                            autoStart: true,
+                            loop: true,
+                            cursor: '_',
+                        }}
+                    />
+                </div>
+                <div className="text-base tracking-wide my-6 ">
+                    <p>
+                        Primarily focused on building modern, responsive websites and web
+                        accessibility websites. Love to experiment with new technologies and build
+                        awesome stuff. In my free time, I customize{' '}
+                        <a
+                            href="https://neovim.io/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-cyan font-bold"
+                        >
+                            Neovim
+                        </a>
+                        ,{' '}
+                        <a
+                            href="https://i3wm.org/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-cyan font-bold"
+                        >
+                            i3wm
+                        </a>
+                        . Checkout my
+                        <a
+                            href="https://github.com/ittisafur/dotfiles"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-cyan font-bold"
+                        >
+                            {' '}
+                            dotfiles
+                        </a>
+                    </p>
+                    <p>Take a look at my portfolio and get in touch if you have any questions.</p>
+                </div>
+            </div>
+            <Lottie
+                options={{
+                    loop: true,
+                    autoplay: true,
+                    animationData: FadingArrow,
+                    rendererSettings: {
+                        preserveAspectRatio: 'xMidYMid slice',
+                    },
+                }}
+                height={100}
+                width={100}
+            />
         </div>
-    )
-})
+    );
+});
 
-Intro.displayName = 'Introduction';
-Home.displayName = 'Home';
+const RecentWorks = () => {
+    return (
+        <div className={cx('recent-works')}>
+            <div className="w-full text-center lg:w-2/6 ">
+                <h1 className="font-ProximaNovaBold text-3xl uppercase text-cyan tracking-wider">
+                    Recent Works
+                </h1>
+                <p className="-ml-3">Check out my most recent works.</p>
+
+                <div className="transform rotate-[270deg]">
+                    <Lottie
+                        options={{
+                            loop: true,
+                            autoplay: true,
+                            animationData: FadingArrow,
+                            rendererSettings: {
+                                preserveAspectRatio: 'xMidYMid slice',
+                            },
+                        }}
+                        height={100}
+                        width={100}
+                    />
+                </div>
+            </div>
+            <PortfolioExcerpt />
+        </div>
+    );
+};
 
 export default Home;
