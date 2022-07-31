@@ -1,0 +1,14 @@
+.masonry-grid {
+    @apply flex;
+    @apply -ml-8;
+    @apply w-auto;
+}
+
+.masonry-grid-column {
+    @apply pl-8;
+    @apply bg-clip-padding;
+    & > div {
+        @apply bg-gray-600;
+        @apply mb-8;
+    }
+}

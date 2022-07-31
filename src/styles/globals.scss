@@ -7,3 +7,17 @@ body {
     @apply text-secondary;
     background: linear-gradient(123.55deg, #232931 36.46%, #393e46 100%);
 }
+
+/* Experimental */
+/* body::-webkit-scrollbar { */
+/*   width: .5em; */
+/* } */
+/*   */
+/* body::-webkit-scrollbar-track { */
+/*   box-shadow: inset 0 0 6px rgba(255,255, 255, 0.2); */
+/* } */
+/*   */
+/* body::-webkit-scrollbar-thumb { */
+/*   background-color: cyan; */
+/*   outline: 1px solid #006064; */
+/* } */

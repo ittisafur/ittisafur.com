@@ -1,0 +1,45 @@
+.link {
+    @apply cursor-pointer;
+}
+
+.image-container {
+    @apply relative;
+    @apply w-48;
+    @apply h-48;
+    @apply lg:w-60;
+    @apply lg:h-60;
+    @apply backdrop-opacity-10;
+    @apply overflow-hidden;
+    @apply mx-auto;
+    @apply my-4;
+    &:hover > .content {
+        @apply block;
+    }
+}
+
+.image {
+    @apply object-cover;
+    @apply relative;
+    @apply rounded-md;
+}
+
+.content {
+    @apply opacity-0;
+    @apply absolute;
+    @apply z-10;
+    @apply top-0;
+    @apply left-0;
+    @apply transform;
+    @apply translate-x-[90%];
+    @apply translate-y-[150%];
+    @apply text-center;
+    @apply w-full;
+    @apply h-full;
+    @apply hover:opacity-100;
+
+    .title {
+    }
+
+    .description {
+    }
+}

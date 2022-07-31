@@ -23,3 +23,9 @@
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'ProximaNovaBold';
+    src: url('/assets/fonts/Proxima Nova Bold.otf') format('opentype');
+    font-display: swap;
+}

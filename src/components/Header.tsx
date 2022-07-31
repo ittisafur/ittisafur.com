@@ -29,22 +29,22 @@ function Header() {
                     </Link>
                 </div>
 
-                <div className="-mr-2 -my-2 md:hidden">
-                    <Popover.Button className="rounded-md p-2 inline-flex items-center justify-center hover:text-secondary hover:text-opacity-70 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary">
-                        <span className={cx('screen-reader')}>Open menu</span>
-                        <MenuIcon className={cx('icon')} aria-hidden="true" />
-                    </Popover.Button>
-                </div>
+                {/* <div className="-mr-2 -my-2 md:hidden"> */}
+                {/*     <Popover.Button className="rounded-md p-2 inline-flex items-center justify-center hover:text-secondary hover:text-opacity-70 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary"> */}
+                {/*         <span className={cx('screen-reader')}>Open menu</span> */}
+                {/*         <MenuIcon className={cx('icon')} aria-hidden="true" /> */}
+                {/*     </Popover.Button> */}
+                {/* </div> */}
 
-                <Popover.Group as="nav" className={cx('right')}>
-                    <Link href="/">
-                        <a className={cx('link')}>Portfolio</a>
-                    </Link>
+                {/* <Popover.Group as="nav" className={cx('right')}> */}
+                {/*     <Link href="/portfolio"> */}
+                {/*         <a className={cx('link')}>Portfolio</a> */}
+                {/*     </Link> */}
 
-                    <Link href="/">
-                        <a className={cx('link')}>Contact</a>
-                    </Link>
-                </Popover.Group>
+                {/*     <Link href="/"> */}
+                {/*         <a className={cx('link')}>Contact</a> */}
+                {/*     </Link> */}
+                {/* </Popover.Group> */}
             </div>
 
             <Transition
@@ -70,7 +70,7 @@ function Header() {
                         </div>
                         <div className="py-6 px-2 space-y-6">
                             <div className="grid grid-cols-1 gap-y-4 gap-x-8 justify-items-center">
-                                <Link href="/">
+                                <Link href="/portfolio">
                                     <a className={cx('link')}>Portfolio</a>
                                 </Link>
 
