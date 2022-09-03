@@ -8,6 +8,11 @@ body {
     background: linear-gradient(123.55deg, #232931 36.46%, #393e46 100%);
 }
 
+*::selection {
+    @apply bg-primary;
+    @apply text-secondary;
+}
+
 /* Experimental */
 /* body::-webkit-scrollbar { */
 /*   width: .5em; */

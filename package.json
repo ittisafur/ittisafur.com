@@ -12,6 +12,8 @@
     "prepare": "husky prepare"
   },
   "dependencies": {
+    "@cloudinary/react": "^1.4.2",
+    "@cloudinary/url-gen": "^1.8.6",
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
     "@headlessui/react": "^1.6.4",
@@ -28,6 +30,7 @@
     "firebase": "^9.9.1",
     "gray-matter": "^4.0.3",
     "gsap": "^3.10.4",
+    "lightgallery": "^2.6.0",
     "marked": "^4.0.17",
     "next": "^12.2.0",
     "next-seo": "^5.4.0",
