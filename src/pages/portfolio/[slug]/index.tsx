@@ -58,7 +58,7 @@ const Portfolio: FunctionComponent<Props> = ({ content, settings }) => {
             </div>
             <div className={cx('testimonial')}>
                 <h2 className={cx('head')}>Client's testimonial</h2>
-                <p>Absolute Garbage</p>
+                <p>In Progress</p>
             </div>
         </section>
     );
