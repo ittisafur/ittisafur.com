@@ -1,14 +1,13 @@
 @import 'lightgallery/scss/lightgallery.scss';
 @import 'lightgallery/scss/lg-zoom.scss';
 
-
 .title {
     @apply font-ProximaNovaBold;
     @apply text-2xl;
     @apply lg:text-5xl;
     @apply w-full;
     @apply text-left;
-    @apply lg:text-center; 
+    @apply lg:text-center;
     @apply uppercase;
 }
 
@@ -80,8 +79,6 @@
     @apply overflow-hidden;
     @apply w-full;
     height: calc(90vh - 108px);
-
-
 
     &:before {
         content: '';

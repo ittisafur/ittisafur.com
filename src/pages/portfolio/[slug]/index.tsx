@@ -35,10 +35,9 @@ const Portfolio: FunctionComponent<Props> = ({ content, settings }) => {
                 <div className="absolute top-0 left-0 z-30 w-full h-full">
                     <div className="container mx-auto px-2 py-4 w-full flex flex-col justify-center items-stretch h-full">
                         <div className="flex flex-col justify-center items-start lg:items-center">
-
-                        <h1 className={cx('title')}>{title}</h1>
-                        <div className={cx('status')}>Status - Finished - {endDate}</div>
-            </div>
+                            <h1 className={cx('title')}>{title}</h1>
+                            <div className={cx('status')}>Status - Finished - {endDate}</div>
+                        </div>
                         <div className={cx('content')}>
                             <div className={cx('stack')}>
                                 <h2 className={cx('head')}>Stack</h2>
@@ -51,7 +50,6 @@ const Portfolio: FunctionComponent<Props> = ({ content, settings }) => {
                         </div>
                     </div>
                 </div>
-
             </section>
             {/* <Gallery Media={media} /> */}
             <div className={cx('details')}>
