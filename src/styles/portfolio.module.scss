@@ -1,0 +1,97 @@
+@import 'lightgallery/scss/lightgallery.scss';
+@import 'lightgallery/scss/lg-zoom.scss';
+
+
+.title {
+    @apply font-ProximaNovaBold;
+    @apply text-2xl;
+    @apply lg:text-5xl;
+    @apply w-full;
+    @apply text-left;
+    @apply lg:text-center; 
+    @apply uppercase;
+}
+
+.status {
+    @apply text-sm;
+    @apply font-ProximaNovaBold;
+    @apply tracking-wide;
+    @apply my-4;
+}
+
+.content {
+    @apply flex;
+    @apply flex-col;
+    @apply lg:flex-row;
+    @apply justify-between;
+    @apply items-start;
+    @apply lg:items-center;
+    .stack {
+        .head {
+            @apply font-bold;
+            @apply uppercase;
+        }
+    }
+    .summary {
+        @apply my-4;
+        @apply lg:mt-0;
+        .head {
+            @apply font-bold;
+            @apply uppercase;
+        }
+    }
+}
+
+.gallery {
+    @apply bg-[#1a1a1a];
+    @apply py-2;
+    @apply max-w-sm;
+    @apply mx-auto;
+    @apply w-full;
+}
+
+.gallery-item {
+    margin: 5px;
+}
+
+.details {
+    @apply text-left;
+    @apply lg:text-center;
+
+    .head {
+        @apply font-bold;
+        @apply uppercase;
+        @apply my-2;
+    }
+}
+
+.testimonial {
+    @apply text-left;
+    @apply lg:text-center;
+    .head {
+        @apply font-bold;
+        @apply uppercase;
+        @apply my-2;
+    }
+}
+
+.image-container {
+    @apply relative;
+    @apply overflow-hidden;
+    @apply w-full;
+    height: calc(90vh - 108px);
+
+
+
+    &:before {
+        content: '';
+        @apply absolute;
+        @apply bg-primary;
+        @apply w-full;
+        @apply h-full;
+        @apply top-0;
+        @apply left-0;
+        @apply z-10;
+        @apply bg-opacity-80;
+    }
+}

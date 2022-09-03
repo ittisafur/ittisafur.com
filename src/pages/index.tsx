@@ -23,7 +23,6 @@ const Home: NextPage = () => {
                 image="/assets/svg/logo-white.svg"
                 keywords="web design, website design, website builder, wordpress, web developer, web designer, website creator, responsive web design"
             />
-
             <Intro />
             <RecentWorks />
         </div>
@@ -33,55 +32,37 @@ const Home: NextPage = () => {
 const Intro = memo(() => {
     return (
         <div className={cx('intro')}>
-            <div className="mt-16">
-                <div className="font-ProximaNovaBold text-3xl text-cyan ">
-                    <h4 className="my-2">Hi, I'm Ittisafur Rahman. I specialize in</h4>
+            <div className="mt-16 text-left">
+                <div className="font-ProximaNovaBold text-3xl text-cyan  ">
+                    <h4 className="my-2">Hi, I'm Ittisafur. I specialize in</h4>
                     <Typewriter
                         options={{
-                            strings: ['React.js/Next.js', 'TypeScript', 'Firebase'],
+                            strings: [
+                                'Fullstack Development',
+                                'Frontend Development',
+                                'React.js/Next.js',
+                                'TypeScript',
+                                'Express.js',
+                                'Firebase',
+                            ],
                             autoStart: true,
                             loop: true,
                             cursor: '_',
                         }}
                     />
                 </div>
-                <div className="text-base tracking-wide my-6 ">
+                <div className="text-base tracking-wide my-6">
                     <p>
                         Primarily focused on building modern, responsive websites and web
                         accessibility websites. Love to experiment with new technologies and build
-                        awesome stuff. In my free time, I customize{' '}
-                        <a
-                            href="https://neovim.io/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-cyan font-bold"
-                        >
-                            Neovim
-                        </a>
-                        ,{' '}
-                        <a
-                            href="https://i3wm.org/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-cyan font-bold"
-                        >
-                            i3wm
-                        </a>
-                        . Checkout my
-                        <a
-                            href="https://github.com/ittisafur/dotfiles"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-cyan font-bold"
-                        >
-                            {' '}
-                            dotfiles
-                        </a>
+                        awesome stuff.
                     </p>
                     <p>Take a look at my portfolio and get in touch if you have any questions.</p>
                 </div>
             </div>
             <Lottie
+                isClickToPauseDisabled={true}
+                onClick={() => console.log('clicked')}
                 options={{
                     loop: true,
                     autoplay: true,
@@ -108,6 +89,7 @@ const RecentWorks = () => {
 
                 <div className="transform rotate-[270deg]">
                     <Lottie
+                        isClickToPauseDisabled={true}
                         options={{
                             loop: true,
                             autoplay: true,
