@@ -19,7 +19,7 @@ interface Props {
 }
 
 const Portfolio: FunctionComponent<Props> = ({ content, settings }) => {
-    const { title, description, media, endDate } = content;
+    const { title, description, media, endDate, summary, stack, url } = content;
     return (
         <section className={cx('wrapper')}>
             <section className="relative mb-4">
@@ -41,11 +41,15 @@ const Portfolio: FunctionComponent<Props> = ({ content, settings }) => {
                         <div className={cx('content')}>
                             <div className={cx('stack')}>
                                 <h2 className={cx('head')}>Stack</h2>
-                                <div className={cx('list')}>Laravel, Reactjs, Nextjs</div>
+                                <div className={cx('list')}>
+                                    {stack.map((item, index) => ( 
+                                        <span key={index}>{item}&nbsp;</span>
+                                    ))}
+                                </div>
                             </div>
                             <div className={cx('summary')}>
                                 <h2 className={cx('head')}>Summary</h2>
-                                <p>{description}</p>
+                                <p>{summary}</p>
                             </div>
                         </div>
                     </div>

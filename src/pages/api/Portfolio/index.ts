@@ -20,6 +20,9 @@ const PortfolioAPI = {
                         'https://res.cloudinary.com/dv7g8veki/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1658408288/Portfolio/raush.png',
                     images: [],
                 },
+                summary: 'This is a summary',
+                stack: ['React', 'Next.js', 'Typescript', 'Tailwind'],
+                url: 'https://rau.sh',
             },
             {
                 id: 2,
@@ -38,6 +41,9 @@ const PortfolioAPI = {
                         'https://res.cloudinary.com/dv7g8veki/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1658417518/Portfolio/Banana_Boyz_Club_nphhr8.png',
                     images: [],
                 },
+                summary: 'This is a summary',
+                stack: ['React.js', 'Next.js', 'Typescript', 'Tailwind'],
+                url: 'https://bananaboyzclub.io',
             },
             {
                 id: 3,
@@ -56,6 +62,9 @@ const PortfolioAPI = {
                         'https://res.cloudinary.com/dv7g8veki/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1658408288/Portfolio/raush.png',
                     images: [],
                 },
+                summary: 'This is a summary',
+                stack: ['React.js', 'Next.js', 'Typescript', 'Tailwind'],
+                url: 'https://protoconn.com',
             },
             {
                 id: 4,
@@ -74,6 +83,9 @@ const PortfolioAPI = {
                         'https://res.cloudinary.com/dv7g8veki/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1658408288/Portfolio/raush.png',
                     images: [],
                 },
+                summary: 'This is a summary',
+                stack: ['React.js', 'Next.js', 'Typescript', 'Tailwind'],
+                url: 'https://protoconn.com',
             },
             {
                 id: 5,
@@ -92,6 +104,8 @@ const PortfolioAPI = {
                         'https://res.cloudinary.com/dv7g8veki/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1658408288/Portfolio/raush.png',
                     images: [],
                 },
+                summary: 'This is a summary',
+                stack: ['Vue.js', 'Tailwind'],
             },
             {
                 id: 6,
@@ -110,6 +124,9 @@ const PortfolioAPI = {
                         'https://res.cloudinary.com/dv7g8veki/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1658408288/Portfolio/raush.png',
                     images: [],
                 },
+                summary: 'This is a summary',
+                stack: ['Wordpress', 'PHP', 'Bootstrap', 'ACF Pro'],
+                url: 'https://rehashltd.com',
             },
             {
                 id: 7,
@@ -120,7 +137,7 @@ const PortfolioAPI = {
                 isworking: false,
                 hasdesign: true,
                 worktype: 'side project',
-                location: 'remote',
+                location: 'Remote',
                 description: 'this is a description',
                 sideproject: true,
                 media: {
@@ -128,6 +145,9 @@ const PortfolioAPI = {
                         'https://res.cloudinary.com/dv7g8veki/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1658408288/portfolio/raush.png',
                     images: [],
                 },
+                summary: 'This is a summary',
+                stack: ['Wordpress', 'PHP', 'Bootstrap', 'ACF Pro'],
+                url: 'https://movieapp.ittisafur.com',
             },
             {
                 id: 8,
@@ -138,7 +158,7 @@ const PortfolioAPI = {
                 isworking: false,
                 hasdesign: false,
                 worktype: 'Professional',
-                location: 'remote',
+                location: 'Remote',
                 description: 'this is a description',
                 sideproject: true,
                 media: {
@@ -146,6 +166,9 @@ const PortfolioAPI = {
                         'https://res.cloudinary.com/dv7g8veki/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1618826713/Portfolio/kbtrust.png',
                     images: [],
                 },
+                summary: 'This is a summary',
+                stack: ['Wordpress', 'Customization', 'Beaver Builder'],
+                url: 'https://kbtrust.com',
             },
         ],
     },

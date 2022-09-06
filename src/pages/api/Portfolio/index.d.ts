@@ -16,6 +16,9 @@ export interface Portfolio {
     description: string;
     sideProject: boolean;
     media: Images;
+    summary: string;
+    stack: any;
+    url?: string;
 }
 
 export interface Data {
