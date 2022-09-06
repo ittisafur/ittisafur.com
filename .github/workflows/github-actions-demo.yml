@@ -9,14 +9,11 @@ jobs:
     steps:
       - name: Check out Git Repo
         uses: actions/checkout@v3 
+
       - name: Setup Node.js
         uses: actions/setup-nodejs@v3
         with:
           node-version: 16
-      - name: Setup yarn
-        uses: mskelton/setup-yarn@v1
-        with:
-          node-version: '16.x'
 
       - name: Install Next.js Dependencies
         run: npm ci
