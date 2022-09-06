@@ -15,10 +15,13 @@ jobs:
         with:
           node-version: 16
 
+      - name: Setup Yarn
+        uses: mskelton/setup-yarn@v1
+        with:
+           node-version: '16.x'
+
       - name: Install Next.js Dependencies
-        run: npm ci
+        run: yarn install --frozen-lockfile
       # Run Lint
       - name: Run Lint
-        uses: wearerequired/lint-action@v2
-        with:
-          eslint: true
+        run: yarn lint
