@@ -42,7 +42,7 @@ const Portfolio: FunctionComponent<Props> = ({ content, settings }) => {
                             <div className={cx('stack')}>
                                 <h2 className={cx('head')}>Stack</h2>
                                 <div className={cx('list')}>
-                                    {stack.map((item, index) => ( 
+                                    {stack.map((item, index) => (
                                         <span key={index}>{item}&nbsp;</span>
                                     ))}
                                 </div>
