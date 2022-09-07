@@ -1,6 +1,5 @@
-@import 'lightgallery/scss/lightgallery.scss';
-@import 'lightgallery/scss/lg-zoom.scss';
-
+/* @import 'lightgallery/scss/lightgallery.scss'; */
+/* @import 'lightgallery/scss/lg-zoom.scss'; */
 .title {
     @apply font-ProximaNovaBold;
     @apply text-2xl;
@@ -43,30 +42,40 @@
 
 .gallery {
     @apply bg-[#1a1a1a];
-    @apply py-2;
-    @apply max-w-sm;
+    @apply py-16;
     @apply mx-auto;
     @apply w-full;
 }
 
-.gallery-item {
-    margin: 5px;
-}
-
 .details {
     @apply text-left;
+    @apply tracking-tight;
+    @apply my-4;
+    @apply px-2;
+    @apply md:px-0;
+    @apply lg:my-16;
     @apply lg:text-center;
+    @apply max-w-xs;
+    @apply mx-auto;
 
     .head {
         @apply font-bold;
         @apply uppercase;
         @apply my-2;
+
     }
 }
 
 .testimonial {
     @apply text-left;
+    @apply tracking-tight;
+    @apply my-4;
+    @apply px-2;
+    @apply md:px-0;
+    @apply lg:my-16;
     @apply lg:text-center;
+    @apply max-w-xs;
+    @apply mx-auto;
     .head {
         @apply font-bold;
         @apply uppercase;
@@ -92,3 +101,25 @@
         @apply bg-opacity-80;
     }
 }
+
+.url {
+    @apply flex;
+    @apply justify-center;
+    @apply items-center;
+    @apply py-4;
+    @apply bg-secondary-light;
+    @apply text-primary-light;
+    @apply max-w-xs;
+    @apply mx-auto;
+    @apply rounded-md;
+    @apply uppercase;
+    @apply font-ProximaNovaBold;
+    @apply text-xs;
+    @apply cursor-pointer;
+    @apply tracking-wide;
+    @apply transition-all;
+    @apply delay-100;
+    @apply ease-in;
+    @apply hover:transform;
+    @apply hover:scale-105;
+  }

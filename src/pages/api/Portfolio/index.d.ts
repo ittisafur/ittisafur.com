@@ -18,6 +18,7 @@ export interface Portfolio {
     media: Images;
     summary: string;
     stack: any;
+    testimonial?: string;
     url?: string;
 }
 

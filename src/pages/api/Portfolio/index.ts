@@ -13,7 +13,7 @@ const PortfolioAPI = {
                 hasDesign: false,
                 workType: 'Part Time',
                 location: 'Remote',
-                description: 'This is a description',
+                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, sodales cursus integer tristique nulla praesent senectus interdum. Quam nunc, ut posuere ut feugiat nisi viverra vitae. Pulvinar eget ipsum, nulla duis vel. Posuere nec commodo nulla in ac ullamcorper aenean.',
                 sideProject: false,
                 media: {
                     thumbnail:
@@ -22,6 +22,7 @@ const PortfolioAPI = {
                 },
                 summary: 'This is a summary',
                 stack: ['React', 'Next.js', 'Typescript', 'Tailwind'],
+                testimonial: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar nullam est egestas lorem elit duis. Maecenas id amet enim, lorem elit sed.',
                 url: 'https://rau.sh',
             },
             {
@@ -34,7 +35,7 @@ const PortfolioAPI = {
                 hasDesign: true,
                 workType: 'Contract',
                 location: 'Remote',
-                description: 'This is a description',
+                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, sodales cursus integer tristique nulla praesent senectus interdum. Quam nunc, ut posuere ut feugiat nisi viverra vitae. Pulvinar eget ipsum, nulla duis vel. Posuere nec commodo nulla in ac ullamcorper aenean.',
                 sideProject: false,
                 media: {
                     thumbnail:
@@ -43,6 +44,7 @@ const PortfolioAPI = {
                 },
                 summary: 'This is a summary',
                 stack: ['React.js', 'Next.js', 'Typescript', 'Tailwind'],
+                testimonial: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar nullam est egestas lorem elit duis. Maecenas id amet enim, lorem elit sed.',
                 url: 'https://bananaboyzclub.io',
             },
             {
@@ -55,7 +57,7 @@ const PortfolioAPI = {
                 hasDesign: true,
                 workType: 'Contract',
                 location: 'Remote',
-                description: 'This is a description',
+                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, sodales cursus integer tristique nulla praesent senectus interdum. Quam nunc, ut posuere ut feugiat nisi viverra vitae. Pulvinar eget ipsum, nulla duis vel. Posuere nec commodo nulla in ac ullamcorper aenean.',
                 sideProject: false,
                 media: {
                     thumbnail:
@@ -64,6 +66,7 @@ const PortfolioAPI = {
                 },
                 summary: 'This is a summary',
                 stack: ['React.js', 'Next.js', 'Typescript', 'Tailwind'],
+                testimonial: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar nullam est egestas lorem elit duis. Maecenas id amet enim, lorem elit sed.',
                 url: 'https://protoconn.com',
             },
             {
@@ -76,7 +79,7 @@ const PortfolioAPI = {
                 hasDesign: false,
                 workType: 'Contract',
                 location: 'Remote',
-                description: 'This is a description',
+                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, sodales cursus integer tristique nulla praesent senectus interdum. Quam nunc, ut posuere ut feugiat nisi viverra vitae. Pulvinar eget ipsum, nulla duis vel. Posuere nec commodo nulla in ac ullamcorper aenean.',
                 sideProject: false,
                 media: {
                     thumbnail:
@@ -85,6 +88,7 @@ const PortfolioAPI = {
                 },
                 summary: 'This is a summary',
                 stack: ['React.js', 'Next.js', 'Typescript', 'Tailwind'],
+                testimonial: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar nullam est egestas lorem elit duis. Maecenas id amet enim, lorem elit sed.',
                 url: 'https://protoconn.com',
             },
             {
@@ -97,7 +101,7 @@ const PortfolioAPI = {
                 hasDesign: false,
                 workType: 'Contract',
                 location: 'Remote',
-                description: 'This is a description',
+                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, sodales cursus integer tristique nulla praesent senectus interdum. Quam nunc, ut posuere ut feugiat nisi viverra vitae. Pulvinar eget ipsum, nulla duis vel. Posuere nec commodo nulla in ac ullamcorper aenean.',
                 sideProject: false,
                 media: {
                     thumbnail:
@@ -106,6 +110,8 @@ const PortfolioAPI = {
                 },
                 summary: 'This is a summary',
                 stack: ['Vue.js', 'Tailwind'],
+                testimonial: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar nullam est egestas lorem elit duis. Maecenas id amet enim, lorem elit sed.',
+                url: null
             },
             {
                 id: 6,
@@ -117,7 +123,7 @@ const PortfolioAPI = {
                 hasDesign: true,
                 workType: 'Contract',
                 location: 'Remote',
-                description: 'This is a description',
+                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, sodales cursus integer tristique nulla praesent senectus interdum. Quam nunc, ut posuere ut feugiat nisi viverra vitae. Pulvinar eget ipsum, nulla duis vel. Posuere nec commodo nulla in ac ullamcorper aenean.',
                 sideProject: false,
                 media: {
                     thumbnail:
@@ -126,6 +132,7 @@ const PortfolioAPI = {
                 },
                 summary: 'This is a summary',
                 stack: ['Wordpress', 'PHP', 'Bootstrap', 'ACF Pro'],
+                testimonial: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar nullam est egestas lorem elit duis. Maecenas id amet enim, lorem elit sed.',
                 url: 'https://rehashltd.com',
             },
             {
@@ -138,7 +145,7 @@ const PortfolioAPI = {
                 hasdesign: true,
                 worktype: 'side project',
                 location: 'Remote',
-                description: 'this is a description',
+                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, sodales cursus integer tristique nulla praesent senectus interdum. Quam nunc, ut posuere ut feugiat nisi viverra vitae. Pulvinar eget ipsum, nulla duis vel. Posuere nec commodo nulla in ac ullamcorper aenean.',
                 sideproject: true,
                 media: {
                     thumbnail:
@@ -147,6 +154,8 @@ const PortfolioAPI = {
                 },
                 summary: 'This is a summary',
                 stack: ['Wordpress', 'PHP', 'Bootstrap', 'ACF Pro'],
+
+                testimonial: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar nullam est egestas lorem elit duis. Maecenas id amet enim, lorem elit sed.',
                 url: 'https://movieapp.ittisafur.com',
             },
             {
@@ -159,7 +168,7 @@ const PortfolioAPI = {
                 hasdesign: false,
                 worktype: 'Professional',
                 location: 'Remote',
-                description: 'this is a description',
+                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, sodales cursus integer tristique nulla praesent senectus interdum. Quam nunc, ut posuere ut feugiat nisi viverra vitae. Pulvinar eget ipsum, nulla duis vel. Posuere nec commodo nulla in ac ullamcorper aenean.',
                 sideproject: true,
                 media: {
                     thumbnail:
@@ -168,6 +177,7 @@ const PortfolioAPI = {
                 },
                 summary: 'This is a summary',
                 stack: ['Wordpress', 'Customization', 'Beaver Builder'],
+                testimonial: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar nullam est egestas lorem elit duis. Maecenas id amet enim, lorem elit sed.',
                 url: 'https://kbtrust.com',
             },
         ],
