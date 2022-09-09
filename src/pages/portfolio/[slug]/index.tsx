@@ -14,6 +14,7 @@ import lgZoom from 'lightgallery/plugins/zoom';
 // Light Gallery Styles
 import 'lightgallery/css/lightgallery.css';
 import 'lightgallery/css/lg-zoom.css';
+import SEO from 'utils/SEO';
 
 const cx = bindClassNames.bind(styles);
 
@@ -26,6 +27,7 @@ const Portfolio: FunctionComponent<Props> = ({ content, settings }) => {
     const { title, description, media, endDate, summary, stack, testimonial, url } = content;
     return (
         <section className={cx('wrapper')}>
+            <SEO title={content.title} description={content.summary} image={content.media.thumbnail} keywords={content.stack} />
             <section className="relative">
                 <div className={cx('image-container')}>
                     <Image
