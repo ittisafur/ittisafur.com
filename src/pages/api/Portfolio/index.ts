@@ -44,7 +44,7 @@ const PortfolioAPI = {
                     thumbnail:
                         'https://res.cloudinary.com/dv7g8veki/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1658417518/Portfolio/Banana_Boyz_Club_nphhr8.png',
                     images: [
-                      'https://res.cloudinary.com/dv7g8veki/image/upload/v1662747663/Personal%20Website/Portfolio/banana_boyz_club_roadmap.png'
+                        'https://res.cloudinary.com/dv7g8veki/image/upload/v1662747663/Personal%20Website/Portfolio/banana_boyz_club_roadmap.png',
                     ],
                 },
                 summary: 'This is a summary',

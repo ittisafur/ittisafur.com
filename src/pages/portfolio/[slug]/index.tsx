@@ -62,9 +62,7 @@ const Portfolio: FunctionComponent<Props> = ({ content, settings }) => {
             <Gallery Media={media} />
             <div className={cx('details')}>
                 <h2 className={cx('head')}>Detailed Information</h2>
-                <p>
-                  {description}
-                </p>
+                <p>{description}</p>
             </div>
             <div className={cx('testimonial')}>
                 <h2 className={cx('head')}> testimonial</h2>
@@ -87,7 +85,9 @@ const Gallery: FunctionComponent<GalleryProps> = memo(({ Media }) => {
     console.log(Media.images['0']);
     return (
         <div className={cx('gallery')}>
-            <h1 className="flex justify-start px-2 lg:justify-center lg:px-0 items-center text-xl uppercase font-ProximaNovaBold mb-8 w-full">Gallery</h1>
+            <h1 className="flex justify-start px-2 lg:justify-center lg:px-0 items-center text-xl uppercase font-ProximaNovaBold mb-8 w-full">
+                Gallery
+            </h1>
             <LightGallery
                 plugins={[lgZoom]}
                 mode="lg-fade"
