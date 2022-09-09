@@ -1,6 +1,6 @@
 export interface Images {
     thumbnail: string;
-    images: string[];
+    images: any;
 }
 
 export interface Portfolio {

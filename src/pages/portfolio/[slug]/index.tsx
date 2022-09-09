@@ -23,7 +23,7 @@ interface Props {
 }
 
 const Portfolio: FunctionComponent<Props> = ({ content, settings }) => {
-    const { title, description, media, endDate, summary, stack, testimonial, url  } = content;
+    const { title, description, media, endDate, summary, stack, testimonial, url } = content;
     return (
         <section className={cx('wrapper')}>
             <section className="relative">
@@ -62,44 +62,53 @@ const Portfolio: FunctionComponent<Props> = ({ content, settings }) => {
             <Gallery Media={media} />
             <div className={cx('details')}>
                 <h2 className={cx('head')}>Detailed Information</h2>
-                {description}
+                <p>
+                  {description}
+                </p>
             </div>
             <div className={cx('testimonial')}>
                 <h2 className={cx('head')}> testimonial</h2>
                 <p>{testimonial}</p>
             </div>
             <div className={cx('url')}>
-                <a href={url} rel="noreferrer noopener" target="_blank">Visit {title}</a>
+                <a href={url} rel="noreferrer noopener" target="_blank">
+                    Visit {title}
+                </a>
             </div>
         </section>
     );
 };
 
-// NOTE:: Needs Work
 interface GalleryProps {
     Media: Images;
 }
 
 const Gallery: FunctionComponent<GalleryProps> = memo(({ Media }) => {
+    console.log(Media.images['0']);
     return (
         <div className={cx('gallery')}>
-            <LightGallery plugins={[lgZoom ]} mode="lg-fade" elementClassNames="container mx-auto grid grid-cols-1 lg:grid-cols-3 gap-4">
-              {Array.from(Array(6)).map((item, index) => (
-                <a
-                    key={index}
-                    data-lg-size="1406-1390"
-                    data-pinterest-text="Shinimamiya, Osaka, Japan"
-                    data-tweet-text="Shinimamiya, Osaka, Japan"
-                    data-src={Media.thumbnail}
-                    data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@entrycube' >Diego Guzmán </a></h4> <p> Location - <a href='https://unsplash.com/s/photos/fushimi-inari-taisha-shrine-senbontorii%2C-68%E7%95%AA%E5%9C%B0-fukakusa-yabunouchicho%2C-fushimi-ward%2C-kyoto%2C-japan'>Fushimi Ward, Kyoto, Japan</a></p>"
-                    className="mx-auto relative overflow-hidden w-72 md:w-80 lg:w-96 h-56 cursor-pointer"
-                >
-                    <Image
-                        className="object-cover object-center max-w-xs rounded-md"
-                        src={Media.thumbnail}
-                        layout="fill"
-                    />
-                </a>
+            <h1 className="flex justify-start px-2 lg:justify-center lg:px-0 items-center text-xl uppercase font-ProximaNovaBold mb-8 w-full">Gallery</h1>
+            <LightGallery
+                plugins={[lgZoom]}
+                mode="lg-fade"
+                elementClassNames="container mx-auto grid grid-cols-1 lg:grid-cols-3 gap-y-4"
+            >
+                {Array.from(Array(6)).map((item, index) => (
+                    <a
+                        key={index}
+                        data-lg-size="1406-1390"
+                        data-pinterest-text="Shinimamiya, Osaka, Japan"
+                        data-tweet-text="Shinimamiya, Osaka, Japan"
+                        data-src={Media.thumbnail}
+                        data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@entrycube' >Diego Guzmán </a></h4> <p> Location - <a href='https://unsplash.com/s/photos/fushimi-inari-taisha-shrine-senbontorii%2C-68%E7%95%AA%E5%9C%B0-fukakusa-yabunouchicho%2C-fushimi-ward%2C-kyoto%2C-japan'>Fushimi Ward, Kyoto, Japan</a></p>"
+                        className="mx-auto relative overflow-hidden w-72 md:w-80 lg:w-96 h-56 cursor-pointer"
+                    >
+                        <Image
+                            className="object-cover object-center max-w-xs rounded-md"
+                            src={Media.thumbnail}
+                            layout="fill"
+                        />
+                    </a>
                 ))}
             </LightGallery>
         </div>

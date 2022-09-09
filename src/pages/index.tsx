@@ -32,7 +32,7 @@ const Home: NextPage = () => {
 const Intro = memo(() => {
     return (
         <div className={cx('intro')}>
-            <div className="mt-16 text-left">
+            <div className="mt-16 text-left h-full flex flex-col justify-center">
                 <div className="font-ProximaNovaBold text-3xl text-cyan  ">
                     <h4 className="my-2">Hi, I'm Ittisafur. I specialize in</h4>
                     <Typewriter
