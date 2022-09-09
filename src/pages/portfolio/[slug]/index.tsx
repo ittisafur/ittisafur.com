@@ -27,7 +27,12 @@ const Portfolio: FunctionComponent<Props> = ({ content, settings }) => {
     const { title, description, media, endDate, summary, stack, testimonial, url } = content;
     return (
         <section className={cx('wrapper')}>
-            <SEO title={content.title} description={content.summary} image={content.media.thumbnail} keywords={content.stack} />
+            <SEO
+                title={content.title}
+                description={content.summary}
+                image={content.media.thumbnail}
+                keywords={content.stack}
+            />
             <section className="relative">
                 <div className={cx('image-container')}>
                     <Image
