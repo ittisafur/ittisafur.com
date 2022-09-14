@@ -17,6 +17,51 @@
     @apply my-4;
 }
 
+.banner {
+    @apply relative;
+}
+
+.content_wrapper {
+    @apply absolute;
+    @apply top-0;
+    @apply left-0;
+    @apply z-30;
+    @apply w-full;
+    @apply h-full;
+
+    .layout {
+        @apply container;
+        @apply mx-auto;
+        @apply px-2;
+        @apply py-4;
+        @apply w-full;
+        @apply flex;
+        @apply flex-col;
+        @apply justify-center;
+        @apply items-stretch;
+        @apply h-full;
+    }
+
+    .title_status {
+        @apply flex;
+        @apply flex-col;
+        @apply justify-center;
+        @apply items-center;
+    }
+}
+
+.skill {
+    @apply relative;
+    @apply overflow-hidden;
+    @apply object-contain;
+
+    &.icon {
+        @apply w-9;
+        @apply h-9;
+        @apply mx-auto;
+    }
+}
+
 .content {
     @apply flex;
     @apply flex-col;
@@ -63,6 +108,14 @@
             @apply gap-3;
             @apply relative;
             @apply cursor-pointer;
+
+            .item {
+                @apply flex;
+                @apply flex-col;
+                @apply justify-center;
+                @apply items-center;
+                @apply space-y-2;
+            }
 
             .title {
                 @apply font-ProximaNovaBold;
@@ -132,7 +185,7 @@
     }
 }
 
-.image-container {
+.banner-container {
     @apply relative;
     @apply overflow-hidden;
     @apply w-full;
@@ -173,4 +226,50 @@
     @apply ease-in;
     @apply hover:transform;
     @apply hover:scale-105;
+}
+
+.gallery {
+    .title {
+        @apply flex;
+        @apply px-2;
+        @apply lg:px-0;
+        @apply justify-center;
+        @apply items-center;
+        @apply text-xl;
+        @apply uppercase;
+        @apply font-ProximaNovaBold;
+        @apply mb-8;
+        @apply w-full;
+        @apply text-center;
+        @apply md:text-left;
+    }
+    .light_gallery {
+        @apply container;
+        @apply mx-auto;
+        @apply grid;
+        @apply grid-cols-1;
+        @apply md:grid-cols-2;
+        @apply lg:grid-cols-3;
+        @apply gap-y-4;
+    }
+    .gallery-container {
+        @apply mx-auto;
+        @apply relative;
+        @apply overflow-hidden;
+        @apply w-72;
+        @apply md:w-80;
+        @apply lg:w-80;
+        @apply xl:w-96;
+        @apply 2xl:w-[30rem];
+        @apply h-56;
+        @apply xl:h-60;
+        @apply 2xl:h-64;
+        @apply cursor-pointer;
+    }
+    .image {
+        @apply object-cover;
+        @apply object-center;
+        @apply max-w-xs;
+        @apply rounded-md;
+    }
 }
