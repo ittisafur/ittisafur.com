@@ -24,10 +24,50 @@
     @apply justify-between;
     @apply items-start;
     @apply lg:items-center;
-    .stack {
+
+    .stack {  
+        @apply relative;
+        @apply z-50;
+        @apply text-center; 
+        @apply p-4;
+
+        &::before {
+            content: '';
+            @apply absolute;
+            @apply top-0;
+            @apply left-0;
+            @apply w-full;
+            @apply h-full;
+            @apply bg-primary;
+            @apply bg-opacity-80;
+            @apply rounded-lg;
+            @apply p-4;
+        }
         .head {
             @apply font-bold;
             @apply uppercase;
+            @apply text-center;
+            @apply text-secondary;
+            @apply relative;
+            @apply mb-4;
+        }
+
+        .list {
+          @apply grid;
+          @apply grid-cols-3;
+          @apply lg:grid-cols-4;
+          @apply gap-3 ;
+          @apply relative;
+          @apply cursor-pointer;
+
+          .title {
+            @apply font-ProximaNovaBold;
+            @apply leading-4;
+            @apply text-center;
+            @apply tracking-tight;
+            font-size: 10px;
+          }
+
         }
     }
     .summary {

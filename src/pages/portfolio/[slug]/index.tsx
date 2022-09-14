@@ -1,4 +1,4 @@
-import { FunctionComponent, memo } from 'react';
+import { Fragment, FunctionComponent, memo } from 'react';
 import { GetServerSideProps } from 'next';
 import { Images, Portfolio } from '../../api/Portfolio/index.d';
 import { PortfolioAPI } from 'pages/api/Portfolio';
@@ -31,9 +31,11 @@ const Portfolio: FunctionComponent<Props> = ({ content, settings }) => {
                 title={content.title}
                 description={content.summary}
                 image={content.media.thumbnail}
-                keywords={content.stack}
+                keywords={content.stack.map((item) => item.title)}
             />
+          
             <section className="relative">
+
                 <div className={cx('image-container')}>
                     <Image
                         layout="fill"
@@ -54,7 +56,12 @@ const Portfolio: FunctionComponent<Props> = ({ content, settings }) => {
                                 <h2 className={cx('head')}>Stack</h2>
                                 <div className={cx('list')}>
                                     {stack.map((item, index) => (
-                                        <span key={index}>{item}&nbsp;</span>
+                                        <div key={index} className="flex flex-col justify-center items-center space-y-2">
+                                          <div className="relative overflow-hidden w-9 h-9 mx-auto object-contain">
+                                            <Image src={item.icon} alt={item.title} layout="fill" objectFit="contain" objectPosition="center" className="w-9 h-9 mx-auto"/>
+                                          </div>
+                                          <p className={cx('title')}>{item.title}</p>
+                                        </div>
                                     ))}
                                 </div>
                             </div>
@@ -108,10 +115,10 @@ const Gallery: FunctionComponent<GalleryProps> = memo(({ Media }) => {
                         data-tweet-text="Shinimamiya, Osaka, Japan"
                         data-src={Media.thumbnail}
                         data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@entrycube' >Diego Guzmán </a></h4> <p> Location - <a href='https://unsplash.com/s/photos/fushimi-inari-taisha-shrine-senbontorii%2C-68%E7%95%AA%E5%9C%B0-fukakusa-yabunouchicho%2C-fushimi-ward%2C-kyoto%2C-japan'>Fushimi Ward, Kyoto, Japan</a></p>"
-                        className="mx-auto relative overflow-hidden w-72 md:w-80 lg:w-96 h-56 cursor-pointer"
+                        className="mx-auto relative overflow-hidden w-72 md:w-80 lg:w-96 h-56 cursor-pointer "
                     >
                         <Image
-                            className="object-cover object-center max-w-xs rounded-md"
+                            className="object-cover object-center max-w-xs rounded-md backdrop-blur-lg"
                             src={Media.thumbnail}
                             layout="fill"
                         />

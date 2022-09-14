@@ -21,8 +21,45 @@ const PortfolioAPI = {
                         'https://res.cloudinary.com/dv7g8veki/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1658408288/Portfolio/raush.png',
                     images: [],
                 },
-                summary: 'This is a summary',
-                stack: ['React', 'Next.js', 'Typescript', 'Tailwind'],
+                summary: 'Turning Content into Products',
+                stack: [
+                  {
+                    title: 'React.js', 
+                    icon: '/assets/svg/react.svg'
+                  },
+                  {
+                    title: 'Next.js',
+                    icon: '/assets/svg/next.svg'
+                  },
+                  {  
+                    title: 'Typescript',
+                    icon: '/assets/svg/typescript.svg'
+                  },
+                  {  
+                    title: 'Tailwindcss',
+                    icon: '/assets/svg/tailwindcss.svg'
+                  },
+                  {  
+                    title: 'MUI',
+                    icon: '/assets/svg/mui.svg'
+                  },
+                  {  
+                    title: 'React Query',
+                    icon: '/assets/svg/react-query.svg'
+                  },
+                  {  
+                    title: 'Playwright',
+                    icon: '/assets/svg/playwright.svg'
+                  },
+                  {  
+                    title: 'Yarn Workspace',
+                    icon: '/assets/svg/yarn.svg'
+                  },
+                  {  
+                    title: 'Gitlab CI',
+                    icon: '/assets/svg/gitlab.svg'
+                  } 
+                ],
                 testimonial:
                     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar nullam est egestas lorem elit duis. Maecenas id amet enim, lorem elit sed.',
                 url: 'https://rau.sh',
@@ -48,7 +85,44 @@ const PortfolioAPI = {
                     ],
                 },
                 summary: 'This is a summary',
-                stack: ['React.js', 'Next.js', 'Typescript', 'Tailwind'],
+                stack: [
+                  {
+                    title: 'React.js', 
+                    icon: '/assets/svg/react.svg'
+                  },
+                  {
+                    title: 'Next.js',
+                    icon: '/assets/svg/next.svg'
+                  },
+                  {  
+                    title: 'Typescript',
+                    icon: '/assets/svg/typescript.svg'
+                  },
+                  {  
+                    title: 'Tailwindcss',
+                    icon: '/assets/svg/tailwindcss.svg'
+                  },
+                  {  
+                    title: 'MUI',
+                    icon: '/assets/svg/mui.svg'
+                  },
+                  {  
+                    title: 'React Query',
+                    icon: '/assets/svg/react-query.svg'
+                  },
+                  {  
+                    title: 'Playwright',
+                    icon: '/assets/svg/playwright.svg'
+                  },
+                  {  
+                    title: 'Yarn Workspace',
+                    icon: '/assets/svg/yarn.svg'
+                  },
+                  {  
+                    title: 'Gitlab CI',
+                    icon: '/assets/svg/gitlab.svg'
+                  } 
+                ],
                 testimonial:
                     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar nullam est egestas lorem elit duis. Maecenas id amet enim, lorem elit sed.',
                 url: 'https://bananaboyzclub.io',
@@ -72,7 +146,44 @@ const PortfolioAPI = {
                     images: [],
                 },
                 summary: 'This is a summary',
-                stack: ['React.js', 'Next.js', 'Typescript', 'Tailwind'],
+                stack: [
+                  {
+                    title: 'React.js', 
+                    icon: '/assets/svg/react.svg'
+                  },
+                  {
+                    title: 'Next.js',
+                    icon: '/assets/svg/next.svg'
+                  },
+                  {  
+                    title: 'Typescript',
+                    icon: '/assets/svg/typescript.svg'
+                  },
+                  {  
+                    title: 'Tailwindcss',
+                    icon: '/assets/svg/tailwindcss.svg'
+                  },
+                  {  
+                    title: 'MUI',
+                    icon: '/assets/svg/mui.svg'
+                  },
+                  {  
+                    title: 'React Query',
+                    icon: '/assets/svg/react-query.svg'
+                  },
+                  {  
+                    title: 'Playwright',
+                    icon: '/assets/svg/playwright.svg'
+                  },
+                  {  
+                    title: 'Yarn Workspace',
+                    icon: '/assets/svg/yarn.svg'
+                  },
+                  {  
+                    title: 'Gitlab CI',
+                    icon: '/assets/svg/gitlab.svg'
+                  } 
+                ],
                 testimonial:
                     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar nullam est egestas lorem elit duis. Maecenas id amet enim, lorem elit sed.',
                 url: 'https://protoconn.com',
@@ -96,7 +207,44 @@ const PortfolioAPI = {
                     images: [],
                 },
                 summary: 'This is a summary',
-                stack: ['React.js', 'Next.js', 'Typescript', 'Tailwind'],
+                stack: [
+                  {
+                    title: 'React.js', 
+                    icon: '/assets/svg/react.svg'
+                  },
+                  {
+                    title: 'Next.js',
+                    icon: '/assets/svg/next.svg'
+                  },
+                  {  
+                    title: 'Typescript',
+                    icon: '/assets/svg/typescript.svg'
+                  },
+                  {  
+                    title: 'Tailwindcss',
+                    icon: '/assets/svg/tailwindcss.svg'
+                  },
+                  {  
+                    title: 'MUI',
+                    icon: '/assets/svg/mui.svg'
+                  },
+                  {  
+                    title: 'React Query',
+                    icon: '/assets/svg/react-query.svg'
+                  },
+                  {  
+                    title: 'Playwright',
+                    icon: '/assets/svg/playwright.svg'
+                  },
+                  {  
+                    title: 'Yarn Workspace',
+                    icon: '/assets/svg/yarn.svg'
+                  },
+                  {  
+                    title: 'Gitlab CI',
+                    icon: '/assets/svg/gitlab.svg'
+                  } 
+                ],
                 testimonial:
                     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar nullam est egestas lorem elit duis. Maecenas id amet enim, lorem elit sed.',
                 url: 'https://protoconn.com',
@@ -120,7 +268,44 @@ const PortfolioAPI = {
                     images: [],
                 },
                 summary: 'This is a summary',
-                stack: ['Vue.js', 'Tailwind'],
+                stack: [
+                  {
+                    title: 'React.js', 
+                    icon: '/assets/svg/react.svg'
+                  },
+                  {
+                    title: 'Next.js',
+                    icon: '/assets/svg/next.svg'
+                  },
+                  {  
+                    title: 'Typescript',
+                    icon: '/assets/svg/typescript.svg'
+                  },
+                  {  
+                    title: 'Tailwindcss',
+                    icon: '/assets/svg/tailwindcss.svg'
+                  },
+                  {  
+                    title: 'MUI',
+                    icon: '/assets/svg/mui.svg'
+                  },
+                  {  
+                    title: 'React Query',
+                    icon: '/assets/svg/react-query.svg'
+                  },
+                  {  
+                    title: 'Playwright',
+                    icon: '/assets/svg/playwright.svg'
+                  },
+                  {  
+                    title: 'Yarn Workspace',
+                    icon: '/assets/svg/yarn.svg'
+                  },
+                  {  
+                    title: 'Gitlab CI',
+                    icon: '/assets/svg/gitlab.svg'
+                  } 
+                ],
                 testimonial:
                     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar nullam est egestas lorem elit duis. Maecenas id amet enim, lorem elit sed.',
                 url: null,
@@ -144,7 +329,44 @@ const PortfolioAPI = {
                     images: [],
                 },
                 summary: 'This is a summary',
-                stack: ['Wordpress', 'PHP', 'Bootstrap', 'ACF Pro'],
+                stack: [
+                  {
+                    title: 'React.js', 
+                    icon: '/assets/svg/react.svg'
+                  },
+                  {
+                    title: 'Next.js',
+                    icon: '/assets/svg/next.svg'
+                  },
+                  {  
+                    title: 'Typescript',
+                    icon: '/assets/svg/typescript.svg'
+                  },
+                  {  
+                    title: 'Tailwindcss',
+                    icon: '/assets/svg/tailwindcss.svg'
+                  },
+                  {  
+                    title: 'MUI',
+                    icon: '/assets/svg/mui.svg'
+                  },
+                  {  
+                    title: 'React Query',
+                    icon: '/assets/svg/react-query.svg'
+                  },
+                  {  
+                    title: 'Playwright',
+                    icon: '/assets/svg/playwright.svg'
+                  },
+                  {  
+                    title: 'Yarn Workspace',
+                    icon: '/assets/svg/yarn.svg'
+                  },
+                  {  
+                    title: 'Gitlab CI',
+                    icon: '/assets/svg/gitlab.svg'
+                  } 
+                ],
                 testimonial:
                     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar nullam est egestas lorem elit duis. Maecenas id amet enim, lorem elit sed.',
                 url: 'https://rehashltd.com',
@@ -168,8 +390,44 @@ const PortfolioAPI = {
                     images: [],
                 },
                 summary: 'This is a summary',
-                stack: ['Wordpress', 'PHP', 'Bootstrap', 'ACF Pro'],
-
+                stack: [
+                  {
+                    title: 'React.js', 
+                    icon: '/assets/svg/react.svg'
+                  },
+                  {
+                    title: 'Next.js',
+                    icon: '/assets/svg/next.svg'
+                  },
+                  {  
+                    title: 'Typescript',
+                    icon: '/assets/svg/typescript.svg'
+                  },
+                  {  
+                    title: 'Tailwindcss',
+                    icon: '/assets/svg/tailwindcss.svg'
+                  },
+                  {  
+                    title: 'MUI',
+                    icon: '/assets/svg/mui.svg'
+                  },
+                  {  
+                    title: 'React Query',
+                    icon: '/assets/svg/react-query.svg'
+                  },
+                  {  
+                    title: 'Playwright',
+                    icon: '/assets/svg/playwright.svg'
+                  },
+                  {  
+                    title: 'Yarn Workspace',
+                    icon: '/assets/svg/yarn.svg'
+                  },
+                  {  
+                    title: 'Gitlab CI',
+                    icon: '/assets/svg/gitlab.svg'
+                  } 
+                ],
                 testimonial:
                     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar nullam est egestas lorem elit duis. Maecenas id amet enim, lorem elit sed.',
                 url: 'https://movieapp.ittisafur.com',
@@ -193,7 +451,44 @@ const PortfolioAPI = {
                     images: [],
                 },
                 summary: 'This is a summary',
-                stack: ['Wordpress', 'Customization', 'Beaver Builder'],
+                stack: [
+                  {
+                    title: 'React.js', 
+                    icon: '/assets/svg/react.svg'
+                  },
+                  {
+                    title: 'Next.js',
+                    icon: '/assets/svg/next.svg'
+                  },
+                  {  
+                    title: 'Typescript',
+                    icon: '/assets/svg/typescript.svg'
+                  },
+                  {  
+                    title: 'Tailwindcss',
+                    icon: '/assets/svg/tailwindcss.svg'
+                  },
+                  {  
+                    title: 'MUI',
+                    icon: '/assets/svg/mui.svg'
+                  },
+                  {  
+                    title: 'React Query',
+                    icon: '/assets/svg/react-query.svg'
+                  },
+                  {  
+                    title: 'Playwright',
+                    icon: '/assets/svg/playwright.svg'
+                  },
+                  {  
+                    title: 'Yarn Workspace',
+                    icon: '/assets/svg/yarn.svg'
+                  },
+                  {  
+                    title: 'Gitlab CI',
+                    icon: '/assets/svg/gitlab.svg'
+                  } 
+                ],
                 testimonial:
                     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar nullam est egestas lorem elit duis. Maecenas id amet enim, lorem elit sed.',
                 url: 'https://kbtrust.com',
