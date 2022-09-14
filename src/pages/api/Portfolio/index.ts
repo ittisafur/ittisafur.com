@@ -23,42 +23,42 @@ const PortfolioAPI = {
                 },
                 summary: 'Turning Content into Products',
                 stack: [
-                  {
-                    title: 'React.js', 
-                    icon: '/assets/svg/react.svg'
-                  },
-                  {
-                    title: 'Next.js',
-                    icon: '/assets/svg/next.svg'
-                  },
-                  {  
-                    title: 'Typescript',
-                    icon: '/assets/svg/typescript.svg'
-                  },
-                  {  
-                    title: 'Tailwindcss',
-                    icon: '/assets/svg/tailwindcss.svg'
-                  },
-                  {  
-                    title: 'MUI',
-                    icon: '/assets/svg/mui.svg'
-                  },
-                  {  
-                    title: 'React Query',
-                    icon: '/assets/svg/react-query.svg'
-                  },
-                  {  
-                    title: 'Playwright',
-                    icon: '/assets/svg/playwright.svg'
-                  },
-                  {  
-                    title: 'Yarn Workspace',
-                    icon: '/assets/svg/yarn.svg'
-                  },
-                  {  
-                    title: 'Gitlab CI',
-                    icon: '/assets/svg/gitlab.svg'
-                  } 
+                    {
+                        title: 'React.js',
+                        icon: '/assets/svg/react.svg',
+                    },
+                    {
+                        title: 'Next.js',
+                        icon: '/assets/svg/next.svg',
+                    },
+                    {
+                        title: 'Typescript',
+                        icon: '/assets/svg/typescript.svg',
+                    },
+                    {
+                        title: 'Tailwindcss',
+                        icon: '/assets/svg/tailwindcss.svg',
+                    },
+                    {
+                        title: 'MUI',
+                        icon: '/assets/svg/mui.svg',
+                    },
+                    {
+                        title: 'React Query',
+                        icon: '/assets/svg/react-query.svg',
+                    },
+                    {
+                        title: 'Playwright',
+                        icon: '/assets/svg/playwright.svg',
+                    },
+                    {
+                        title: 'Yarn Workspace',
+                        icon: '/assets/svg/yarn.svg',
+                    },
+                    {
+                        title: 'Gitlab CI',
+                        icon: '/assets/svg/gitlab.svg',
+                    },
                 ],
                 testimonial:
                     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar nullam est egestas lorem elit duis. Maecenas id amet enim, lorem elit sed.',
@@ -86,42 +86,42 @@ const PortfolioAPI = {
                 },
                 summary: 'This is a summary',
                 stack: [
-                  {
-                    title: 'React.js', 
-                    icon: '/assets/svg/react.svg'
-                  },
-                  {
-                    title: 'Next.js',
-                    icon: '/assets/svg/next.svg'
-                  },
-                  {  
-                    title: 'Typescript',
-                    icon: '/assets/svg/typescript.svg'
-                  },
-                  {  
-                    title: 'Tailwindcss',
-                    icon: '/assets/svg/tailwindcss.svg'
-                  },
-                  {  
-                    title: 'MUI',
-                    icon: '/assets/svg/mui.svg'
-                  },
-                  {  
-                    title: 'React Query',
-                    icon: '/assets/svg/react-query.svg'
-                  },
-                  {  
-                    title: 'Playwright',
-                    icon: '/assets/svg/playwright.svg'
-                  },
-                  {  
-                    title: 'Yarn Workspace',
-                    icon: '/assets/svg/yarn.svg'
-                  },
-                  {  
-                    title: 'Gitlab CI',
-                    icon: '/assets/svg/gitlab.svg'
-                  } 
+                    {
+                        title: 'React.js',
+                        icon: '/assets/svg/react.svg',
+                    },
+                    {
+                        title: 'Next.js',
+                        icon: '/assets/svg/next.svg',
+                    },
+                    {
+                        title: 'Typescript',
+                        icon: '/assets/svg/typescript.svg',
+                    },
+                    {
+                        title: 'Tailwindcss',
+                        icon: '/assets/svg/tailwindcss.svg',
+                    },
+                    {
+                        title: 'MUI',
+                        icon: '/assets/svg/mui.svg',
+                    },
+                    {
+                        title: 'React Query',
+                        icon: '/assets/svg/react-query.svg',
+                    },
+                    {
+                        title: 'Playwright',
+                        icon: '/assets/svg/playwright.svg',
+                    },
+                    {
+                        title: 'Yarn Workspace',
+                        icon: '/assets/svg/yarn.svg',
+                    },
+                    {
+                        title: 'Gitlab CI',
+                        icon: '/assets/svg/gitlab.svg',
+                    },
                 ],
                 testimonial:
                     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar nullam est egestas lorem elit duis. Maecenas id amet enim, lorem elit sed.',
@@ -147,42 +147,42 @@ const PortfolioAPI = {
                 },
                 summary: 'This is a summary',
                 stack: [
-                  {
-                    title: 'React.js', 
-                    icon: '/assets/svg/react.svg'
-                  },
-                  {
-                    title: 'Next.js',
-                    icon: '/assets/svg/next.svg'
-                  },
-                  {  
-                    title: 'Typescript',
-                    icon: '/assets/svg/typescript.svg'
-                  },
-                  {  
-                    title: 'Tailwindcss',
-                    icon: '/assets/svg/tailwindcss.svg'
-                  },
-                  {  
-                    title: 'MUI',
-                    icon: '/assets/svg/mui.svg'
-                  },
-                  {  
-                    title: 'React Query',
-                    icon: '/assets/svg/react-query.svg'
-                  },
-                  {  
-                    title: 'Playwright',
-                    icon: '/assets/svg/playwright.svg'
-                  },
-                  {  
-                    title: 'Yarn Workspace',
-                    icon: '/assets/svg/yarn.svg'
-                  },
-                  {  
-                    title: 'Gitlab CI',
-                    icon: '/assets/svg/gitlab.svg'
-                  } 
+                    {
+                        title: 'React.js',
+                        icon: '/assets/svg/react.svg',
+                    },
+                    {
+                        title: 'Next.js',
+                        icon: '/assets/svg/next.svg',
+                    },
+                    {
+                        title: 'Typescript',
+                        icon: '/assets/svg/typescript.svg',
+                    },
+                    {
+                        title: 'Tailwindcss',
+                        icon: '/assets/svg/tailwindcss.svg',
+                    },
+                    {
+                        title: 'MUI',
+                        icon: '/assets/svg/mui.svg',
+                    },
+                    {
+                        title: 'React Query',
+                        icon: '/assets/svg/react-query.svg',
+                    },
+                    {
+                        title: 'Playwright',
+                        icon: '/assets/svg/playwright.svg',
+                    },
+                    {
+                        title: 'Yarn Workspace',
+                        icon: '/assets/svg/yarn.svg',
+                    },
+                    {
+                        title: 'Gitlab CI',
+                        icon: '/assets/svg/gitlab.svg',
+                    },
                 ],
                 testimonial:
                     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar nullam est egestas lorem elit duis. Maecenas id amet enim, lorem elit sed.',
@@ -208,42 +208,42 @@ const PortfolioAPI = {
                 },
                 summary: 'This is a summary',
                 stack: [
-                  {
-                    title: 'React.js', 
-                    icon: '/assets/svg/react.svg'
-                  },
-                  {
-                    title: 'Next.js',
-                    icon: '/assets/svg/next.svg'
-                  },
-                  {  
-                    title: 'Typescript',
-                    icon: '/assets/svg/typescript.svg'
-                  },
-                  {  
-                    title: 'Tailwindcss',
-                    icon: '/assets/svg/tailwindcss.svg'
-                  },
-                  {  
-                    title: 'MUI',
-                    icon: '/assets/svg/mui.svg'
-                  },
-                  {  
-                    title: 'React Query',
-                    icon: '/assets/svg/react-query.svg'
-                  },
-                  {  
-                    title: 'Playwright',
-                    icon: '/assets/svg/playwright.svg'
-                  },
-                  {  
-                    title: 'Yarn Workspace',
-                    icon: '/assets/svg/yarn.svg'
-                  },
-                  {  
-                    title: 'Gitlab CI',
-                    icon: '/assets/svg/gitlab.svg'
-                  } 
+                    {
+                        title: 'React.js',
+                        icon: '/assets/svg/react.svg',
+                    },
+                    {
+                        title: 'Next.js',
+                        icon: '/assets/svg/next.svg',
+                    },
+                    {
+                        title: 'Typescript',
+                        icon: '/assets/svg/typescript.svg',
+                    },
+                    {
+                        title: 'Tailwindcss',
+                        icon: '/assets/svg/tailwindcss.svg',
+                    },
+                    {
+                        title: 'MUI',
+                        icon: '/assets/svg/mui.svg',
+                    },
+                    {
+                        title: 'React Query',
+                        icon: '/assets/svg/react-query.svg',
+                    },
+                    {
+                        title: 'Playwright',
+                        icon: '/assets/svg/playwright.svg',
+                    },
+                    {
+                        title: 'Yarn Workspace',
+                        icon: '/assets/svg/yarn.svg',
+                    },
+                    {
+                        title: 'Gitlab CI',
+                        icon: '/assets/svg/gitlab.svg',
+                    },
                 ],
                 testimonial:
                     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar nullam est egestas lorem elit duis. Maecenas id amet enim, lorem elit sed.',
@@ -269,42 +269,42 @@ const PortfolioAPI = {
                 },
                 summary: 'This is a summary',
                 stack: [
-                  {
-                    title: 'React.js', 
-                    icon: '/assets/svg/react.svg'
-                  },
-                  {
-                    title: 'Next.js',
-                    icon: '/assets/svg/next.svg'
-                  },
-                  {  
-                    title: 'Typescript',
-                    icon: '/assets/svg/typescript.svg'
-                  },
-                  {  
-                    title: 'Tailwindcss',
-                    icon: '/assets/svg/tailwindcss.svg'
-                  },
-                  {  
-                    title: 'MUI',
-                    icon: '/assets/svg/mui.svg'
-                  },
-                  {  
-                    title: 'React Query',
-                    icon: '/assets/svg/react-query.svg'
-                  },
-                  {  
-                    title: 'Playwright',
-                    icon: '/assets/svg/playwright.svg'
-                  },
-                  {  
-                    title: 'Yarn Workspace',
-                    icon: '/assets/svg/yarn.svg'
-                  },
-                  {  
-                    title: 'Gitlab CI',
-                    icon: '/assets/svg/gitlab.svg'
-                  } 
+                    {
+                        title: 'React.js',
+                        icon: '/assets/svg/react.svg',
+                    },
+                    {
+                        title: 'Next.js',
+                        icon: '/assets/svg/next.svg',
+                    },
+                    {
+                        title: 'Typescript',
+                        icon: '/assets/svg/typescript.svg',
+                    },
+                    {
+                        title: 'Tailwindcss',
+                        icon: '/assets/svg/tailwindcss.svg',
+                    },
+                    {
+                        title: 'MUI',
+                        icon: '/assets/svg/mui.svg',
+                    },
+                    {
+                        title: 'React Query',
+                        icon: '/assets/svg/react-query.svg',
+                    },
+                    {
+                        title: 'Playwright',
+                        icon: '/assets/svg/playwright.svg',
+                    },
+                    {
+                        title: 'Yarn Workspace',
+                        icon: '/assets/svg/yarn.svg',
+                    },
+                    {
+                        title: 'Gitlab CI',
+                        icon: '/assets/svg/gitlab.svg',
+                    },
                 ],
                 testimonial:
                     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar nullam est egestas lorem elit duis. Maecenas id amet enim, lorem elit sed.',
@@ -330,42 +330,42 @@ const PortfolioAPI = {
                 },
                 summary: 'This is a summary',
                 stack: [
-                  {
-                    title: 'React.js', 
-                    icon: '/assets/svg/react.svg'
-                  },
-                  {
-                    title: 'Next.js',
-                    icon: '/assets/svg/next.svg'
-                  },
-                  {  
-                    title: 'Typescript',
-                    icon: '/assets/svg/typescript.svg'
-                  },
-                  {  
-                    title: 'Tailwindcss',
-                    icon: '/assets/svg/tailwindcss.svg'
-                  },
-                  {  
-                    title: 'MUI',
-                    icon: '/assets/svg/mui.svg'
-                  },
-                  {  
-                    title: 'React Query',
-                    icon: '/assets/svg/react-query.svg'
-                  },
-                  {  
-                    title: 'Playwright',
-                    icon: '/assets/svg/playwright.svg'
-                  },
-                  {  
-                    title: 'Yarn Workspace',
-                    icon: '/assets/svg/yarn.svg'
-                  },
-                  {  
-                    title: 'Gitlab CI',
-                    icon: '/assets/svg/gitlab.svg'
-                  } 
+                    {
+                        title: 'React.js',
+                        icon: '/assets/svg/react.svg',
+                    },
+                    {
+                        title: 'Next.js',
+                        icon: '/assets/svg/next.svg',
+                    },
+                    {
+                        title: 'Typescript',
+                        icon: '/assets/svg/typescript.svg',
+                    },
+                    {
+                        title: 'Tailwindcss',
+                        icon: '/assets/svg/tailwindcss.svg',
+                    },
+                    {
+                        title: 'MUI',
+                        icon: '/assets/svg/mui.svg',
+                    },
+                    {
+                        title: 'React Query',
+                        icon: '/assets/svg/react-query.svg',
+                    },
+                    {
+                        title: 'Playwright',
+                        icon: '/assets/svg/playwright.svg',
+                    },
+                    {
+                        title: 'Yarn Workspace',
+                        icon: '/assets/svg/yarn.svg',
+                    },
+                    {
+                        title: 'Gitlab CI',
+                        icon: '/assets/svg/gitlab.svg',
+                    },
                 ],
                 testimonial:
                     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar nullam est egestas lorem elit duis. Maecenas id amet enim, lorem elit sed.',
@@ -391,42 +391,42 @@ const PortfolioAPI = {
                 },
                 summary: 'This is a summary',
                 stack: [
-                  {
-                    title: 'React.js', 
-                    icon: '/assets/svg/react.svg'
-                  },
-                  {
-                    title: 'Next.js',
-                    icon: '/assets/svg/next.svg'
-                  },
-                  {  
-                    title: 'Typescript',
-                    icon: '/assets/svg/typescript.svg'
-                  },
-                  {  
-                    title: 'Tailwindcss',
-                    icon: '/assets/svg/tailwindcss.svg'
-                  },
-                  {  
-                    title: 'MUI',
-                    icon: '/assets/svg/mui.svg'
-                  },
-                  {  
-                    title: 'React Query',
-                    icon: '/assets/svg/react-query.svg'
-                  },
-                  {  
-                    title: 'Playwright',
-                    icon: '/assets/svg/playwright.svg'
-                  },
-                  {  
-                    title: 'Yarn Workspace',
-                    icon: '/assets/svg/yarn.svg'
-                  },
-                  {  
-                    title: 'Gitlab CI',
-                    icon: '/assets/svg/gitlab.svg'
-                  } 
+                    {
+                        title: 'React.js',
+                        icon: '/assets/svg/react.svg',
+                    },
+                    {
+                        title: 'Next.js',
+                        icon: '/assets/svg/next.svg',
+                    },
+                    {
+                        title: 'Typescript',
+                        icon: '/assets/svg/typescript.svg',
+                    },
+                    {
+                        title: 'Tailwindcss',
+                        icon: '/assets/svg/tailwindcss.svg',
+                    },
+                    {
+                        title: 'MUI',
+                        icon: '/assets/svg/mui.svg',
+                    },
+                    {
+                        title: 'React Query',
+                        icon: '/assets/svg/react-query.svg',
+                    },
+                    {
+                        title: 'Playwright',
+                        icon: '/assets/svg/playwright.svg',
+                    },
+                    {
+                        title: 'Yarn Workspace',
+                        icon: '/assets/svg/yarn.svg',
+                    },
+                    {
+                        title: 'Gitlab CI',
+                        icon: '/assets/svg/gitlab.svg',
+                    },
                 ],
                 testimonial:
                     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar nullam est egestas lorem elit duis. Maecenas id amet enim, lorem elit sed.',
@@ -452,42 +452,42 @@ const PortfolioAPI = {
                 },
                 summary: 'This is a summary',
                 stack: [
-                  {
-                    title: 'React.js', 
-                    icon: '/assets/svg/react.svg'
-                  },
-                  {
-                    title: 'Next.js',
-                    icon: '/assets/svg/next.svg'
-                  },
-                  {  
-                    title: 'Typescript',
-                    icon: '/assets/svg/typescript.svg'
-                  },
-                  {  
-                    title: 'Tailwindcss',
-                    icon: '/assets/svg/tailwindcss.svg'
-                  },
-                  {  
-                    title: 'MUI',
-                    icon: '/assets/svg/mui.svg'
-                  },
-                  {  
-                    title: 'React Query',
-                    icon: '/assets/svg/react-query.svg'
-                  },
-                  {  
-                    title: 'Playwright',
-                    icon: '/assets/svg/playwright.svg'
-                  },
-                  {  
-                    title: 'Yarn Workspace',
-                    icon: '/assets/svg/yarn.svg'
-                  },
-                  {  
-                    title: 'Gitlab CI',
-                    icon: '/assets/svg/gitlab.svg'
-                  } 
+                    {
+                        title: 'React.js',
+                        icon: '/assets/svg/react.svg',
+                    },
+                    {
+                        title: 'Next.js',
+                        icon: '/assets/svg/next.svg',
+                    },
+                    {
+                        title: 'Typescript',
+                        icon: '/assets/svg/typescript.svg',
+                    },
+                    {
+                        title: 'Tailwindcss',
+                        icon: '/assets/svg/tailwindcss.svg',
+                    },
+                    {
+                        title: 'MUI',
+                        icon: '/assets/svg/mui.svg',
+                    },
+                    {
+                        title: 'React Query',
+                        icon: '/assets/svg/react-query.svg',
+                    },
+                    {
+                        title: 'Playwright',
+                        icon: '/assets/svg/playwright.svg',
+                    },
+                    {
+                        title: 'Yarn Workspace',
+                        icon: '/assets/svg/yarn.svg',
+                    },
+                    {
+                        title: 'Gitlab CI',
+                        icon: '/assets/svg/gitlab.svg',
+                    },
                 ],
                 testimonial:
                     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar nullam est egestas lorem elit duis. Maecenas id amet enim, lorem elit sed.',

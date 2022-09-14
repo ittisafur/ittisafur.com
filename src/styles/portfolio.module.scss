@@ -3,10 +3,10 @@
 .title {
     @apply font-ProximaNovaBold;
     @apply text-2xl;
+    @apply md:text-4xl;
     @apply lg:text-5xl;
     @apply w-full;
-    @apply text-left;
-    @apply lg:text-center;
+    @apply text-center;
     @apply uppercase;
 }
 
@@ -22,14 +22,18 @@
     @apply flex-col;
     @apply lg:flex-row;
     @apply justify-between;
-    @apply items-start;
+    @apply items-center;
+    @apply lg:items-start;
     @apply lg:items-center;
 
-    .stack {  
+    .stack {
         @apply relative;
         @apply z-50;
-        @apply text-center; 
+        @apply text-center;
         @apply p-4;
+        @apply w-auto;
+        @apply md:w-2/3;
+        @apply lg:w-auto;
 
         &::before {
             content: '';
@@ -53,26 +57,29 @@
         }
 
         .list {
-          @apply grid;
-          @apply grid-cols-3;
-          @apply lg:grid-cols-4;
-          @apply gap-3 ;
-          @apply relative;
-          @apply cursor-pointer;
+            @apply grid;
+            @apply grid-cols-3;
+            @apply lg:grid-cols-4;
+            @apply gap-3;
+            @apply relative;
+            @apply cursor-pointer;
 
-          .title {
-            @apply font-ProximaNovaBold;
-            @apply leading-4;
-            @apply text-center;
-            @apply tracking-tight;
-            font-size: 10px;
-          }
-
+            .title {
+                @apply font-ProximaNovaBold;
+                @apply leading-4;
+                @apply text-center;
+                @apply tracking-tight;
+                font-size: 10px;
+            }
         }
     }
     .summary {
         @apply my-4;
-        @apply lg:mt-0;
+        @apply lg:mt-0; 
+        @apply w-2/3;
+        @apply lg:w-auto;
+        @apply text-center;
+        @apply lg:text-left;
         .head {
             @apply font-bold;
             @apply uppercase;
@@ -91,7 +98,7 @@
 .details {
     @apply text-left;
     @apply tracking-tight;
-    @apply my-4;
+    @apply my-8;
     @apply px-2;
     @apply md:px-0;
     @apply lg:my-16;
@@ -110,7 +117,7 @@
 .testimonial {
     @apply text-left;
     @apply tracking-tight;
-    @apply my-4;
+    @apply my-8;
     @apply px-2;
     @apply md:px-0;
     @apply lg:my-16;
@@ -151,7 +158,9 @@
     @apply py-4;
     @apply bg-secondary-light;
     @apply text-primary-light;
-    @apply max-w-xs;
+    @apply w-3/4;
+    @apply md:w-auto;
+    @apply md:max-w-xs;
     @apply mx-auto;
     @apply rounded-md;
     @apply uppercase;
