@@ -53,7 +53,7 @@ const PortfolioExcerpt = memo(() => {
                 </SwiperSlide>
             );
         });
-    }, [PortfolioAPI]);
+    }, [Portfolio]);
 
     return (
         <Fragment>

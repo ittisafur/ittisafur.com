@@ -41,6 +41,7 @@ const Portfolio: FunctionComponent<Props> = ({ content, settings }) => {
                         src={media.thumbnail}
                         objectFit="cover"
                         objectPosition="center"
+                        alt={content.title}
                     />
                 </div>
 
@@ -122,6 +123,7 @@ const Gallery: FunctionComponent<GalleryProps> = memo(({ Media }) => {
                             layout="fill"
                             objectFit="cover"
                             objectPosition="center"
+                            alt="Project Images"
                         />
                     </a>
                 ))}
