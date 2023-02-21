@@ -15,15 +15,15 @@ function Header() {
             <div className={cx('menu')}>
                 <div className={cx('left')}>
                     <Link href="/" passHref>
-                            <span className={cx('screen-reader')}>
-                                Ittisafur - Full Stack Developer
-                            </span>
-                            <Image
-                                src="/assets/svg/logo-white.svg"
-                                alt="Ittisafur Logo"
-                                width={100}
-                                height={100}
-                            />
+                        <span className={cx('screen-reader')}>
+                            Ittisafur - Full Stack Developer
+                        </span>
+                        <Image
+                            src="/assets/svg/logo-white.svg"
+                            alt="Ittisafur Logo"
+                            width={100}
+                            height={100}
+                        />
                     </Link>
                 </div>
 
