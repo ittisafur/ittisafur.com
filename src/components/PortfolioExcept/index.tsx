@@ -21,13 +21,13 @@ const PortfolioExcerpt = memo(() => {
         return Portfolio.map((item, index) => {
             return (
                 <SwiperSlide key={index}>
-                    {/* <Link */}
-                    {/*     href={{ */}
-                    {/*         pathname: `/portfolio/${item.slug}`, */}
-                    {/*     }} */}
-                    {/*     passHref */}
-                    {/* > */}
-                    <a className={cx('link')}>
+                    <Link
+                        href={{
+                            pathname: `/portfolio/${item.slug}`,
+                        }}
+                        passHref
+                        className={cx('link')}
+                    >
                         <div>
                             {item.media?.thumbnail && (
                                 <div className="relative" key={index}>
@@ -48,8 +48,7 @@ const PortfolioExcerpt = memo(() => {
                                 </div>
                             )}
                         </div>
-                    </a>
-                    {/* </Link> */}
+                    </Link>
                 </SwiperSlide>
             );
         });
