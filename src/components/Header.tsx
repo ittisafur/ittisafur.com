@@ -15,7 +15,6 @@ function Header() {
             <div className={cx('menu')}>
                 <div className={cx('left')}>
                     <Link href="/" passHref>
-                        <a>
                             <span className={cx('screen-reader')}>
                                 Ittisafur - Full Stack Developer
                             </span>
@@ -25,7 +24,6 @@ function Header() {
                                 width={100}
                                 height={100}
                             />
-                        </a>
                     </Link>
                 </div>
 
@@ -70,12 +68,12 @@ function Header() {
                         </div>
                         <div className="py-6 px-2 space-y-6">
                             <div className="grid grid-cols-1 gap-y-4 gap-x-8 justify-items-center">
-                                <Link href="/portfolio">
-                                    <a className={cx('link')}>Portfolio</a>
+                                <Link href="/portfolio" className={cx('link')}>
+                                    Portfolio
                                 </Link>
 
-                                <Link href="/">
-                                    <a className={cx('link')}>Contact</a>
+                                <Link href="/" className={cx('link')}>
+                                    Contact
                                 </Link>
                             </div>
                         </div>

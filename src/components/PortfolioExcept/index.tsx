@@ -21,35 +21,35 @@ const PortfolioExcerpt = memo(() => {
         return Portfolio.map((item, index) => {
             return (
                 <SwiperSlide key={index}>
-                    <Link
-                        href={{
-                            pathname: `/portfolio/${item.slug}`,
-                        }}
-                        passHref
-                    >
-                        <a className={cx('link')}>
-                            <div>
-                                {item.media?.thumbnail && (
-                                    <div className="relative" key={index}>
-                                        <div className={cx('image-container')}>
-                                            <Image
-                                                src={item.media.thumbnail}
-                                                layout="fill"
-                                                className={cx('image')}
-                                                objectFit="cover"
-                                                objectPosition="center"
-                                                alt={item.title}
-                                            />
-                                        </div>
-                                        <div className={cx('content')}>
-                                            <h3 className={cx('title')}>{item.title}</h3>
-                                            <p className={cx('description')}>{item.description}</p>
-                                        </div>
+                    {/* <Link */}
+                    {/*     href={{ */}
+                    {/*         pathname: `/portfolio/${item.slug}`, */}
+                    {/*     }} */}
+                    {/*     passHref */}
+                    {/* > */}
+                    <a className={cx('link')}>
+                        <div>
+                            {item.media?.thumbnail && (
+                                <div className="relative" key={index}>
+                                    <div className={cx('image-container')}>
+                                        <Image
+                                            src={item.media.thumbnail}
+                                            layout="fill"
+                                            className={cx('image')}
+                                            objectFit="cover"
+                                            objectPosition="center"
+                                            alt={item.title}
+                                        />
                                     </div>
-                                )}
-                            </div>
-                        </a>
-                    </Link>
+                                    <div className={cx('content')}>
+                                        <h3 className={cx('title')}>{item.title}</h3>
+                                        <p className={cx('description')}>{item.description}</p>
+                                    </div>
+                                </div>
+                            )}
+                        </div>
+                    </a>
+                    {/* </Link> */}
                 </SwiperSlide>
             );
         });
