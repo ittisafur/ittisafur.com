@@ -1,9 +1,14 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:base"
-  ],
-  "prConcurrentLimit": 5,
+  "prConcurrentLimit": 10,
   "rangeStrategy": "pin"
-
+  "baseBranches": [
+    "dep-updates"
+  ],
+  "packageRules": [
+    {
+      "updateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true
+    }
+  ]
 }
