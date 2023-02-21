@@ -20,7 +20,7 @@
     "@heroicons/react": "1.0.6",
     "@mdx-js/loader": "2.1.2",
     "@mdx-js/react": "2.1.2",
-    "@mui/lab": "5.0.0-alpha.90",
+    "@mui/lab": "5.0.0-alpha.120",
     "@mui/material": "5.8.4",
     "@next/mdx": "12.2.0",
     "axios": "0.27.2",
