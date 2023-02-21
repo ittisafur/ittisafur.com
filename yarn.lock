@@ -105,7 +105,21 @@
   dependencies:
     "@cloudinary/url-gen" "^1.7.0"
 
-"@cloudinary/url-gen@1.8.6", "@cloudinary/url-gen@^1.7.0":
+"@cloudinary/transformation-builder-sdk@^1.2.0":
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/@cloudinary/transformation-builder-sdk/-/transformation-builder-sdk-1.2.4.tgz#85994d739a778b3c61cb759bbe3ae7272897e09c"
+  integrity sha512-mwjEBT+JQshbXFoR3p7UvZC7yR+C3GpGTtvRYhiqjGZCKXCfvq3k5zCddFsuOsxsU7K9pvNwLDtLNcWWwslrbQ==
+  dependencies:
+    "@cloudinary/url-gen" "^1.7.0"
+
+"@cloudinary/url-gen@1.9.0":
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/@cloudinary/url-gen/-/url-gen-1.9.0.tgz#0a8421ff4a4330993e9cf6b8225d918e4614af9e"
+  integrity sha512-rw2/KkWsb2oBTQX58E7Zm1pOb3+K7tqHPxms2C7P49qzJbqG+y/u1StwfqCrE94mZMr8q+o47cHxoQJMwWz1fQ==
+  dependencies:
+    "@cloudinary/transformation-builder-sdk" "^1.2.0"
+
+"@cloudinary/url-gen@^1.7.0":
   version "1.8.6"
   resolved "https://registry.yarnpkg.com/@cloudinary/url-gen/-/url-gen-1.8.6.tgz#5d28c6957c01f3237230181387c818394ff30aab"
   integrity sha512-BZUHOns1+ECmZTGlcWWZ1mM7Fu5TsSWqbknGCVtmhgX2g82kwZa3W3LhICMu/xyPjuQmz8ykjXHAkRw5kRZf+w==
