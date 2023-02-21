@@ -1175,10 +1175,10 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-syntax-highlighter@15.5.2":
-  version "15.5.2"
-  resolved "https://registry.yarnpkg.com/@types/react-syntax-highlighter/-/react-syntax-highlighter-15.5.2.tgz#b3450851c11b8526a27edf51d00769b69d8fbf20"
-  integrity sha512-cJJvwU8lQv/efGSo/LmPoaOqWi/B0AG4CNKKCn7HPUL25SqiPn1Vl+fV1JiUigJv97ruTZ8mo08+b8/0zoYufA==
+"@types/react-syntax-highlighter@15.5.6":
+  version "15.5.6"
+  resolved "https://registry.yarnpkg.com/@types/react-syntax-highlighter/-/react-syntax-highlighter-15.5.6.tgz#77c95e6b74d2be23208fcdcf187b93b47025f1b1"
+  integrity sha512-i7wFuLbIAFlabTeD2I1cLjEOrG/xdMa/rpx2zwzAoGHuXJDhSqp9BSfDlMHSh9JSuNfxHk9eEmMX6D55GiyjGg==
   dependencies:
     "@types/react" "*"
 
