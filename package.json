@@ -12,33 +12,33 @@
     "prepare": "husky prepare"
   },
   "dependencies": {
-    "@cloudinary/react": "1.4.2",
+    "@cloudinary/react": "1.11.0",
     "@cloudinary/url-gen": "1.9.0",
     "@emotion/react": "11.9.3",
     "@emotion/styled": "11.9.3",
     "@headlessui/react": "1.7.11",
     "@heroicons/react": "1.0.6",
     "@mdx-js/loader": "2.3.0",
-    "@mdx-js/react": "2.1.2",
+    "@mdx-js/react": "2.3.0",
     "@mui/lab": "5.0.0-alpha.120",
-    "@mui/material": "5.8.4",
+    "@mui/material": "5.11.10",
     "@next/mdx": "12.3.4",
     "axios": "0.27.2",
     "classnames": "2.3.2",
     "firebase": "9.9.1",
     "gray-matter": "4.0.3",
     "gsap": "3.10.4",
-    "lightgallery": "2.6.0",
+    "lightgallery": "2.7.1",
     "marked": "4.0.17",
-    "next": "13.0.2",
+    "next": "13.1.6",
     "next-seo": "5.4.0",
-    "next-sitemap": "3.0.5",
+    "next-sitemap": "3.1.52",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-lottie": "1.2.3",
     "react-masonry-css": "1.0.16",
     "react-syntax-highlighter": "15.5.0",
-    "swiper": "8.3.1",
+    "swiper": "8.4.7",
     "typewriter-effect": "2.19.0"
   },
   "devDependencies": {
@@ -53,8 +53,8 @@
     "eslint-config-next": "13.1.6",
     "husky": "8.0.1",
     "postcss": "8.4.21",
-    "sass": "1.52.3",
+    "sass": "1.58.3",
     "tailwindcss": "3.1.2",
-    "typescript": "4.7.3"
+    "typescript": "4.9.5"
   }
 }
