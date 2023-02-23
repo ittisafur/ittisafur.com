@@ -25,7 +25,7 @@
     "@next/mdx": "12.3.4",
     "axios": "0.27.2",
     "classnames": "2.3.2",
-    "firebase": "9.9.1",
+    "firebase": "9.17.1",
     "gray-matter": "4.0.3",
     "gsap": "3.10.4",
     "lightgallery": "2.7.1",
