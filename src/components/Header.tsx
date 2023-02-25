@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import { Popover, Transition } from '@headlessui/react';
-import { XIcon } from '@heroicons/react/24/outline';
+import { XMarkIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -61,7 +61,7 @@ function Header() {
                                 <div className="-mr-2">
                                     <Popover.Button className="bg-primary rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary">
                                         <span className={cx('screen-reacer')}>Close menu</span>
-                                        <XIcon className={cx('icon')} aria-hidden="true" />
+                                        <XMarkIcon className={cx('icon')} aria-hidden="true" />
                                     </Popover.Button>
                                 </div>
                             </div>
