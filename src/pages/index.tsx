@@ -32,9 +32,9 @@ const Home: NextPage = () => {
 const Intro = memo(() => {
     return (
         <div className={cx('intro')}>
-            <div className="mt-16 text-left h-full flex flex-col justify-center">
-                <div className="font-ProximaNovaBold text-3xl text-cyan  ">
-                    <h4 className="my-2">Hi, I'm Ittisafur. I specialize in</h4>
+            <div className={cx('content-wrapper')}>
+                <div className={cx('content')}>
+                    <h4>Hi, I'm Ittisafur. I specialize in</h4>
                     <Typewriter
                         options={{
                             strings: [
@@ -51,7 +51,7 @@ const Intro = memo(() => {
                         }}
                     />
                 </div>
-                <div className="text-base tracking-wide my-6">
+                <div className={cx('paragraphs')}>
                     <p>
                         Primarily focused on building modern, responsive websites and web
                         accessibility websites. Love to experiment with new technologies and build
@@ -81,27 +81,25 @@ const Intro = memo(() => {
 const RecentWorks = () => {
     return (
         <div className={cx('recent-works')}>
-            <div className="w-full text-center lg:w-2/6 ">
-                <h1 className="font-ProximaNovaBold text-3xl uppercase text-cyan tracking-wider">
-                    Recent Works
-                </h1>
-                <p className="-ml-3">Check out my most recent works.</p>
+            <div className={cx('recent-works-wrapper')}>
+                <h1 className={cx('heading')}>Recent Works</h1>
+                <p>Check out my most recent works.</p>
 
-                <div className="transform rotate-[270deg]">
-                    <Lottie
-                        isClickToPauseDisabled={true}
-                        options={{
-                            loop: true,
-                            autoplay: true,
-                            animationData: FadingArrow,
-                            rendererSettings: {
-                                preserveAspectRatio: 'xMidYMid slice',
-                            },
-                        }}
-                        height={100}
-                        width={100}
-                    />
-                </div>
+                {/* <div className={cx('lottie-wrapper')}> */}
+                {/*     <Lottie */}
+                {/*         isClickToPauseDisabled={true} */}
+                {/*         options={{ */}
+                {/*             loop: true, */}
+                {/*             autoplay: true, */}
+                {/*             animationData: FadingArrow, */}
+                {/*             rendererSettings: { */}
+                {/*                 preserveAspectRatio: 'xMidYMid slice', */}
+                {/*             }, */}
+                {/*         }} */}
+                {/*         height={100} */}
+                {/*         width={100} */}
+                {/*     /> */}
+                {/* </div> */}
             </div>
             <PortfolioExcerpt />
         </div>

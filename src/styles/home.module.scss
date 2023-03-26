@@ -2,7 +2,7 @@
     @apply container;
     @apply mx-auto;
     @apply px-2;
-    @apply lg:px-0;
+    @apply lg:px-4;
 }
 
 .container {
@@ -29,9 +29,62 @@
     @apply h-auto;
     height: calc(100vh - 7.5rem);
 }
+
+.content-wrapper {
+    @apply mt-16;
+    @apply h-full;
+    @apply flex;
+    @apply flex-col;
+    @apply justify-center;
+    @apply text-center;
+    @apply md:text-left;
+}
+
+.content {
+    @apply font-ProximaNovaBold;
+    @apply text-3xl;
+    @apply text-cyan;
+
+    > h4 {
+        @apply my-2;
+    }
+}
+
+.paragraphs {
+    @apply text-base;
+    @apply tracking-wide;
+    @apply my-6;
+}
 // Intro End
 
 // Recent Works
 .recent-works {
-    @apply flex flex-col lg:flex-row justify-center items-center container mx-auto h-screen;
+    @apply justify-center;
+    @apply items-center;
+    @apply mx-auto;
+    @apply flex;
+    @apply flex-col;
+    @apply space-y-4;
+    @apply md:space-y-11;
+}
+
+.recent-works-wrapper {
+    @apply text-center;
+    @apply w-full;
+
+    > p {
+        @apply -ml-3;
+    }
+}
+
+.heading {
+    @apply font-ProximaNovaBold;
+    @apply text-3xl;
+    @apply uppercase;
+    @apply text-cyan;
+    @apply tracking-wider;
+}
+.lottie-wrapper {
+    @apply transform;
+    @apply rotate-[270deg];
 }
