@@ -2,12 +2,16 @@
 const path = require('path');
 
 module.exports = {
-    reactStrictMode: true,
-    swcMinify: true,
-    sassOptions: {
-        includePaths: [path.join(__dirname, 'styles')],
-    },
-    images: {
-        domains: ['images.unsplash.com', 'res.cloudinary.com'],
-    },
+  reactStrictMode: true,
+  swcMinify: true,
+  sassOptions: {
+    includePaths: [path.join(__dirname, 'styles')],
+  },
+  images: {
+    domains: ['images.unsplash.com', 'res.cloudinary.com'],
+  },
+  i18n: {
+    locales: ['en'],
+    defaultLocale: 'en',
+  }
 };
