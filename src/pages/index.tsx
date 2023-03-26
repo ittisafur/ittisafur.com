@@ -18,8 +18,8 @@ const Home: NextPage = () => {
     return (
         <div className={cx('wrapper')}>
             <SEO
-                title="Welcome, Home"
-                description="Your go to guy for business solution"
+                title="Welcome to Ittisafur's Portfolio"
+                description="Custom web development that drives results."
                 image="/assets/svg/logo-white.svg"
                 keywords="web design, website design, website builder, wordpress, web developer, web designer, website creator, responsive web design"
             />
