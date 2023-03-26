@@ -46,8 +46,8 @@
     @apply bg-opacity-90;
     @apply px-4;
 
-    /* @apply opacity-0; */
-    /* @apply hover:opacity-100; */
+    @apply opacity-0;
+    @apply hover:opacity-100;
 
     .title {
         @apply font-bold;
