@@ -79,7 +79,7 @@ const PortfolioAPI = {
                 sideProject: false,
                 media: {
                     thumbnail:
-                        'https://res.cloudinary.com/dv7g8veki/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1658417518/Portfolio/Banana_Boyz_Club_nphhr8.png',
+                        'https://res.cloudinary.com/dv7g8veki/image/upload/v1663187274/personal_website/portfolio/banana-boyz-club/thumbnail_u9nifz.png',
                     images: [
                         'https://res.cloudinary.com/dv7g8veki/image/upload/v1662747663/Personal%20Website/Portfolio/banana_boyz_club_roadmap.png',
                     ],
@@ -131,7 +131,7 @@ const PortfolioAPI = {
                 id: 3,
                 title: 'Protoconn',
                 slug: 'protoconn',
-                startDate: '2022-02-01',
+                startDate: '2022-02-25',
                 endDate: '2022-05-31',
                 isWorking: false,
                 hasDesign: true,
@@ -142,7 +142,7 @@ const PortfolioAPI = {
                 sideProject: false,
                 media: {
                     thumbnail:
-                        'https://res.cloudinary.com/dv7g8veki/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1658408288/Portfolio/raush.png',
+                        'https://res.cloudinary.com/dv7g8veki/image/upload/v1679869295/personal_website/portfolio/protoconn/2023-03-27_04-20_evkvrd.png',
                     images: [],
                 },
                 summary: 'This is a summary',
@@ -167,22 +167,6 @@ const PortfolioAPI = {
                         title: 'MUI',
                         icon: '/assets/svg/mui.svg',
                     },
-                    {
-                        title: 'React Query',
-                        icon: '/assets/svg/react-query.svg',
-                    },
-                    {
-                        title: 'Playwright',
-                        icon: '/assets/svg/playwright.svg',
-                    },
-                    {
-                        title: 'Yarn Workspace',
-                        icon: '/assets/svg/yarn.svg',
-                    },
-                    {
-                        title: 'Gitlab CI',
-                        icon: '/assets/svg/gitlab.svg',
-                    },
                 ],
                 testimonial:
                     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar nullam est egestas lorem elit duis. Maecenas id amet enim, lorem elit sed.',
@@ -203,7 +187,7 @@ const PortfolioAPI = {
                 sideProject: false,
                 media: {
                     thumbnail:
-                        'https://res.cloudinary.com/dv7g8veki/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1658408288/Portfolio/raush.png',
+                        'https://res.cloudinary.com/dv7g8veki/image/upload/v1679869660/personal_website/portfolio/think-studio/2023-03-27_04-24_bxekqw.png',
                     images: [],
                 },
                 summary: 'This is a summary',
@@ -325,7 +309,7 @@ const PortfolioAPI = {
                 sideProject: false,
                 media: {
                     thumbnail:
-                        'https://res.cloudinary.com/dv7g8veki/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1658408288/Portfolio/raush.png',
+                        'https://res.cloudinary.com/dv7g8veki/image/upload/v1679869758/personal_website/portfolio/rehashltd/2023-03-27_04-28_wxzirz.png',
                     images: [],
                 },
                 summary: 'This is a summary',
@@ -373,7 +357,7 @@ const PortfolioAPI = {
             },
             {
                 id: 7,
-                title: 'movie app',
+                title: 'Movie app',
                 slug: 'movie-app',
                 startdate: '2021-02-01',
                 enddate: '2021-05-31',
@@ -386,7 +370,7 @@ const PortfolioAPI = {
                 sideproject: true,
                 media: {
                     thumbnail:
-                        'https://res.cloudinary.com/dv7g8veki/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1658408288/portfolio/raush.png',
+                        'https://res.cloudinary.com/dv7g8veki/image/upload/v1679869819/personal_website/portfolio/movie-app/2023-03-27_04-29_mhwqe1.png',
                     images: [],
                 },
                 summary: 'This is a summary',

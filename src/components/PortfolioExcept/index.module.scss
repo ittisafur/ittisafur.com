@@ -1,9 +1,13 @@
 .link {
     @apply cursor-pointer;
+
+    @apply relative;
+    &:hover > .content {
+        @apply flex;
+    }
 }
 
 .image-container {
-    @apply relative;
     @apply w-48;
     @apply h-48;
     @apply lg:w-60;
@@ -12,9 +16,6 @@
     @apply overflow-hidden;
     @apply mx-auto;
     @apply my-4;
-    &:hover > .content {
-        @apply block;
-    }
 }
 
 .image {
@@ -24,22 +25,40 @@
 }
 
 .content {
-    @apply opacity-0;
     @apply absolute;
     @apply z-10;
-    @apply top-0;
+    @apply top-0.5;
     @apply left-0;
-    @apply transform;
-    @apply translate-x-[90%];
-    @apply translate-y-[150%];
     @apply text-center;
-    @apply w-full;
-    @apply h-full;
+    @apply flex;
+    @apply flex-col;
+    @apply justify-center;
+    @apply items-center;
+    width: 102%;
+    height: 95%;
+    @apply transform;
+    /* @apply translate-x-[0%]; */
+    @apply translate-y-[5%];
+    @apply transition-all;
+    @apply duration-300;
+    @apply ease-in-out;
+    @apply bg-primary;
+    @apply bg-opacity-90;
+    @apply px-4;
+
+    @apply opacity-0;
     @apply hover:opacity-100;
 
     .title {
+        @apply font-bold;
+        @apply text-cyan;
+    }
+
+    .isPortfolioPage {
+        width: 95% !important;
     }
 
     .description {
+        @apply text-secondary-light;
     }
 }

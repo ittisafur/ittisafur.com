@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import { Popover, Transition } from '@headlessui/react';
-import { XMarkIcon } from '@heroicons/react/24/outline';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -27,22 +27,22 @@ function Header() {
                     </Link>
                 </div>
 
-                {/* <div className="-mr-2 -my-2 md:hidden"> */}
-                {/*     <Popover.Button className="rounded-md p-2 inline-flex items-center justify-center hover:text-secondary hover:text-opacity-70 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary"> */}
-                {/*         <span className={cx('screen-reader')}>Open menu</span> */}
-                {/*         <MenuIcon className={cx('icon')} aria-hidden="true" /> */}
-                {/*     </Popover.Button> */}
-                {/* </div> */}
+                <div className="-mr-2 -my-2 md:hidden">
+                    <Popover.Button className="rounded-md p-2 inline-flex items-center justify-center hover:text-secondary hover:text-opacity-70 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary">
+                        <span className={cx('screen-reader')}>Open menu</span>
+                        <Bars3Icon className={cx('icon')} aria-hidden="true" />
+                    </Popover.Button>
+                </div>
 
-                {/* <Popover.Group as="nav" className={cx('right')}> */}
-                {/*     <Link href="/portfolio"> */}
-                {/*         <a className={cx('link')}>Portfolio</a> */}
-                {/*     </Link> */}
+                <Popover.Group as="nav" className={cx('right')}>
+                    <Link href="/portfolio" className={cx('link')}>
+                        Portfolio
+                    </Link>
 
-                {/*     <Link href="/"> */}
-                {/*         <a className={cx('link')}>Contact</a> */}
-                {/*     </Link> */}
-                {/* </Popover.Group> */}
+                    <Link href="/" className={cx('link')}>
+                        Contact
+                    </Link>
+                </Popover.Group>
             </div>
 
             <Transition

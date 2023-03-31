@@ -80,7 +80,7 @@ const Portfolio: FunctionComponent<Props> = ({ content, settings }) => {
                     </div>
                 </div>
             </section>
-            <Gallery Media={media} />
+            {/* <Gallery Media={media} /> */}
             <div className={cx('details')}>
                 <h2 className={cx('head')}>Detailed Information</h2>
                 <p>{description}</p>
