@@ -39,7 +39,7 @@
   "devDependencies": {
     "@types/marked": "4.0.8",
     "@types/node": "18.15.10",
-    "@types/react": "18.0.29",
+    "@types/react": "18.0.32",
     "@types/react-gtm-module": "2.0.1",
     "@types/react-syntax-highlighter": "15.5.6",
     "autoprefixer": "10.4.14",
