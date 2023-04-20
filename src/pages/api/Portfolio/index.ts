@@ -235,67 +235,6 @@ const PortfolioAPI = {
             },
             {
                 id: 5,
-                title: 'WilsonH',
-                slug: 'wilsonh',
-                startDate: '2021-02-01',
-                endDate: '2021-05-31',
-                isWorking: false,
-                hasDesign: false,
-                workType: 'Contract',
-                location: 'Remote',
-                description:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, sodales cursus integer tristique nulla praesent senectus interdum. Quam nunc, ut posuere ut feugiat nisi viverra vitae. Pulvinar eget ipsum, nulla duis vel. Posuere nec commodo nulla in ac ullamcorper aenean.',
-                sideProject: false,
-                media: {
-                    thumbnail:
-                        'https://res.cloudinary.com/dv7g8veki/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1658408288/Portfolio/raush.png',
-                    images: [],
-                },
-                summary: 'This is a summary',
-                stack: [
-                    {
-                        title: 'React.js',
-                        icon: '/assets/svg/react.svg',
-                    },
-                    {
-                        title: 'Next.js',
-                        icon: '/assets/svg/next.svg',
-                    },
-                    {
-                        title: 'Typescript',
-                        icon: '/assets/svg/typescript.svg',
-                    },
-                    {
-                        title: 'Tailwindcss',
-                        icon: '/assets/svg/tailwindcss.svg',
-                    },
-                    {
-                        title: 'MUI',
-                        icon: '/assets/svg/mui.svg',
-                    },
-                    {
-                        title: 'React Query',
-                        icon: '/assets/svg/react-query.svg',
-                    },
-                    {
-                        title: 'Playwright',
-                        icon: '/assets/svg/playwright.svg',
-                    },
-                    {
-                        title: 'Yarn Workspace',
-                        icon: '/assets/svg/yarn.svg',
-                    },
-                    {
-                        title: 'Gitlab CI',
-                        icon: '/assets/svg/gitlab.svg',
-                    },
-                ],
-                testimonial:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar nullam est egestas lorem elit duis. Maecenas id amet enim, lorem elit sed.',
-                url: null,
-            },
-            {
-                id: 6,
                 title: 'Rehash LTD',
                 slug: 'rehash-ltd',
                 startDate: '2021-02-01',
@@ -356,7 +295,7 @@ const PortfolioAPI = {
                 url: 'https://rehashltd.com',
             },
             {
-                id: 7,
+                id: 6,
                 title: 'Movie app',
                 slug: 'movie-app',
                 startdate: '2021-02-01',
@@ -417,7 +356,7 @@ const PortfolioAPI = {
                 url: 'https://movieapp.ittisafur.com',
             },
             {
-                id: 8,
+                id: 7,
                 title: 'KB Trust',
                 slug: 'kb-trust',
                 startdate: '2021-02-01',

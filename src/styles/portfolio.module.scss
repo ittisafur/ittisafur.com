@@ -208,11 +208,10 @@
     @apply flex;
     @apply justify-center;
     @apply items-center;
-    @apply py-4;
     @apply bg-secondary-light;
     @apply text-primary-light;
     @apply w-3/4;
-    @apply md:w-auto;
+    @apply md:w-max;
     @apply md:max-w-xs;
     @apply mx-auto;
     @apply rounded-md;
@@ -226,6 +225,12 @@
     @apply ease-in;
     @apply hover:transform;
     @apply hover:scale-105;
+    
+    & > a {
+    @apply py-4;
+    @apply px-14;
+    @apply md:px-24;
+  }
 }
 
 .gallery {
