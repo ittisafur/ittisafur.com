@@ -44,7 +44,7 @@
     "@types/react-syntax-highlighter": "15.5.6",
     "autoprefixer": "10.4.14",
     "eslint": "8.38.0",
-    "eslint-config-next": "13.3.0",
+    "eslint-config-next": "13.3.1",
     "husky": "8.0.3",
     "postcss": "8.4.23",
     "sass": "1.62.0",
