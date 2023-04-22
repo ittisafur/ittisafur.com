@@ -41,7 +41,7 @@ function Header() {
                 <div
                     className={cx('nav-overlay')}
                     style={{
-                        top: isOpen ? '0' : '-100%',
+                        top: isOpen ? '0' : '-200%',
                         transitionDelay: isOpen ? '0.3s' : '0s',
                     }}
                 >
@@ -62,7 +62,7 @@ function Header() {
 
                         <li className={cx('items')}>
                             <Link
-                                href="/"
+                                href="/portfolio"
                                 className={cx('link')}
                                 onClick={() => setIsOpen(!isOpen)}
                                 style={{
