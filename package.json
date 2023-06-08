@@ -21,7 +21,7 @@
     "@vercel/analytics": "1.0.1",
     "axios": "1.4.0",
     "classnames": "2.3.2",
-    "firebase": "9.22.1",
+    "firebase": "9.22.2",
     "gsap": "3.12.1",
     "lightgallery": "2.7.1",
     "next": "13.4.4",
