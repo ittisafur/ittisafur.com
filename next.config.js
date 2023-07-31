@@ -6,6 +6,7 @@ module.exports = {
   swcMinify: true,
   env: {
     NEXT_PUBLIC_GTM_ID: 'GTM-T2XMWBJ',
+    NEXT_PUBLIC_GA4_MEASURMENT_ID: 'G-7VYVZFTH80',
   },
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],

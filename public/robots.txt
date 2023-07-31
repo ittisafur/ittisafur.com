@@ -7,3 +7,4 @@ Host: https://ittisafur.com
 
 # Sitemaps
 Sitemap: https://ittisafur.com/sitemap.xml
+Sitemap: https://ittisafur.com/portfolio/sitemap.xml

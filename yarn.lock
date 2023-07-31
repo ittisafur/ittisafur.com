@@ -97,16 +97,12 @@
     source-map "^0.5.7"
     stylis "4.2.0"
 
+
 "@emotion/cache@^11.11.0":
   version "11.11.0"
   resolved "https://registry.yarnpkg.com/@emotion/cache/-/cache-11.11.0.tgz#809b33ee6b1cb1a625fef7a45bc568ccd9b8f3ff"
   integrity sha512-P34z9ssTCBi3e9EI1ZsWpNHcfY1r09ZO0rZbRO2ob3ZQMnFI35jB536qoXbkdesr5EUhYi22anuEJuyxifaqAQ==
-  dependencies:
-    "@emotion/memoize" "^0.8.1"
-    "@emotion/sheet" "^1.2.2"
-    "@emotion/utils" "^1.2.1"
-    "@emotion/weak-memoize" "^0.3.1"
-    stylis "4.2.0"
+
 
 "@emotion/hash@^0.9.1":
   version "0.9.1"
@@ -2133,6 +2129,15 @@ fraction.js@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/fraction.js/-/fraction.js-4.2.0.tgz#448e5109a313a3527f5a3ab2119ec4cf0e0e2950"
   integrity sha512-MhLuK+2gUcnZe8ZHlaaINnQLl0xRIGRfcGk2yl8xoQAfHrSsL3rYu6FCmBdkdbhc9EPlwyGHewaRsvwRMJtAlA==
+
+framer-motion@^10.12.4:
+  version "10.12.4"
+  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-10.12.4.tgz#905fdfa5b63dae53a63d2549b29aef6193eb78c7"
+  integrity sha512-9gLtv8T6dui0tujHROR+VM3kdJyKiFCFiD94IQE+0OuX6LaIyXtdVpviokVdrHSb1giWhmmX4yzoucALMx6mtw==
+  dependencies:
+    tslib "^2.4.0"
+  optionalDependencies:
+    "@emotion/is-prop-valid" "^0.8.2"
 
 fs.realpath@^1.0.0:
   version "1.0.0"

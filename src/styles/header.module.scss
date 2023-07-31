@@ -1,61 +1,187 @@
-.wrapper {
-    @apply relative;
-    @apply font-GentonaExtraBold;
-    @apply container;
-    @apply mx-auto;
-    @apply px-4;
-    @apply md:px-2;
+.nav {
+    @apply fixed;
+    @apply z-10;
 }
 
-.menu {
+.navbar {
+    @apply fixed;
+    @apply top-0;
+    @apply left-0;
+    @apply w-full;
     @apply flex;
     @apply justify-between;
     @apply items-center;
-    @apply md:space-x-10;
+    @apply p-4;
 }
 
-.left {
-    @apply flex;
-    @apply justify-start;
-    @apply lg:w-0;
-    @apply lg:flex-1;
+.logo {
+    @apply no-underline;
+    @apply text-white;
 }
 
-.right {
-    @apply hidden;
-    @apply md:flex;
-    @apply space-x-10;
+.menu-toggle {
+    @apply cursor-pointer;
 }
 
-.mobile {
+.nav-overlay {
+    @apply fixed;
+    @apply bg-primary;
+    @apply -z-10;
+    @apply -top-full;
+    @apply left-0;
+    @apply w-full;
+    @apply h-screen;
+    @apply overflow-hidden;
+    @apply p-8;
+    transition: all 2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hambox {
+    @apply relative;
+    @apply w-11;
+    @apply h-11;
+    @apply cursor-pointer;
+    @apply rounded-full;
+    @apply transition-all;
+    @apply duration-300;
+    @apply ease-in-out;
+    @apply p-9;
+
+    &:hover {
+        animation: pulse-scale 2s infinite;
+    }
+}
+
+.ham-box-open {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.line-top,
+.line-bottom {
+    @apply mx-auto;
+    @apply m-0;
     @apply absolute;
-    @apply top-0;
-    @apply inset-x-0;
-    @apply p-2;
-    @apply transition;
+    @apply block;
+    @apply w-6;
+    @apply h-0.5;
+    @apply rounded-xl;
+    @apply bg-white;
+    @apply left-6;
+    @apply right-0;
+    transform: rotate(0deg);
+    transition: all 0.3s ease-in-out;
+}
+
+.line-top {
+    @apply top-8;
+}
+
+.line-bottom {
+    @apply bottom-8;
+}
+
+.line-top.spin {
+    @apply top-9;
     @apply transform;
-    @apply origin-top-right;
-    @apply md:hidden;
+    @apply rotate-[135deg];
+    @apply bg-white;
 }
 
-.icon {
-    @apply h-6 w-6 text-secondary;
+.line-bottom.spin {
+    @apply bottom-[2.125rem];
+    @apply transform;
+    @apply rotate-[225deg];
+    @apply bg-white;
 }
 
-.screen-reader {
-    @apply sr-only;
+.nav-links {
+    @apply absolute;
+    @apply top-[50%];
+    @apply left-[50%];
+    @apply transform;
+    @apply -translate-x-1/2;
+    @apply -translate-y-1/2;
+    @apply m-0;
+    @apply p-0;
+
+    @apply w-full;
+    @apply h-auto;
+    @apply md:h-full;
+
+    // 2 Menus
+    @apply flex;
+    @apply justify-center;
+    @apply items-center;
+    @apply flex-col;
+    @apply space-y-4;
+    @apply md:flex-row;
+    @apply md:space-y-0;
+
+    // 5 Menus
+    /* @apply flex; */
+    /* @apply justify-center; */
+    /* @apply items-center; */
+    /* @apply flex-col; */
+    /* @apply space-y-10; */
+    /* @apply md:flex-row; */
+    /* @apply md:space-y-0; */
+    /* @apply md:space-x-10; */
+}
+
+.items {
+    @apply relative;
+    @apply w-3/12;
+    @apply h-full;
+    @apply mx-auto;
+    @apply flex;
+    @apply justify-center;
+    @apply items-center;
 }
 
 .link {
+    @apply relative;
+    @apply top-0;
     @apply font-GentonaExtraBold;
     @apply text-secondary;
     @apply tracking-wider;
     @apply text-sm;
-    @apply tracking-wider;
     @apply uppercase;
-    @apply transition-colors;
-    @apply duration-300;
-    @apply ease-in;
     @apply hover:text-opacity-70;
     @apply lg:text-base;
+    @apply flex;
+    @apply justify-center;
+    @apply items-center;
+    @apply cursor-pointer;
+    @apply w-full;
+    @apply h-full;
+    @apply z-50;
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+    @apply hover:bg-primary-light;
+}
+
+.item-wrapper {
+    &:after {
+        @apply absolute;
+        @apply top-32;
+        @apply -left-[10%];
+        @apply w-full;
+        @apply h-full;
+        @apply mx-auto;
+        content: '';
+    }
+}
+
+@keyframes pulse-scale {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.3);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
 }

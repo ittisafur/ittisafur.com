@@ -25,13 +25,14 @@ interface Props {
 
 const Portfolio: FunctionComponent<Props> = ({ content, settings }) => {
     const { title, description, media, endDate, summary, stack, testimonial, url } = content;
+
     return (
         <section className={cx('wrapper')}>
             <SEO
-                title={content.title}
-                description={content.summary}
-                image={content.media.thumbnail}
-                keywords={content.stack.map((item) => item.title)}
+                title={content?.title}
+                description={content?.summary}
+                image={content?.media?.thumbnail}
+                keywords={content?.stack?.map((item) => item.title)}
             />
 
             <section className={cx('banner')}>
