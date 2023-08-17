@@ -22,7 +22,7 @@ dependencies:
     version: 2.7.1
   next:
     specifier: 13.4.17
-    version: 13.4.17(react-dom@18.2.0)(react@18.2.0)(sass@1.65.1)
+    version: 13.4.17(react-dom@18.2.0)(react@18.2.0)(sass@1.66.0)
   next-seo:
     specifier: 6.1.0
     version: 6.1.0(next@13.4.17)(react-dom@18.2.0)(react@18.2.0)
@@ -77,8 +77,8 @@ devDependencies:
     specifier: 8.4.28
     version: 8.4.28
   sass:
-    specifier: 1.65.1
-    version: 1.65.1
+    specifier: 1.66.0
+    version: 1.66.0
   tailwindcss:
     specifier: 3.3.3
     version: 3.3.3
@@ -1933,7 +1933,7 @@ packages:
       react: '>=16.0.0'
       react-dom: '>=16.0.0'
     dependencies:
-      next: 13.4.17(react-dom@18.2.0)(react@18.2.0)(sass@1.65.1)
+      next: 13.4.17(react-dom@18.2.0)(react@18.2.0)(sass@1.66.0)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     dev: false
@@ -1949,10 +1949,10 @@ packages:
       '@next/env': 13.4.16
       fast-glob: 3.3.1
       minimist: 1.2.8
-      next: 13.4.17(react-dom@18.2.0)(react@18.2.0)(sass@1.65.1)
+      next: 13.4.17(react-dom@18.2.0)(react@18.2.0)(sass@1.66.0)
     dev: false
 
-  /next@13.4.17(react-dom@18.2.0)(react@18.2.0)(sass@1.65.1):
+  /next@13.4.17(react-dom@18.2.0)(react@18.2.0)(sass@1.66.0):
     resolution: {integrity: sha512-f0L+lbQA+GFkHu9wpupiURLFIEEPSVQhUuR+5lQNI+aFzbCbCGl7h0Vurs1jA4wtP7T7fEO0iSWmt37+88wIZA==}
     engines: {node: '>=16.8.0'}
     hasBin: true
@@ -1974,7 +1974,7 @@ packages:
       postcss: 8.4.14
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
-      sass: 1.65.1
+      sass: 1.66.0
       styled-jsx: 5.1.1(react@18.2.0)
       watchpack: 2.4.0
       zod: 3.21.4
@@ -2450,8 +2450,8 @@ packages:
       is-regex: 1.1.4
     dev: true
 
-  /sass@1.65.1:
-    resolution: {integrity: sha512-9DINwtHmA41SEd36eVPQ9BJKpn7eKDQmUHmpI0y5Zv2Rcorrh0zS+cFrt050hdNbmmCNKTW3hV5mWfuegNRsEA==}
+  /sass@1.66.0:
+    resolution: {integrity: sha512-C3U+RgpAAlTXULZkWwzfysgbbBBo8IZudNAOJAVBLslFbIaZv4MBPkTqhuvpK4lqgdoFiWhnOGMoV4L1FyOBag==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
