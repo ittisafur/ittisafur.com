@@ -1,9 +1,9 @@
 name: Lint
-on: [push, pull_request]
+on: [pull_request]
 
 jobs:
   run-linters:
-    name: Yarn Lint
+    name: Lint and Build
     runs-on: ubuntu-latest
 
     steps:
@@ -15,7 +15,7 @@ jobs:
         with:
           node-version: 18
 
-      - name: Setup Pnpm 
+      - name: Setup pnpm 
         uses: pnpm/action-setup@v2
         with:
           version: 8
@@ -26,5 +26,5 @@ jobs:
       - name: Run Lint
         run: pnpm lint
       # Run build
-      - name: Yarn build
+      - name: pnpm build
         run: pnpm build
