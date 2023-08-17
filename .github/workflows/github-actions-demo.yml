@@ -3,7 +3,7 @@ on: [push, pull_request]
 
 jobs:
   run-linters:
-    name: Yarn Lint
+    name: Lint and Build
     runs-on: ubuntu-latest
 
     steps:
@@ -13,18 +13,18 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 18
 
-      - name: Setup Yarn
-        uses: mskelton/setup-yarn@v1
+      - name: Setup pnpm 
+        uses: pnpm/action-setup@v2
         with:
-           node-version: '16.x'
+          version: 8
 
       - name: Install Next.js Dependencies
-        run: yarn install --frozen-lockfile
+        run: pnpm install --frozen-lockfile
       # Run Lint
       - name: Run Lint
-        run: yarn lint
+        run: pnpm lint
       # Run build
-      - name: Yarn build
-        run: yarn build
+      - name: pnpm build
+        run: pnpm build

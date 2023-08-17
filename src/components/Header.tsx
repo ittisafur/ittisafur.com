@@ -16,12 +16,14 @@ function Header() {
             <div className={cx('nav-container')}>
                 <div className={cx('navbar')}>
                     <div className={cx('logo')}>
-                        <Image
-                            src="/assets/svg/logo-white.svg"
-                            alt="Ittisafur Logo"
-                            width="100"
-                            height="50"
-                        />
+                        <Link href="/">
+                            <Image
+                                src="/assets/svg/logo-white.svg"
+                                alt="Ittisafur Logo"
+                                width="100"
+                                height="50"
+                            />
+                        </Link>
                     </div>
                     <div className={cx('menu-toggle')} onClick={() => setIsOpen(!isOpen)}>
                         <div
