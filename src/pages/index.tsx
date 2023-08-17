@@ -43,7 +43,6 @@ const Intro = memo(() => {
                                 'React.js/Next.js',
                                 'TypeScript',
                                 'Express.js',
-                                'Firebase',
                             ],
                             autoStart: true,
                             loop: true,
