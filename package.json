@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "@types/marked": "5.0.1",
-    "@types/node": "20.5.2",
+    "@types/node": "20.5.3",
     "@types/react": "18.2.20",
     "@types/react-gtm-module": "2.0.1",
     "autoprefixer": "10.4.15",
