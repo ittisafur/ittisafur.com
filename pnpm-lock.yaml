@@ -18,8 +18,8 @@ dependencies:
     specifier: 2.3.2
     version: 2.3.2
   lightgallery:
-    specifier: 2.7.1
-    version: 2.7.1
+    specifier: 2.7.2
+    version: 2.7.2
   next:
     specifier: 13.5.1
     version: 13.5.1(react-dom@18.2.0)(react@18.2.0)(sass@1.67.0)
@@ -1909,8 +1909,8 @@ packages:
       type-check: 0.4.0
     dev: true
 
-  /lightgallery@2.7.1:
-    resolution: {integrity: sha512-NbXOzD2APY1OhOOn464jDsBZBaCRahUoLvBxhDFxvwJeC8hCkCIPYSjGgGTYINxVK09DKMsNDJzRr1ngH5nDdg==}
+  /lightgallery@2.7.2:
+    resolution: {integrity: sha512-Ewdcg9UPDqV0HGZeD7wNE4uYejwH2u0fMo5VAr6GHzlPYlhItJvjhLTR0cL0V1HjhMsH39PAom9iv69ewitLWw==}
     engines: {node: '>=6.0.0'}
     dev: false
 
