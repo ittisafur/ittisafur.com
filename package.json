@@ -34,7 +34,7 @@
     "@types/react-gtm-module": "2.0.1",
     "autoprefixer": "10.4.16",
     "eslint": "8.50.0",
-    "eslint-config-next": "13.5.2",
+    "eslint-config-next": "13.5.3",
     "husky": "8.0.3",
     "postcss": "8.4.30",
     "sass": "1.68.0",
