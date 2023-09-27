@@ -28,7 +28,7 @@
     "typewriter-effect": "2.21.0"
   },
   "devDependencies": {
-    "@types/marked": "5.0.1",
+    "@types/marked": "5.0.2",
     "@types/node": "20.7.0",
     "@types/react": "18.2.23",
     "@types/react-gtm-module": "2.0.1",
