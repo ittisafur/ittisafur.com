@@ -4,13 +4,12 @@
 
 html,
 body {
-    @apply text-secondary;
-    background: linear-gradient(123.55deg, #232931 36.46%, #393e46 100%);
+    @apply text-it-light-200;
 }
 
 *::selection {
-    @apply bg-primary;
-    @apply text-secondary;
+    @apply bg-it-dark-900;
+    @apply text-it-light-200;
 }
 
 /* Experimental */

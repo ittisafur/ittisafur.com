@@ -1,12 +1,14 @@
 .wrapper {
+    background: linear-gradient(180deg, #06121b 0%, #212b35 47.92%, rgba(33, 43, 53, 0.85) 95.83%);
+}
+
+.contain {
     @apply container;
     @apply mx-auto;
     @apply px-2;
     @apply lg:px-4;
-}
 
-.container {
-    @apply text-secondary;
+    @apply text-it-light-700;
     @apply flex;
     @apply flex-col;
     @apply justify-center;
@@ -43,7 +45,7 @@
 .content {
     @apply font-ProximaNovaBold;
     @apply text-3xl;
-    @apply text-cyan;
+    @apply text-it-light-200;
 
     > h4 {
         @apply my-2;
@@ -81,7 +83,7 @@
     @apply font-ProximaNovaBold;
     @apply text-3xl;
     @apply uppercase;
-    @apply text-cyan;
+    @apply text-it-light-200;
     @apply tracking-wider;
 }
 .lottie-wrapper {

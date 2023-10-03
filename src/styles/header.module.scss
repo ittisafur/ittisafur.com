@@ -25,7 +25,7 @@
 
 .nav-overlay {
     @apply fixed;
-    @apply bg-primary;
+    @apply bg-it-dark-900;
     @apply -z-10;
     @apply -top-full;
     @apply left-0;
@@ -142,7 +142,7 @@
     @apply relative;
     @apply top-0;
     @apply font-GentonaExtraBold;
-    @apply text-secondary;
+    @apply text-it-light-200;
     @apply tracking-wider;
     @apply text-sm;
     @apply uppercase;
@@ -156,7 +156,7 @@
     @apply h-full;
     @apply z-50;
     transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
-    @apply hover:bg-primary-light;
+    @apply hover:bg-it-light-200;
 }
 
 .item-wrapper {

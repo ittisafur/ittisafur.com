@@ -17,14 +17,16 @@ const cx = bindClassNames.bind(styles);
 const Home: NextPage = () => {
     return (
         <div className={cx('wrapper')}>
-            <SEO
-                title="Welcome to Ittisafur's Portfolio"
-                description="Custom web development that drives results."
-                image="/assets/svg/logo-white.svg"
-                keywords="web design, website design, website builder, wordpress, web developer, web designer, website creator, responsive web design"
-            />
-            <Intro />
-            <RecentWorks />
+            <div className={cx('contain')}>
+                <SEO
+                    title="Welcome to Ittisafur's Portfolio"
+                    description="Custom web development that drives results."
+                    image="/assets/svg/logo-white.svg"
+                    keywords="web design, website design, website builder, wordpress, web developer, web designer, website creator, responsive web design"
+                />
+                <Intro />
+                <RecentWorks />
+            </div>
         </div>
     );
 };

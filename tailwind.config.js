@@ -14,11 +14,18 @@ module.exports = {
                 ProximaNovaBold: ['ProximaNovaBold', 'sans-serif'],
             },
             colors: {
-                primary: '#1A1A1A',
-                secondary: '#FDF1E4',
-                'primary-light': '#393E46',
-                'secondary-light': '#EEEEEE',
-                cyan: '#00FFFF',
+                it: {
+                    dark: {
+                        900: '#06121b',
+                        800: '#212b35',
+                    },
+                    light: {
+                        900: '#e1e8e0',
+                        800: '#f3f3f3',
+                        700: '#eceeee',
+                        200: '#fcfbfb',
+                    },
+                },
             },
         },
     },
