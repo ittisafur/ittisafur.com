@@ -56,8 +56,8 @@ devDependencies:
     specifier: 20.8.4
     version: 20.8.4
   '@types/react':
-    specifier: 18.2.25
-    version: 18.2.25
+    specifier: 18.2.27
+    version: 18.2.27
   '@types/react-gtm-module':
     specifier: 2.0.1
     version: 2.0.1
@@ -377,8 +377,8 @@ packages:
     resolution: {integrity: sha512-T/DN9gAbCYk5wJ1nxf4pSwmXz4d1iVjM++OoG+mwMfz9STMAotGjSb65gJHOS5bPvl6vLSsJnuC+y/43OQrltg==}
     dev: true
 
-  /@types/react@18.2.25:
-    resolution: {integrity: sha512-24xqse6+VByVLIr+xWaQ9muX1B4bXJKXBbjszbld/UEDslGLY53+ZucF44HCmLbMPejTzGG9XgR+3m2/Wqu1kw==}
+  /@types/react@18.2.27:
+    resolution: {integrity: sha512-Wfv7B7FZiR2r3MIqbAlXoY1+tXm4bOqfz4oRr+nyXdBqapDBZ0l/IGcSlAfvxIHEEJjkPU0MYAc/BlFPOcrgLw==}
     dependencies:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.3
