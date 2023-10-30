@@ -22,7 +22,7 @@
     @apply flex-col;
     @apply justify-end;
     @apply items-center;
-    @apply max-w-2xl;
+    @apply max-w-5xl;
     @apply mx-auto;
     @apply px-0;
     @apply lg:px-4;
@@ -46,47 +46,38 @@
     @apply font-ProximaNovaBold;
     @apply text-3xl;
     @apply text-it-light-200;
+    @apply flex;
+    @apply flex-col;
+    @apply items-center;
+    @apply space-y-8;
+
+    .headline {
+      @apply flex;
+      @apply flex-col;
+      @apply justify-center;
+      @apply items-center;
+      @apply space-y-4;
+      @apply text-4xl;
+      @apply md:text-5xl;
+      @apply xl:text-6xl;
+      @apply font-Vujahday;
+    }
 
     > h4 {
         @apply my-2;
     }
 }
-
-.paragraphs {
-    @apply text-base;
-    @apply tracking-wide;
-    @apply my-6;
+.expertism{
+  @apply flex;
+  @apply flex-col;
+  @apply items-center;
+  @apply space-y-4;
 }
-// Intro End
+// Intro Ends
 
-// Recent Works
-.recent-works {
-    @apply justify-center;
-    @apply items-center;
-    @apply mx-auto;
-    @apply flex;
-    @apply flex-col;
-    @apply space-y-4;
-    @apply md:space-y-11;
+// Bit About me
+.about_wrapper {
+  @apply bg-it-light-900; 
 }
+// Bit About me Ends
 
-.recent-works-wrapper {
-    @apply text-center;
-    @apply w-full;
-
-    > p {
-        @apply -ml-3;
-    }
-}
-
-.heading {
-    @apply font-ProximaNovaBold;
-    @apply text-3xl;
-    @apply uppercase;
-    @apply text-it-light-200;
-    @apply tracking-wider;
-}
-.lottie-wrapper {
-    @apply transform;
-    @apply rotate-[270deg];
-}
