@@ -52,32 +52,31 @@
     @apply space-y-8;
 
     .headline {
-      @apply flex;
-      @apply flex-col;
-      @apply justify-center;
-      @apply items-center;
-      @apply space-y-4;
-      @apply text-4xl;
-      @apply md:text-5xl;
-      @apply xl:text-6xl;
-      @apply font-Vujahday;
+        @apply flex;
+        @apply flex-col;
+        @apply justify-center;
+        @apply items-center;
+        @apply space-y-4;
+        @apply text-4xl;
+        @apply md:text-5xl;
+        @apply xl:text-6xl;
+        @apply font-Vujahday;
     }
 
     > h4 {
         @apply my-2;
     }
 }
-.expertism{
-  @apply flex;
-  @apply flex-col;
-  @apply items-center;
-  @apply space-y-4;
+.expertism {
+    @apply flex;
+    @apply flex-col;
+    @apply items-center;
+    @apply space-y-4;
 }
 // Intro Ends
 
 // Bit About me
 .about_wrapper {
-  @apply bg-it-light-900; 
+    @apply bg-it-light-900;
 }
 // Bit About me Ends
-
