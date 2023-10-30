@@ -13,7 +13,6 @@
     @apply flex-col;
     @apply justify-center;
     @apply items-center;
-    /* height: calc(100vh - 9.9rem); */
 }
 
 // Intro
@@ -29,7 +28,6 @@
     @apply text-left;
     @apply lg:text-center;
     @apply h-auto;
-    height: calc(100vh - 7.5rem);
 }
 
 .content-wrapper {

@@ -48,18 +48,21 @@ const Intro = memo(() => {
                         <span>Frontend Engineer</span>
                         <span>skilled in</span>
                     </div>
-                    <div className="grid grid-cols-3 md:grid-cols-4 xl:grid-cols-7 gap-x-16 gap-y-8">
+                    <div className="grid grid-cols-3 md:grid-cols-4 xl:grid-cols-7 gap-x-12 md:gap-x-16 gap-y-8 py-8">
                         {skills.map((skill, index) => {
                             const { name, path } = skill;
                             const prefixedPath = `/assets/svg/${path}`;
                             return (
-                                <div key={index} className="w-24 h-24 object-contain">
+                                <div
+                                    key={index}
+                                    className="w-14 h-14 md:w-24 md:h-24 object-contain"
+                                >
                                     <Image
                                         src={prefixedPath}
                                         alt={name}
                                         width={100}
                                         height={100}
-                                        className="w-24 h-24 object-contain"
+                                        className="w-14 h-14 md:w-24 md:h-24 object-contain"
                                     />
                                 </div>
                             );
@@ -88,11 +91,11 @@ const Intro = memo(() => {
 const AboutMe = () => {
     return (
         <div className={cx('about_wrapper', 'py-16')}>
-            <div className="container mx-auto w-full px-2 py-4 text-it-dark-800">
+            <div className="container mx-auto w-full px-2 py-4 text-it-dark-800 flex flex-col xl:flex-row">
                 <div className="flex justify-center items-center text-3xl capitalize font-medium pb-12">
                     Bit about me
                 </div>
-                <div className="flex justify-center items-center w-full mx-auto text-center space-x-12">
+                <div className="flex justify-center items-center w-full mx-auto text-center space-x-4 xl:space-x-12 space-y-12 xl:space-y-0 flex-col xl:flex-row">
                     <div className="max-w-xl">
                         <div className="w-60 h-60 object-contain rounded-full">
                             <Image
