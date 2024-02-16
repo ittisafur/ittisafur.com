@@ -14,7 +14,7 @@
   "dependencies": {
     "@headlessui/react": "1.7.18",
     "@heroicons/react": "2.1.1",
-    "@vercel/analytics": "1.1.4",
+    "@vercel/analytics": "1.2.0",
     "classnames": "2.5.1",
     "lightgallery": "2.7.2",
     "next": "13.5.6",
