@@ -22,7 +22,7 @@ dependencies:
     version: 2.7.2
   next:
     specifier: 13.5.6
-    version: 13.5.6(react-dom@18.2.0)(react@18.2.0)(sass@1.71.1)
+    version: 13.5.6(react-dom@18.2.0)(react@18.2.0)(sass@1.72.0)
   next-seo:
     specifier: 6.5.0
     version: 6.5.0(next@13.5.6)(react-dom@18.2.0)(react@18.2.0)
@@ -77,8 +77,8 @@ devDependencies:
     specifier: 8.4.35
     version: 8.4.35
   sass:
-    specifier: 1.71.1
-    version: 1.71.1
+    specifier: 1.72.0
+    version: 1.72.0
   tailwindcss:
     specifier: 3.4.1
     version: 3.4.1
@@ -482,7 +482,7 @@ packages:
       react:
         optional: true
     dependencies:
-      next: 13.5.6(react-dom@18.2.0)(react@18.2.0)(sass@1.71.1)
+      next: 13.5.6(react-dom@18.2.0)(react@18.2.0)(sass@1.72.0)
       react: 18.2.0
       server-only: 0.0.1
     dev: false
@@ -2057,7 +2057,7 @@ packages:
       react: '>=16.0.0'
       react-dom: '>=16.0.0'
     dependencies:
-      next: 13.5.6(react-dom@18.2.0)(react@18.2.0)(sass@1.71.1)
+      next: 13.5.6(react-dom@18.2.0)(react@18.2.0)(sass@1.72.0)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     dev: false
@@ -2073,10 +2073,10 @@ packages:
       '@next/env': 13.4.19
       fast-glob: 3.3.1
       minimist: 1.2.8
-      next: 13.5.6(react-dom@18.2.0)(react@18.2.0)(sass@1.71.1)
+      next: 13.5.6(react-dom@18.2.0)(react@18.2.0)(sass@1.72.0)
     dev: false
 
-  /next@13.5.6(react-dom@18.2.0)(react@18.2.0)(sass@1.71.1):
+  /next@13.5.6(react-dom@18.2.0)(react@18.2.0)(sass@1.72.0):
     resolution: {integrity: sha512-Y2wTcTbO4WwEsVb4A8VSnOsG1I9ok+h74q0ZdxkwM3EODqrs4pasq7O0iUxbcS9VtWMicG7f3+HAj0r1+NtKSw==}
     engines: {node: '>=16.14.0'}
     hasBin: true
@@ -2098,7 +2098,7 @@ packages:
       postcss: 8.4.31
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
-      sass: 1.71.1
+      sass: 1.72.0
       styled-jsx: 5.1.1(react@18.2.0)
       watchpack: 2.4.0
     optionalDependencies:
@@ -2576,8 +2576,8 @@ packages:
       is-regex: 1.1.4
     dev: true
 
-  /sass@1.71.1:
-    resolution: {integrity: sha512-wovtnV2PxzteLlfNzbgm1tFXPLoZILYAMJtvoXXkD7/+1uP41eKkIt1ypWq5/q2uT94qHjXehEYfmjKOvjL9sg==}
+  /sass@1.72.0:
+    resolution: {integrity: sha512-Gpczt3WA56Ly0Mn8Sl21Vj94s1axi9hDIzDFn9Ph9x3C3p4nNyvsqJoQyVXKou6cBlfFWEgRW4rT8Tb4i3XnVA==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
