@@ -42,8 +42,8 @@ dependencies:
     specifier: 1.2.4
     version: 1.2.4(react@18.2.0)
   swiper:
-    specifier: 10.3.1
-    version: 10.3.1
+    specifier: 11.1.0
+    version: 11.1.0
   typewriter-effect:
     specifier: 2.21.0
     version: 2.21.0(react-dom@18.2.0)(react@18.2.0)
@@ -2767,8 +2767,8 @@ packages:
     engines: {node: '>= 0.4'}
     dev: true
 
-  /swiper@10.3.1:
-    resolution: {integrity: sha512-24Wk3YUdZHxjc9faID97GTu6xnLNia+adMt6qMTZG/HgdSUt4fS0REsGUXJOgpTED0Amh/j+gRGQxsLayJUlBQ==}
+  /swiper@11.1.0:
+    resolution: {integrity: sha512-Pm78CgU7Wvg+w/MgIL/1NwMSLgx0XqFof25EnVyX8iZFCYJv5CppH7LHkBj43qW2k5Cp3Iz7FcdBxrox7XX2AQ==}
     engines: {node: '>= 4.7.0'}
     dev: false
 
