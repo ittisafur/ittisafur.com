@@ -1,9 +1,9 @@
 .link {
     @apply cursor-pointer;
-
     @apply relative;
     &:hover > .content {
         @apply flex;
+        @apply opacity-100; /* Ensure this is visible on hover */
     }
 }
 
@@ -26,28 +26,23 @@
 
 .content {
     @apply absolute;
-    @apply z-10;
-    @apply top-0.5;
-    @apply left-0;
-    @apply text-center;
+    @apply inset-0;
+    @apply m-auto;
     @apply flex;
     @apply flex-col;
     @apply justify-center;
     @apply items-center;
-    width: 102%;
-    height: 95%;
-    @apply transform;
-    /* @apply translate-x-[0%]; */
-    @apply translate-y-[5%];
-    @apply transition-all;
-    @apply duration-300;
-    @apply ease-in-out;
+    @apply text-center;
     @apply bg-it-dark-800;
     @apply bg-opacity-90;
     @apply px-4;
-
-    @apply opacity-0;
-    @apply hover:opacity-100;
+    @apply opacity-0; /* Start hidden */
+    @apply transition-opacity;
+    @apply duration-300;
+    @apply ease-in-out;
+    width: 15rem;
+    height: 15rem;
+    transform: translate(0px, 8px);
 
     .title {
         @apply font-bold;

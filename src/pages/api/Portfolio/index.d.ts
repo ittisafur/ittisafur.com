@@ -3,6 +3,11 @@ export interface Images {
     images: any;
 }
 
+export interface Testimonial {
+    isShared: boolean;
+    content: string;
+}
+
 export interface Portfolio {
     id: number | string;
     title: string;
@@ -18,7 +23,7 @@ export interface Portfolio {
     media: Images;
     summary: string;
     stack: any;
-    testimonial?: string;
+    testimonial?: Testimonial;
     url?: string;
 }
 

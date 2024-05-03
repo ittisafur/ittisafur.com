@@ -24,7 +24,8 @@ interface Props {
 }
 
 const Portfolio: FunctionComponent<Props> = ({ content, settings }) => {
-    const { title, description, media, endDate, summary, stack, testimonial, url } = content;
+    const { title, description, media, endDate, summary, isWorking, stack, testimonial, url } =
+        content;
 
     return (
         <section className={cx('wrapper')}>
@@ -50,7 +51,9 @@ const Portfolio: FunctionComponent<Props> = ({ content, settings }) => {
                     <div className={cx('layout')}>
                         <div className={cx('title_status')}>
                             <h1 className={cx('title')}>{title}</h1>
-                            <div className={cx('status')}>Status - Finished - {endDate}</div>
+                            <div className={cx('status')}>
+                                Status - {isWorking ? 'Working' : 'Finished'}
+                            </div>
                         </div>
                         <div className={cx('content')}>
                             <div className={cx('stack')}>
@@ -86,10 +89,14 @@ const Portfolio: FunctionComponent<Props> = ({ content, settings }) => {
                 <h2 className={cx('head')}>Detailed Information</h2>
                 <p>{description}</p>
             </div>
-            <div className={cx('testimonial')}>
-                <h2 className={cx('head')}> testimonial</h2>
-                <p>{testimonial}</p>
-            </div>
+            {testimonial.isShared ? (
+                <div className={cx('testimonial')}>
+                    <h2 className={cx('head')}> testimonial</h2>
+                    <p>{testimonial.content}</p>
+                </div>
+            ) : (
+                <Fragment />
+            )}
             <div className={cx('url')}>
                 <a href={url} rel="noreferrer noopener" target="_blank">
                     Visit {title}
