@@ -87,7 +87,7 @@
             @apply left-0;
             @apply w-full;
             @apply h-full;
-            @apply bg-primary;
+            @apply bg-it-dark-800;
             @apply bg-opacity-80;
             @apply rounded-lg;
             @apply p-4;
@@ -96,7 +96,7 @@
             @apply font-bold;
             @apply uppercase;
             @apply text-center;
-            @apply text-secondary;
+            @apply text-it-light-200;
             @apply relative;
             @apply mb-4;
         }
@@ -194,7 +194,7 @@
     &:before {
         content: '';
         @apply absolute;
-        @apply bg-primary;
+        @apply bg-it-dark-800;
         @apply w-full;
         @apply h-full;
         @apply top-0;
@@ -208,8 +208,8 @@
     @apply flex;
     @apply justify-center;
     @apply items-center;
-    @apply bg-secondary-light;
-    @apply text-primary-light;
+    @apply bg-it-light-700;
+    @apply text-it-light-200;
     @apply w-3/4;
     @apply md:w-max;
     @apply md:max-w-xs;

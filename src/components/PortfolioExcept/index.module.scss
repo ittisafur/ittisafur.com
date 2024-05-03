@@ -42,7 +42,7 @@
     @apply transition-all;
     @apply duration-300;
     @apply ease-in-out;
-    @apply bg-primary;
+    @apply bg-it-dark-800;
     @apply bg-opacity-90;
     @apply px-4;
 
@@ -51,7 +51,7 @@
 
     .title {
         @apply font-bold;
-        @apply text-cyan;
+        @apply text-it-light-200;
     }
 
     .isPortfolioPage {
@@ -59,6 +59,6 @@
     }
 
     .description {
-        @apply text-secondary-light;
+        @apply text-it-light-700;
     }
 }
