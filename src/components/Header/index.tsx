@@ -1,4 +1,4 @@
-import { Fragment, useState } from 'react';
+import { Fragment } from 'react';
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
@@ -9,11 +9,7 @@ import bindClassNames from 'classnames/bind';
 
 const cx = bindClassNames.bind(styles);
 
-const navigation = [
-    { name: 'Projects', href: '#', current: true },
-    { name: 'About', href: '#', current: false },
-    { name: 'Blog', href: '#', current: false },
-];
+const navigation = [{ name: 'Projects', href: '/portfolio', current: true }];
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ');
@@ -40,12 +36,14 @@ function Header() {
                             </div>
                             <div className="flex flex-1 items-center justify-center sm:justify-between">
                                 <div className="flex flex-shrink-0 items-center justify-center">
-                                    <Image
-                                        src="/assets/svg/logo-white.svg"
-                                        alt="Ittisafur Logo"
-                                        width="100"
-                                        height="50"
-                                    />
+                                    <Link href="/">
+                                        <Image
+                                            src="/assets/svg/logo-white.svg"
+                                            alt="Ittisafur Logo"
+                                            width="100"
+                                            height="50"
+                                        />
+                                    </Link>
                                 </div>
                                 <div className="hidden sm:ml-6 sm:block">
                                     <div className="flex space-x-4">

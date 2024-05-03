@@ -5,6 +5,58 @@ const PortfolioAPI = {
         portfolio: [
             {
                 id: 1,
+                title: 'Kanarys',
+                slug: 'kanarys',
+                startDate: 'Sep 2022',
+                endDate: null,
+                isWorking: true,
+                hasDesign: false,
+                workType: 'Full Time',
+                location: 'Remote',
+                description:
+                    "As a Full Stack Developer, I've been instrumental in driving our mission forward. While my primary focus has been on UI frontend development and API integration, my contributions have been integral to enhancing the user experience and functionality of our platform. With a strong foundation in frontend technologies and a knack for creating intuitive and visually appealing interfaces, I've worked closely with our team to design and implement features that make navigating Kanarys.com a seamless experience for users. Additionally, my expertise in API development with Symfony has allowed me to effectively integrate backend functionality, ensuring that our platform delivers on its promise of empowering organizations to create more inclusive cultures.",
+                sideProject: false,
+                media: {
+                    thumbnail:
+                        'https://res.cloudinary.com/dv7g8veki/image/upload/v1714775007/personal_website/portfolio/Kanarys/CAP-Landing.png',
+                    images: [],
+                },
+                summary:
+                    'Kanarys is a platform focused on helping organizations create inclusive and equitable workplace cultures through data-driven insights and infographics',
+                stack: [
+                    {
+                        title: 'React.js',
+                        icon: '/assets/svg/react.svg',
+                    },
+                    {
+                        title: 'Typescript',
+                        icon: '/assets/svg/typescript.svg',
+                    },
+                    {
+                        title: 'Tailwindcss',
+                        icon: '/assets/svg/tailwindcss.svg',
+                    },
+                    {
+                        title: 'MUI',
+                        icon: '/assets/svg/mui.svg',
+                    },
+                    {
+                        title: 'Playwright',
+                        icon: '/assets/svg/playwright.svg',
+                    },
+                    {
+                        title: 'Gitlab CI',
+                        icon: '/assets/svg/gitlab.svg',
+                    },
+                ],
+                testimonial: {
+                    isShared: false,
+                    content: '',
+                },
+                url: 'https://kanarys.com/',
+            },
+            {
+                id: 2,
                 title: 'Raush',
                 slug: 'raush',
                 startDate: '2022-01-21',
@@ -60,12 +112,14 @@ const PortfolioAPI = {
                         icon: '/assets/svg/gitlab.svg',
                     },
                 ],
-                testimonial:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar nullam est egestas lorem elit duis. Maecenas id amet enim, lorem elit sed.',
+                testimonial: {
+                    isShared: true,
+                    content: 'Great Working with Ittisafur',
+                },
                 url: 'https://rau.sh',
             },
             {
-                id: 2,
+                id: 3,
                 title: 'Banana Boyz Club',
                 slug: 'banana-boyz-club',
                 startDate: '2022-01-21',
@@ -123,12 +177,14 @@ const PortfolioAPI = {
                         icon: '/assets/svg/gitlab.svg',
                     },
                 ],
-                testimonial:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar nullam est egestas lorem elit duis. Maecenas id amet enim, lorem elit sed.',
+                testimonial: {
+                    isShared: true,
+                    content: 'Deliveried on Time',
+                },
                 url: 'https://bananaboyzclub.io',
             },
             {
-                id: 3,
+                id: 4,
                 title: 'Protoconn',
                 slug: 'protoconn',
                 startDate: '2022-02-25',
@@ -168,12 +224,14 @@ const PortfolioAPI = {
                         icon: '/assets/svg/mui.svg',
                     },
                 ],
-                testimonial:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar nullam est egestas lorem elit duis. Maecenas id amet enim, lorem elit sed.',
+                testimonial: {
+                    isShared: true,
+                    content: 'Deliveried on Time',
+                },
                 url: 'https://protoconn.com',
             },
             {
-                id: 4,
+                id: 5,
                 title: 'Think Studio',
                 slug: 'think-studio',
                 startDate: '2021-02-01',
@@ -229,12 +287,14 @@ const PortfolioAPI = {
                         icon: '/assets/svg/gitlab.svg',
                     },
                 ],
-                testimonial:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar nullam est egestas lorem elit duis. Maecenas id amet enim, lorem elit sed.',
+                testimonial: {
+                    isShared: true,
+                    content: 'Deliveried on Time',
+                },
                 url: 'https://protoconn.com',
             },
             {
-                id: 5,
+                id: 6,
                 title: 'Rehash LTD',
                 slug: 'rehash-ltd',
                 startDate: '2021-02-01',
@@ -290,12 +350,14 @@ const PortfolioAPI = {
                         icon: '/assets/svg/gitlab.svg',
                     },
                 ],
-                testimonial:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar nullam est egestas lorem elit duis. Maecenas id amet enim, lorem elit sed.',
+                testimonial: {
+                    isShared: true,
+                    content: 'Deliveried on Time',
+                },
                 url: 'https://rehashltd.com',
             },
             {
-                id: 6,
+                id: 7,
                 title: 'Movie app',
                 slug: 'movie-app',
                 startdate: '2021-02-01',
@@ -305,7 +367,7 @@ const PortfolioAPI = {
                 worktype: 'side project',
                 location: 'Remote',
                 description:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, sodales cursus integer tristique nulla praesent senectus interdum. Quam nunc, ut posuere ut feugiat nisi viverra vitae. Pulvinar eget ipsum, nulla duis vel. Posuere nec commodo nulla in ac ullamcorper aenean.',
+                    'Experience the world of cinema like never before with our personalized movie application, developed using the powerful TMDB API and crafted with Next.js technology.',
                 sideproject: true,
                 media: {
                     thumbnail:
@@ -351,12 +413,14 @@ const PortfolioAPI = {
                         icon: '/assets/svg/gitlab.svg',
                     },
                 ],
-                testimonial:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar nullam est egestas lorem elit duis. Maecenas id amet enim, lorem elit sed.',
+                testimonial: {
+                    isShared: false,
+                    content: '',
+                },
                 url: 'https://movieapp.ittisafur.com',
             },
             {
-                id: 7,
+                id: 8,
                 title: 'KB Trust',
                 slug: 'kb-trust',
                 startdate: '2021-02-01',
@@ -412,8 +476,10 @@ const PortfolioAPI = {
                         icon: '/assets/svg/gitlab.svg',
                     },
                 ],
-                testimonial:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar nullam est egestas lorem elit duis. Maecenas id amet enim, lorem elit sed.',
+                testimonial: {
+                    isShared: true,
+                    content: 'Work was deliveried on Time',
+                },
                 url: 'https://kbtrust.com',
             },
         ],

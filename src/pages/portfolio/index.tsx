@@ -4,10 +4,10 @@ import SEO from 'utils/SEO';
 
 const Portfolio = (props: {}) => {
     return (
-        <Fragment>
+        <div className="bg-it-light-900">
             <SEO title="Portfolio Page" description="Portfolio Page" image="" keywords="" />
             <PortfolioExcerpt />
-        </Fragment>
+        </div>
     );
 };
 
