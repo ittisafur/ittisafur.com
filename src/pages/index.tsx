@@ -45,7 +45,7 @@ const Intro = memo(() => {
                     </div>
 
                     <div className={cx('expertism')}>
-                        <span>Frontend Engineer</span>
+                        <span>Full Stack Engineer</span>
                         <span>skilled in</span>
                     </div>
                     <div className="grid grid-cols-3 md:grid-cols-4 xl:grid-cols-7 gap-x-12 md:gap-x-16 gap-y-8 py-8">
@@ -91,7 +91,7 @@ const Intro = memo(() => {
 const AboutMe = () => {
     return (
         <div className={cx('about_wrapper', 'py-16')}>
-            <div className="container mx-auto w-full px-2 py-4 text-it-dark-800 flex flex-col xl:flex-row">
+            <div className="container mx-auto w-full px-2 py-4 text-it-dark-800 flex flex-col">
                 <div className="flex justify-center items-center text-3xl capitalize font-medium pb-12">
                     Bit about me
                 </div>
@@ -139,12 +139,12 @@ const AboutMe = () => {
                         <p>
                             Hey! I’m a seasoned Full Stack Developer with over six years of
                             experience, starting my tech journey in 2013 with HTML/CSS out of
-                            curiosity. From 2017 I've working as a professional freelancer. I've
-                            sharpened my skills across various tech stacks and frameworks through
-                            freelancing and contract work, always aiming to push technical
-                            boundaries and foster community growth. I’m keen on exploring new
-                            opportunities and collaborations—let’s connect and see how I can help
-                            propel your business forward!
+                            curiosity. From 2017 I've worked as a freelancer. Since 2019 I've been
+                            working as a Professional Web Developer. I've sharpened my skills across
+                            various tech stacks and frameworks through freelancing and contract
+                            work, always aiming to push technical boundaries and foster community
+                            growth. I’m keen on exploring new opportunities and collaborations—let’s
+                            connect and see how I can help propel your business forward!
                         </p>
                     </div>
                 </div>
