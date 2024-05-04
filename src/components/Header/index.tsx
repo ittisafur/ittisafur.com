@@ -9,7 +9,7 @@ import bindClassNames from 'classnames/bind';
 
 const cx = bindClassNames.bind(styles);
 
-const navigation = [{ name: 'Portfolio', href: '/portfolio', current: true }];
+const navigation = [{ name: 'Portfolio', href: '/portfolio', current: false }];
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ');
@@ -20,7 +20,7 @@ function Header() {
         <Disclosure as="nav" className="bg-it-dark-900">
             {({ open }) => (
                 <>
-                    <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+                    <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 font-ReadexPro">
                         <div className="relative flex h-16 items-center justify-between">
                             <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                                 {/* Mobile menu button*/}
@@ -54,8 +54,8 @@ function Header() {
                                                 className={classNames(
                                                     item.current
                                                         ? 'bg-gray-900 text-white'
-                                                        : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                                                    'rounded-md px-3 py-2 text-sm font-medium'
+                                                        : 'text-gray-300 hover:text-white hover:underline transition-all duration-300 ease-in',
+                                                    'rounded-md px-3 py-2 text-sm font-medium uppercase tracking-wide'
                                                 )}
                                                 aria-current={item.current ? 'page' : undefined}
                                             >

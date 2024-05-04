@@ -13,6 +13,7 @@ module.exports = {
         ProximaNova: ['ProximaNova', 'sans-serif'],
         ProximaNovaBold: ['ProximaNovaBold', 'sans-serif'],
         Vujahday: ['Vujahday Script', 'cursive'],
+        ReadexPro: ['Readex Pro', 'sans-serif']
       },
       colors: {
         it: {

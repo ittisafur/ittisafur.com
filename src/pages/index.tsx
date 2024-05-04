@@ -24,7 +24,7 @@ const Home: NextPage = () => {
                         title="Welcome to Ittisafur's Portfolio"
                         description="Engineering that drives results."
                         image="/assets/svg/logo-white.svg"
-                        keywords="web design, website design, website builder, wordpress, web developer, web designer, website creator, responsive web design"
+                        keywords="React.js developer, Next.js development, Redux Toolkit expert, PHP web developer, Full stack React developer, JavaScript SPA developer, PHP and JavaScript developer, Responsive web design with React, Advanced React web applications, Custom PHP solutions"
                     />
                     <Intro />
                 </div>
@@ -108,16 +108,43 @@ const AboutMe = () => {
                         </div>
                     </div>
                     <div className="max-w-xl flex flex-col justify-start text-left">
-                        <p className="text-lg mb-4">
-                            With over 6 years in Web Development, I've honed my skills from the
-                            foundational tech stacks to modern frameworks. My journey started in
-                            2013 with HTML/CSS, eventually diving into WordPress in 2015. Over the
-                            years, I've freelanced and worked on contract jobs, always with an aim
-                            to contribute to the community and drive technical growth.
-                        </p>
-                        <p className="text-lg">
-                            I'm open to new opportunities and collaborations. Let's connect and see
-                            how I can help your business grow!
+                        {/* <p className="text-lg mb-4"> */}
+                        {/*     Hey there! I’m a seasoned Full Stack Developer with a solid track record */}
+                        {/*     of turning complex tech challenges into smooth, scalable solutions. */}
+                        {/*     Starting my journey in 2013, I quickly moved from mastering the basics */}
+                        {/*     of HTML and CSS to tackling dynamic projects with modern frameworks like */}
+                        {/*     React.js and Next.js. Whether it’s optimizing build processes or */}
+                        {/*     crafting interactive web applications, I bring a keen eye for detail and */}
+                        {/*     a knack for pushing tech boundaries. I thrive in collaborative */}
+                        {/*     environments, always eager to sync with cross-functional teams to */}
+                        {/*     enhance project flow and smash goals. Over the years, I've contributed */}
+                        {/*     my mix of technical expertise and leadership across various roles— from */}
+                        {/*     optimizing web applications to enhancing user interactions with advanced */}
+                        {/*     API integrations. */}
+                        {/* </p> */}
+                        {/* <p className="text-lg"> */}
+                        {/*     I thrive in collaborative environments, always eager to sync with */}
+                        {/*     cross-functional teams to enhance project flow and smash goals. Over the */}
+                        {/*     years, I've contributed my mix of technical expertise and leadership */}
+                        {/*     across various roles— from optimizing web applications to enhancing user */}
+                        {/*     interactions with advanced API integrations. */}
+                        {/* </p> */}
+                        {/* <p className="text-lg"> */}
+                        {/*     I'm all about leveraging my tech skills to drive innovation and am */}
+                        {/*     constantly on the lookout for new opportunities to help businesses grow. */}
+                        {/*     Let’s connect and explore how we can create something awesome together! */}
+                        {/*     Check out my LinkedIn for a deeper dive into my professional journey or */}
+                        {/*     grab my CV to see where I can fit into your next big project. */}
+                        {/* </p> */}
+                        <p>
+                            Hey! I’m a seasoned Full Stack Developer with over six years of
+                            experience, starting my tech journey in 2013 with HTML/CSS out of
+                            curiosity. From 2017 I've working as a professional freelancer. I've
+                            sharpened my skills across various tech stacks and frameworks through
+                            freelancing and contract work, always aiming to push technical
+                            boundaries and foster community growth. I’m keen on exploring new
+                            opportunities and collaborations—let’s connect and see how I can help
+                            propel your business forward!
                         </p>
                     </div>
                 </div>
