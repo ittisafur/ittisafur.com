@@ -9,7 +9,7 @@ const Footer = () => {
     return (
         <footer className={cx('footer')}>
             <div className="px-6 lg:px-2 container mx-auto flex flex-col py-14 space-y-4">
-                <div className="w-full flex justify-start items-center space-x-12">
+                <div className="w-full flex justify-start items-baseline space-x-12">
                     <div>
                         <h3 className="text-base uppercase mb-1">Links</h3>
                         <ul>
@@ -49,10 +49,6 @@ const links = [
     {
         name: 'portfolio',
         slug: 'portfolio',
-    },
-    {
-        name: 'blog',
-        slug: 'blog',
     },
 ];
 

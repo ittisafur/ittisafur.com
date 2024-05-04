@@ -9,7 +9,7 @@ import bindClassNames from 'classnames/bind';
 
 const cx = bindClassNames.bind(styles);
 
-const navigation = [{ name: 'Projects', href: '/portfolio', current: true }];
+const navigation = [{ name: 'Portfolio', href: '/portfolio', current: true }];
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ');
