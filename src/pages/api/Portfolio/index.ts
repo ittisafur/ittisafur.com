@@ -18,7 +18,7 @@ const PortfolioAPI = {
                 sideProject: false,
                 media: {
                     thumbnail:
-                        'https://res.cloudinary.com/dv7g8veki/image/upload/v1714775007/personal_website/portfolio/Kanarys/CAP-Landing.png',
+                        'https://res.cloudinary.com/dv7g8veki/image/upload/v1714859096/personal_website/portfolio/Kanarys/kanarys_crj02h.jpg',
                     images: [],
                 },
                 summary:
@@ -57,16 +57,68 @@ const PortfolioAPI = {
             },
             {
                 id: 2,
-                title: 'Raush',
-                slug: 'raush',
-                startDate: '2022-01-21',
-                endDate: '',
-                isWorking: true,
+                title: 'Tesch Global',
+                slug: 'teschglobal',
+                startDate: 'May 2023',
+                endDate: 'Aug 2023',
+                isWorking: false,
                 hasDesign: false,
-                workType: 'Part Time',
+                workType: 'Freelance',
                 location: 'Remote',
                 description:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, sodales cursus integer tristique nulla praesent senectus interdum. Quam nunc, ut posuere ut feugiat nisi viverra vitae. Pulvinar eget ipsum, nulla duis vel. Posuere nec commodo nulla in ac ullamcorper aenean.',
+                    'At TeschGlobal, my role as a Full Stack Developer focused on enhancing backend and frontend operations through innovative solutions. I spearheaded the integration of GraphQL with Express.js and Apollo Server, optimizing our backend support. On the frontend, I leveraged Next.js to develop responsive and high-performance web applications. I managed the seamless integration of data flow between Optum and Medimpact APIs, ensuring robust connectivity. Additionally, I was responsible for monitoring AWS builds post-GitHub push, which helped maintain continuous and successful deployments. A key achievement was the implementation of automated error handling mechanisms, which significantly reduced system downtime by 75% due to API integration issues, thereby boosting overall system reliability and user satisfaction.',
+                sideProject: false,
+                media: {
+                    thumbnail:
+                        'https://res.cloudinary.com/dv7g8veki/image/upload/v1714857447/personal_website/portfolio/teschglobal/TESCHGlobal-logo-profile_b1ofdx.jpg',
+                    images: [],
+                },
+                summary:
+                    'TeschGlobal leverages technology-agnostic solutions to solve complex business challenges, enhancing productivity and efficiency across industries.',
+                stack: [
+                    {
+                        title: 'React.js',
+                        icon: '/assets/svg/react.svg',
+                    },
+                    {
+                        title: 'Typescript',
+                        icon: '/assets/svg/typescript.svg',
+                    },
+                    {
+                        title: 'Tailwindcss',
+                        icon: '/assets/svg/tailwindcss.svg',
+                    },
+                    {
+                        title: 'MUI',
+                        icon: '/assets/svg/mui.svg',
+                    },
+                    {
+                        title: 'Playwright',
+                        icon: '/assets/svg/playwright.svg',
+                    },
+                    {
+                        title: 'Gitlab CI',
+                        icon: '/assets/svg/gitlab.svg',
+                    },
+                ],
+                testimonial: {
+                    isShared: false,
+                    content: '',
+                },
+                url: 'https://teschglobal.com/',
+            },
+            {
+                id: 2,
+                title: 'Raush',
+                slug: 'raush',
+                startDate: 'Nov 2021',
+                endDate: 'Dec 2022',
+                isWorking: false,
+                hasDesign: false,
+                workType: 'Full Time',
+                location: 'Remote',
+                description:
+                    "As a dedicated Front End Developer, my technical expertise has significantly advanced our project outcomes. My strategic implementations within our monorepo have boosted code efficiency by 15%, streamlining workflows. I've also spearheaded the modernization of our application design, incorporating Playwright for automated testing, which has reduced bug discovery during QA by 20%. My use of react-query caching has enhanced performance, while my focus on optimized component development has improved page load times by 15% and boosted user engagement by 25%. This comprehensive approach to development has been crucial in optimizing both the user interface and overall functionality of our systems.",
                 sideProject: false,
                 media: {
                     thumbnail:
@@ -119,34 +171,29 @@ const PortfolioAPI = {
                 url: 'https://rau.sh',
             },
             {
-                id: 3,
-                title: 'Banana Boyz Club',
-                slug: 'banana-boyz-club',
-                startDate: '2022-01-21',
-                endDate: '2022-07-21',
+                id: 2,
+                title: 'Kitty',
+                slug: 'wearekitty',
+                startDate: 'Jul 2022',
+                endDate: 'Sep 2022',
                 isWorking: false,
-                hasDesign: true,
-                workType: 'Contract',
+                hasDesign: false,
+                workType: 'Freelance',
                 location: 'Remote',
                 description:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, sodales cursus integer tristique nulla praesent senectus interdum. Quam nunc, ut posuere ut feugiat nisi viverra vitae. Pulvinar eget ipsum, nulla duis vel. Posuere nec commodo nulla in ac ullamcorper aenean.',
+                    'At We Are Kitty, as a front-end developer, I played a key role in enhancing the digital experiences delivered to our users. My work included integrating WordPress APIs using GraphQL to ensure seamless data delivery across Next.js-driven interfaces. I also designed and implemented an intuitive ROI calculator that significantly enhanced user interaction and experience. Additionally, I crafted optimized GraphQL queries to ensure the UI was enriched with precise and reliable data. Moreover, I developed dynamic and responsive custom blocks using Advanced Custom Fields (ACF) to elevate the frontend architecture, providing a more engaging and effective user experience.',
                 sideProject: false,
                 media: {
                     thumbnail:
-                        'https://res.cloudinary.com/dv7g8veki/image/upload/v1663187274/personal_website/portfolio/banana-boyz-club/thumbnail_u9nifz.png',
-                    images: [
-                        'https://res.cloudinary.com/dv7g8veki/image/upload/v1662747663/Personal%20Website/Portfolio/banana_boyz_club_roadmap.png',
-                    ],
+                        'https://res.cloudinary.com/dv7g8veki/image/upload/v1714858691/personal_website/portfolio/Kitty/kitty_emcvti.png',
+                    images: [],
                 },
-                summary: 'This is a summary',
+                summary:
+                    'We Are Kitty, a London-based agency, crafts innovative web solutions that drive brand growth and enhance user engagement.',
                 stack: [
                     {
                         title: 'React.js',
                         icon: '/assets/svg/react.svg',
-                    },
-                    {
-                        title: 'Next.js',
-                        icon: '/assets/svg/next.svg',
                     },
                     {
                         title: 'Typescript',
@@ -161,16 +208,8 @@ const PortfolioAPI = {
                         icon: '/assets/svg/mui.svg',
                     },
                     {
-                        title: 'React Query',
-                        icon: '/assets/svg/react-query.svg',
-                    },
-                    {
                         title: 'Playwright',
                         icon: '/assets/svg/playwright.svg',
-                    },
-                    {
-                        title: 'Yarn Workspace',
-                        icon: '/assets/svg/yarn.svg',
                     },
                     {
                         title: 'Gitlab CI',
@@ -178,10 +217,10 @@ const PortfolioAPI = {
                     },
                 ],
                 testimonial: {
-                    isShared: true,
-                    content: 'Deliveried on Time',
+                    isShared: false,
+                    content: '',
                 },
-                url: 'https://bananaboyzclub.io',
+                url: 'https://wearekitty.com/',
             },
             {
                 id: 4,
@@ -194,14 +233,15 @@ const PortfolioAPI = {
                 workType: 'Contract',
                 location: 'Remote',
                 description:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, sodales cursus integer tristique nulla praesent senectus interdum. Quam nunc, ut posuere ut feugiat nisi viverra vitae. Pulvinar eget ipsum, nulla duis vel. Posuere nec commodo nulla in ac ullamcorper aenean.',
+                    "At Protoconn, my role as a front-end developer involved a comprehensive redesign and rebuild of the website, enhancing both aesthetics and functionality. I implemented reusable animations using Swiper, significantly improving user interaction. To optimize performance, I reduced Time To First Byte (TTFB) by 2 seconds through on-demand Incremental Static Regeneration (ISR). Additionally, I enhanced site performance further by 5ms using Next.js's optimized image handling capabilities.",
                 sideProject: false,
                 media: {
                     thumbnail:
                         'https://res.cloudinary.com/dv7g8veki/image/upload/v1679869295/personal_website/portfolio/protoconn/2023-03-27_04-20_evkvrd.png',
                     images: [],
                 },
-                summary: 'This is a summary',
+                summary:
+                    'Protoconn connects entrepreneurs with investors, offering Shariah-compliant fundraising and investment opportunities to empower businesses and promote ethical growth.',
                 stack: [
                     {
                         title: 'React.js',
@@ -241,14 +281,15 @@ const PortfolioAPI = {
                 workType: 'Contract',
                 location: 'Remote',
                 description:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, sodales cursus integer tristique nulla praesent senectus interdum. Quam nunc, ut posuere ut feugiat nisi viverra vitae. Pulvinar eget ipsum, nulla duis vel. Posuere nec commodo nulla in ac ullamcorper aenean.',
+                    'At Think Studio, my role as a Full Stack Developer involved enhancing website performance and client satisfaction through innovative solutions. I developed custom WordPress themes using PHP, Elementor, and Beaver Builder, which improved website performance by 40% according to Google PageSpeed Insights. Additionally, I streamlined WordPress development by implementing advanced custom fields (ACF), cutting development time by 20% and boosting client satisfaction by 15%. Collaborating closely with the design team, I played a key part in creating visually captivating websites that increased user engagement by 30%. Furthermore, I developed web applications using Laravel and managed their deployment on DigitalOcean, ensuring scalability, security, and high performance.',
                 sideProject: false,
                 media: {
                     thumbnail:
-                        'https://res.cloudinary.com/dv7g8veki/image/upload/v1679869660/personal_website/portfolio/think-studio/2023-03-27_04-24_bxekqw.png',
+                        'https://res.cloudinary.com/dv7g8veki/image/upload/v1714859317/personal_website/portfolio/think-studio/thethinkstudio_logo_hxmtgf.jpg',
                     images: [],
                 },
-                summary: 'This is a summary',
+                summary:
+                    'Think Studio is a web development and design agency, expertly blending strategy, marketing, and digital skills to craft bespoke solutions that drive business growth and enhance customer connectivity.',
                 stack: [
                     {
                         title: 'React.js',
@@ -288,10 +329,10 @@ const PortfolioAPI = {
                     },
                 ],
                 testimonial: {
-                    isShared: true,
+                    isShared: false,
                     content: 'Deliveried on Time',
                 },
-                url: 'https://protoconn.com',
+                url: 'https://thinkstud.io/',
             },
             {
                 id: 6,
@@ -304,14 +345,15 @@ const PortfolioAPI = {
                 workType: 'Contract',
                 location: 'Remote',
                 description:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, sodales cursus integer tristique nulla praesent senectus interdum. Quam nunc, ut posuere ut feugiat nisi viverra vitae. Pulvinar eget ipsum, nulla duis vel. Posuere nec commodo nulla in ac ullamcorper aenean.',
+                    'At Rehash Ltd, my role as a Full Stack Developer and Designer focused on enhancing user interaction and optimizing performance. I developed and implemented custom themes for WordPress sites using Figma, which boosted user engagement by 40% and reduced bounce rates by 20%. Utilizing the Bootstrap framework, I optimized website loading times, achieving a 30% improvement in page load speed and elevating SEO rankings by 15 positions. My collaboration with cross-functional teams led to the design and build of user-friendly interfaces, significantly improving customer satisfaction ratings by 50%.',
                 sideProject: false,
                 media: {
                     thumbnail:
                         'https://res.cloudinary.com/dv7g8veki/image/upload/v1679869758/personal_website/portfolio/rehashltd/2023-03-27_04-28_wxzirz.png',
                     images: [],
                 },
-                summary: 'This is a summary',
+                summary:
+                    'Rehash Ltd excels as a leading manufacturer of sustainable garment accessories, distinguished by its eco-friendly products and international certifications, enhancing both local and global market presence.',
                 stack: [
                     {
                         title: 'React.js',
@@ -357,6 +399,71 @@ const PortfolioAPI = {
                 url: 'https://rehashltd.com',
             },
             {
+                id: 3,
+                title: 'Banana Boyz Club',
+                slug: 'banana-boyz-club',
+                startDate: '2022-01-21',
+                endDate: '2022-07-21',
+                isWorking: false,
+                hasDesign: true,
+                workType: 'Contract',
+                location: 'Remote',
+                description:
+                    'At Banana Boyz Club, as the designer and front-end developer, I led the creation of both low and high fidelity designs using Figma, which significantly streamlined the visual and interactive aspects of the project. My efforts in optimizing the website resulted in a reduction of the initial load time from 3.8 seconds to 1.6 seconds and substantial improvements in First Contentful Paint (FCP) and Largest Contentful Paint (LCP) metrics. Despite these successes, the project was unfortunately discontinued due to financial disputes.',
+                sideProject: false,
+                media: {
+                    thumbnail:
+                        'https://res.cloudinary.com/dv7g8veki/image/upload/v1663187274/personal_website/portfolio/banana-boyz-club/thumbnail_u9nifz.png',
+                    images: [
+                        'https://res.cloudinary.com/dv7g8veki/image/upload/v1662747663/Personal%20Website/Portfolio/banana_boyz_club_roadmap.png',
+                    ],
+                },
+                summary: 'NFT website.',
+                stack: [
+                    {
+                        title: 'React.js',
+                        icon: '/assets/svg/react.svg',
+                    },
+                    {
+                        title: 'Next.js',
+                        icon: '/assets/svg/next.svg',
+                    },
+                    {
+                        title: 'Typescript',
+                        icon: '/assets/svg/typescript.svg',
+                    },
+                    {
+                        title: 'Tailwindcss',
+                        icon: '/assets/svg/tailwindcss.svg',
+                    },
+                    {
+                        title: 'MUI',
+                        icon: '/assets/svg/mui.svg',
+                    },
+                    {
+                        title: 'React Query',
+                        icon: '/assets/svg/react-query.svg',
+                    },
+                    {
+                        title: 'Playwright',
+                        icon: '/assets/svg/playwright.svg',
+                    },
+                    {
+                        title: 'Yarn Workspace',
+                        icon: '/assets/svg/yarn.svg',
+                    },
+                    {
+                        title: 'Gitlab CI',
+                        icon: '/assets/svg/gitlab.svg',
+                    },
+                ],
+                testimonial: {
+                    isShared: false,
+                    content: 'Deliveried on Time',
+                },
+                url: 'https://bananaclub.ittisafur.com/',
+            },
+            {
                 id: 7,
                 title: 'Movie app',
                 slug: 'movie-app',
@@ -374,7 +481,7 @@ const PortfolioAPI = {
                         'https://res.cloudinary.com/dv7g8veki/image/upload/v1679869819/personal_website/portfolio/movie-app/2023-03-27_04-29_mhwqe1.png',
                     images: [],
                 },
-                summary: 'This is a summary',
+                summary: 'Website created with TMDB API and Reactjs',
                 stack: [
                     {
                         title: 'React.js',
@@ -418,69 +525,6 @@ const PortfolioAPI = {
                     content: '',
                 },
                 url: 'https://movieapp.ittisafur.com',
-            },
-            {
-                id: 8,
-                title: 'KB Trust',
-                slug: 'kb-trust',
-                startdate: '2021-02-01',
-                enddate: '2021-05-31',
-                isworking: false,
-                hasdesign: false,
-                worktype: 'Professional',
-                location: 'Remote',
-                description:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, sodales cursus integer tristique nulla praesent senectus interdum. Quam nunc, ut posuere ut feugiat nisi viverra vitae. Pulvinar eget ipsum, nulla duis vel. Posuere nec commodo nulla in ac ullamcorper aenean.',
-                sideproject: true,
-                media: {
-                    thumbnail:
-                        'https://res.cloudinary.com/dv7g8veki/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1618826713/Portfolio/kbtrust.png',
-                    images: [],
-                },
-                summary: 'This is a summary',
-                stack: [
-                    {
-                        title: 'React.js',
-                        icon: '/assets/svg/react.svg',
-                    },
-                    {
-                        title: 'Next.js',
-                        icon: '/assets/svg/next.svg',
-                    },
-                    {
-                        title: 'Typescript',
-                        icon: '/assets/svg/typescript.svg',
-                    },
-                    {
-                        title: 'Tailwindcss',
-                        icon: '/assets/svg/tailwindcss.svg',
-                    },
-                    {
-                        title: 'MUI',
-                        icon: '/assets/svg/mui.svg',
-                    },
-                    {
-                        title: 'React Query',
-                        icon: '/assets/svg/react-query.svg',
-                    },
-                    {
-                        title: 'Playwright',
-                        icon: '/assets/svg/playwright.svg',
-                    },
-                    {
-                        title: 'Yarn Workspace',
-                        icon: '/assets/svg/yarn.svg',
-                    },
-                    {
-                        title: 'Gitlab CI',
-                        icon: '/assets/svg/gitlab.svg',
-                    },
-                ],
-                testimonial: {
-                    isShared: true,
-                    content: 'Work was deliveried on Time',
-                },
-                url: 'https://kbtrust.com',
             },
         ],
     },
