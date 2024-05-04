@@ -7,6 +7,7 @@ import Footer from 'components/Footer';
 import { Analytics } from '@vercel/analytics/react';
 import TagManager from 'react-gtm-module';
 import Script from 'next/script';
+import { useRouter } from 'next/router';
 import posthog from 'posthog-js';
 import { PostHogProvider } from 'posthog-js/react';
 
@@ -21,10 +22,20 @@ if (typeof window !== 'undefined') {
 }
 
 function MyApp({ Component, pageProps }: AppProps) {
+    const router = useRouter();
+
     useEffect(() => {
         TagManager.initialize({ gtmId: process.env.NEXT_PUBLIC_GTM_ID });
     }, []);
-    posthog.capture('my event', { property: 'value' });
+
+    useEffect(() => {
+        const handleRouteChange = () => posthog?.capture('$pageview');
+        router.events.on('routeChangeComplete', handleRouteChange);
+
+        return () => {
+            router.events.off('routeChangeComplete', handleRouteChange);
+        };
+    }, []);
 
     return (
         <Fragment>
