@@ -31,7 +31,8 @@
 }
 @font-face {
     font-family: 'Vujahday Script';
-    src: url('/assets/fonts/VujahdayScript-Regular.woff2') format('woff2'),
+    src:
+        url('/assets/fonts/VujahdayScript-Regular.woff2') format('woff2'),
         url('/assets/fonts/VujahdayScript-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
@@ -40,7 +41,8 @@
 
 @font-face {
     font-family: 'Readex Pro';
-    src: url('/assets/fonts/ReadexPro-Regular.woff2') format('woff2'),
+    src:
+        url('/assets/fonts/ReadexPro-Regular.woff2') format('woff2'),
         url('/assets/fonts/ReadexPro-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
@@ -49,7 +51,8 @@
 
 @font-face {
     font-family: 'Readex Pro';
-    src: url('/assets/fonts/ReadexPro-Light.woff2') format('woff2'),
+    src:
+        url('/assets/fonts/ReadexPro-Light.woff2') format('woff2'),
         url('/assets/fonts/ReadexPro-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;

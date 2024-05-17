@@ -81,62 +81,6 @@ const PortfolioAPI = {
             },
             {
                 id: 2,
-                title: 'Tesch Global',
-                slug: 'teschglobal',
-                startDate: 'May 2023',
-                endDate: 'Aug 2023',
-                isWorking: false,
-                hasDesign: false,
-                workType: 'Freelance',
-                location: 'Remote',
-                description:
-                    'At TeschGlobal, my role as a Full Stack Developer focused on enhancing backend and frontend operations through innovative solutions. I spearheaded the integration of GraphQL with Express.js and Apollo Server, optimizing our backend support. On the frontend, I leveraged Next.js to develop responsive and high-performance web applications. I managed the seamless integration of data flow between Optum and Medimpact APIs, ensuring robust connectivity. Additionally, I was responsible for monitoring AWS builds post-GitHub push, which helped maintain continuous and successful deployments. A key achievement was the implementation of automated error handling mechanisms, which significantly reduced system downtime by 75% due to API integration issues, thereby boosting overall system reliability and user satisfaction.',
-                sideProject: false,
-                media: {
-                    thumbnail:
-                        'https://res.cloudinary.com/dv7g8veki/image/upload/v1714857447/personal_website/portfolio/teschglobal/TESCHGlobal-logo-profile_b1ofdx.jpg',
-                    images: [],
-                },
-                summary:
-                    'TeschGlobal leverages technology-agnostic solutions to solve complex business challenges, enhancing productivity and efficiency across industries.',
-                stack: [
-                    {
-                        title: 'React.js',
-                        icon: '/assets/svg/react-stack.svg',
-                    },
-                    {
-                        title: 'Next.js',
-                        icon: '/assets/svg/next-stack.svg',
-                    },
-                    {
-                        title: 'Typescript',
-                        icon: '/assets/svg/typescript-stack.svg',
-                    },
-                    {
-                        title: 'Express.js',
-                        icon: '/assets/svg/express-stack.svg',
-                    },
-                    {
-                        title: 'Apollo GQL',
-                        icon: '/assets/svg/apollo-stack.svg',
-                    },
-                    {
-                        title: 'GraphQL',
-                        icon: '/assets/svg/graphql-stack.svg',
-                    },
-                    {
-                        title: 'AWS',
-                        icon: '/assets/svg/aws-stack.svg',
-                    },
-                ],
-                testimonial: {
-                    isShared: false,
-                    content: '',
-                },
-                url: 'https://teschglobal.com/',
-            },
-            {
-                id: 3,
                 title: 'Raush',
                 slug: 'raush',
                 startDate: 'Nov 2021',
@@ -199,7 +143,7 @@ const PortfolioAPI = {
                 url: 'https://rau.sh',
             },
             {
-                id: 4,
+                id: 3,
                 title: 'Kitty',
                 slug: 'wearekitty',
                 startDate: 'Jul 2022',
@@ -419,7 +363,7 @@ const PortfolioAPI = {
                 url: 'https://rehashltd.com',
             },
             {
-                id: 3,
+                id: 7,
                 title: 'Banana Boyz Club',
                 slug: 'banana-boyz-club',
                 startDate: '2022-01-21',
@@ -468,7 +412,7 @@ const PortfolioAPI = {
                 url: 'https://bananaclub.ittisafur.com/',
             },
             {
-                id: 7,
+                id: 8,
                 title: 'Movie app',
                 slug: 'movie-app',
                 startdate: '2021-02-01',
