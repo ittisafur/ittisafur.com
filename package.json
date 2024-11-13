@@ -16,7 +16,7 @@
     "@heroicons/react": "2.1.5",
     "@vercel/analytics": "1.4.0",
     "classnames": "2.5.1",
-    "lightgallery": "2.7.2",
+    "lightgallery": "2.8.1",
     "next": "14.2.17",
     "next-seo": "6.6.0",
     "next-sitemap": "4.2.3",
