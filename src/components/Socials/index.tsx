@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { Mail, Linkedin, Github } from 'lucide-react';
-import { cn } from '@/lib/utils';
 
 interface SocialLink {
   name: string;

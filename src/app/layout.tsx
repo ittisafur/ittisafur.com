@@ -39,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} antialiased`}
+        className={`${inter.variable} ${figtree.variable} ${montserrat.variable} antialiased`}
       >
         <Header />
         <main className="min-h-screen pt-[var(--header-height)] bg-it-dark-900 ">

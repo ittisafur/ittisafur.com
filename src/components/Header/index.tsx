@@ -7,9 +7,20 @@ import { usePathname } from 'next/navigation';
 import { ChevronDown } from 'lucide-react';
 import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetTitle } from '@/components/ui/sheet';
 import { cn } from "@/lib/utils";
-import styles from './index.module.scss';
 
-const navLinks = [
+type SubLink = {
+  title: string;
+  link: string;
+  description: string;
+};
+
+type NavLink = {
+  name: string;
+  link: string;
+  subLinks: SubLink[] | null;
+};
+
+const navLinks: NavLink[] = [
   {
     name: 'About',
     link: 'about',
@@ -79,38 +90,35 @@ const Header = () => {
     };
   }, [openDropdown]);
 
+  // Fix the ref callback type
+  const setDropdownRef = (link: string) => (el: HTMLDivElement | null) => {
+    dropdownRefs.current[link] = el;
+  };
 
-  const isActiveLink = (link: string, subLinks: { link: string }[] | null = null) => {
-    // Exact match for root path
+  const isActiveLink = (link: string, subLinks: SubLink[] | null = null) => {
     if (link === '' && pathname === '/') return true;
-
-    // Create the base path to check against
     const basePath = `/${link}`;
-
-    // If there are no subLinks, just check if the current path starts with the base path
     if (!subLinks) {
       return pathname === basePath;
     }
-
-    // Check if we're on the parent path or any of its subpaths
     const isParentPath = pathname === basePath;
     const isSubPath = subLinks.some(subLink =>
       pathname.startsWith(subLink.link)
     );
-
     return isParentPath || isSubPath;
   };
 
   const isActiveSubLink = (link: string) => {
     return pathname === link;
   };
-  const renderNavigationItem = (item: typeof navLinks[0]) => {
+
+  const renderNavigationItem = (item: NavLink) => {
     if (item.subLinks) {
       return (
         <div
           key={item.link}
           className="relative"
-          ref={el => dropdownRefs.current[item.link] = el}
+          ref={setDropdownRef(item.link)}
         >
           <div
             className={cn(
