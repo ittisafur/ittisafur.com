@@ -1,97 +1,319 @@
-import { Fragment } from 'react';
-import { Disclosure, Menu, Transition } from '@headlessui/react';
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
-import Link from 'next/link';
+'use client';
+
+import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { ChevronDown } from 'lucide-react';
+import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetTitle } from '@/components/ui/sheet';
+import { cn } from "@/lib/utils";
+import styles from './index.module.scss';
 
-import styles from '@/styles/header.module.scss';
-import bindClassNames from 'classnames/bind';
+const navLinks = [
+  {
+    name: 'About',
+    link: 'about',
+    subLinks: [
+      {
+        title: "Resume",
+        link: "/about/resume",
+        description: "View my professional experience and skills",
+      }
+    ]
+  },
+  {
+    name: 'Portfolio',
+    link: 'portfolio',
+    subLinks: [
+      {
+        title: "Professional Projects",
+        link: "/portfolio/professional-experience",
+        description: "View my professional work experience",
+      },
+      {
+        title: "Personal Projects",
+        link: "/portfolio/personal-projects",
+        description: "Check out my side projects and experiments",
+      }
+    ]
+  },
+  {
+    name: 'Services',
+    link: 'services',
+    subLinks: null
+  },
+  {
+    name: 'Blog',
+    link: 'blog',
+    subLinks: null
+  },
+];
 
-const cx = bindClassNames.bind(styles);
+const Header = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const dropdownRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
+  const pathname = usePathname();
 
-const navigation = [{ name: 'Portfolio', href: '/portfolio', current: false }];
+  useEffect(() => {
+    const handleScroll = () => {
+      if (typeof window !== 'undefined') {
+        setIsScrolled(window.scrollY > 10);
+      }
+    };
 
-function classNames(...classes) {
-    return classes.filter(Boolean).join(' ');
-}
+    const handleClickOutside = (event: MouseEvent) => {
+      if (openDropdown && dropdownRefs.current[openDropdown] &&
+        !dropdownRefs.current[openDropdown]?.contains(event.target as Node)) {
+        setOpenDropdown(null);
+      }
+    };
 
-function Header() {
-    return (
-        <Disclosure as="nav" className="bg-it-dark-900">
-            {({ open }) => (
-                <>
-                    <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 font-ReadexPro">
-                        <div className="relative flex h-16 items-center justify-between">
-                            <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                                {/* Mobile menu button*/}
-                                <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
-                                    <span className="absolute -inset-0.5" />
-                                    <span className="sr-only">Open main menu</span>
-                                    {open ? (
-                                        <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
-                                    ) : (
-                                        <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
-                                    )}
-                                </Disclosure.Button>
-                            </div>
-                            <div className="flex flex-1 items-center justify-center sm:justify-between">
-                                <div className="flex flex-shrink-0 items-center justify-center">
-                                    <Link href="/">
-                                        <Image
-                                            src="/assets/svg/logo-white.svg"
-                                            alt="Ittisafur Logo"
-                                            width="100"
-                                            height="50"
-                                        />
-                                    </Link>
-                                </div>
-                                <div className="hidden sm:ml-6 sm:block">
-                                    <div className="flex space-x-4">
-                                        {navigation.map((item) => (
-                                            <a
-                                                key={item.name}
-                                                href={item.href}
-                                                className={classNames(
-                                                    item.current
-                                                        ? 'bg-gray-900 text-white'
-                                                        : 'text-gray-300 hover:text-white hover:underline transition-all duration-300 ease-in',
-                                                    'rounded-md px-3 py-2 text-sm font-medium uppercase tracking-wide'
-                                                )}
-                                                aria-current={item.current ? 'page' : undefined}
-                                            >
-                                                {item.name}
-                                            </a>
-                                        ))}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    window.addEventListener('scroll', handleScroll);
+    document.addEventListener('mousedown', handleClickOutside);
+    handleScroll();
 
-                    <Disclosure.Panel className="sm:hidden">
-                        <div className="space-y-1 px-2 pb-3 pt-2">
-                            {navigation.map((item) => (
-                                <Disclosure.Button
-                                    key={item.name}
-                                    as="a"
-                                    href={item.href}
-                                    className={classNames(
-                                        item.current
-                                            ? 'bg-gray-900 text-white'
-                                            : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                                        'block rounded-md px-3 py-2 text-base font-medium'
-                                    )}
-                                    aria-current={item.current ? 'page' : undefined}
-                                >
-                                    {item.name}
-                                </Disclosure.Button>
-                            ))}
-                        </div>
-                    </Disclosure.Panel>
-                </>
-            )}
-        </Disclosure>
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [openDropdown]);
+
+
+  const isActiveLink = (link: string, subLinks: { link: string }[] | null = null) => {
+    // Exact match for root path
+    if (link === '' && pathname === '/') return true;
+
+    // Create the base path to check against
+    const basePath = `/${link}`;
+
+    // If there are no subLinks, just check if the current path starts with the base path
+    if (!subLinks) {
+      return pathname === basePath;
+    }
+
+    // Check if we're on the parent path or any of its subpaths
+    const isParentPath = pathname === basePath;
+    const isSubPath = subLinks.some(subLink =>
+      pathname.startsWith(subLink.link)
     );
-}
+
+    return isParentPath || isSubPath;
+  };
+
+  const isActiveSubLink = (link: string) => {
+    return pathname === link;
+  };
+  const renderNavigationItem = (item: typeof navLinks[0]) => {
+    if (item.subLinks) {
+      return (
+        <div
+          key={item.link}
+          className="relative"
+          ref={el => dropdownRefs.current[item.link] = el}
+        >
+          <div
+            className={cn(
+              "inline-flex items-center gap-1 cursor-pointer px-4 py-2 rounded-md transition-colors font-semibold",
+              isScrolled
+                ? isActiveLink(item.link, item.subLinks)
+                  ? 'text-white bg-white/10'
+                  : 'text-gray-300 hover:text-white hover:bg-white/5'
+                : isActiveLink(item.link, item.subLinks)
+                  ? 'text-white bg-white/10'
+                  : 'text-white hover:text-gray-200 hover:bg-white/5'
+            )}
+            onClick={() => setOpenDropdown(openDropdown === item.link ? null : item.link)}
+          >
+            <Link href={`/${item.link}`}>
+              <span>{item.name}</span>
+            </Link>
+            <ChevronDown
+              className={cn(
+                "h-4 w-4 transition-transform duration-200",
+                openDropdown === item.link ? "rotate-180" : "rotate-0"
+              )}
+            />
+          </div>
+          {openDropdown === item.link && (
+            <div className={cn(
+              "absolute top-full left-0 mt-2 p-4 rounded-md shadow-lg",
+              "bg-it-dark-900 border border-gray-700",
+              item.subLinks.length > 1 ? "w-[500px] grid grid-cols-2 gap-3" : "w-[400px]"
+            )}>
+              {item.subLinks.map((subLink) => (
+                <Link
+                  key={subLink.link}
+                  href={subLink.link}
+                  className={cn(
+                    "block p-3 rounded-md transition-colors font-semibold",
+                    isActiveSubLink(subLink.link)
+                      ? 'bg-gray-800/70 text-white'
+                      : 'hover:bg-gray-800/50 text-gray-300 hover:text-white'
+                  )}
+                  onClick={() => setOpenDropdown(null)}
+                >
+                  <div className="text-sm font-medium">{subLink.title}</div>
+                  <p className="text-sm text-gray-400 mt-1 font-normal">{subLink.description}</p>
+                </Link>
+              ))}
+            </div>
+          )}
+        </div>
+      );
+    }
+    return (
+      <Link
+        key={item.link}
+        href={`/${item.link}`}
+        className={cn(
+          "px-4 py-2 rounded-md transition-colors font-semibold",
+          isScrolled
+            ? isActiveLink(item.link)
+              ? 'bg-gray-800/70 text-white'
+              : 'hover:text-gray-900 hover:bg-gray-50'
+            : isActiveLink(item.link)
+              ? 'bg-white/10'
+              : 'hover:text-gray-200 hover:bg-white/5'
+        )}
+      >
+        {item.name}
+      </Link>
+    );
+  };
+
+  return (
+    <header
+      className={cn(
+        "h-[var(--header-height)] fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+        isScrolled ? 'bg-it-dark-800 shadow-lg shadow-black/20' : 'bg-transparent'
+      )}
+    >
+      <nav className="container mx-auto flex items-center justify-between p-3">
+        <Link href="/" className="flex items-center relative w-28 h-28">
+          <Image
+            src={'/assets/svg/logo-white.svg'}
+            alt="Logo"
+            fill
+            className="mr-4 object-contain"
+            priority
+          />
+        </Link>
+
+        {/* Desktop Navigation */}
+        <div className="hidden lg:flex flex-1 items-center justify-center gap-4">
+          {navLinks.map(renderNavigationItem)}
+        </div>
+
+        {/* CTA Button */}
+        <div className="hidden lg:flex">
+          <Link
+            href="/contact"
+            className={cn(
+              "border-2 rounded px-4 py-2 transition-colors duration-300 font-bold",
+              isScrolled
+                ? "border-gray-300 text-it-white hover:bg-it-white hover:text-it-dark-900 hover:border-it-white"
+                : "border-it-white text-it-white hover:bg-it-white hover:text-it-dark-900"
+            )}
+          >
+            Schedule a Consultation
+          </Link>
+        </div>
+
+        {/* Mobile Menu */}
+        <div className="lg:hidden">
+          <Sheet>
+            <SheetTrigger asChild>
+              <button
+                className={cn(
+                  "focus:outline-none transition-colors duration-300 text-white",
+                )}
+              >
+                <span className="sr-only">Open menu</span>
+                <SheetTitle className="hidden">Edit profile</SheetTitle>
+                <svg
+                  className="w-6 h-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16m-7 6h7"
+                  />
+                </svg>
+              </button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-[300px] bg-it-dark-900 border-l border-gray-700">
+              <div className="py-4">
+                <SheetClose asChild>
+                  <Link href="/" className="block">
+                    <Image
+                      src="/assets/svg/logo-white.svg"
+                      alt="Logo"
+                      width={160}
+                      height={80}
+                      className="mr-4 object-contain"
+                      priority
+                    />
+                  </Link>
+                </SheetClose>
+              </div>
+
+              <div className="mt-6">
+                <ul className="flex flex-col space-y-4">
+                  {navLinks.map((link) => (
+                    <React.Fragment key={link.link}>
+                      <li>
+                        <SheetClose asChild>
+                          <Link
+                            href={`/${link.link}`}
+                            className={cn(
+                              "block py-2 px-4 capitalize transition-colors duration-300 font-semibold",
+                              isActiveLink(link.link)
+                                ? '!bg-gray-800/50 text-white'
+                                : 'text-gray-300 hover:text-white hover:bg-gray-800/30'
+                            )}
+                          >
+                            {link.name}
+                          </Link>
+                        </SheetClose>
+                      </li>
+                      {link.subLinks?.map((subLink) => (
+                        <li key={subLink.link} className="ml-4">
+                          <SheetClose asChild>
+                            <Link
+                              href={subLink.link}
+                              className="block py-2 px-4 text-sm text-gray-400 hover:text-white hover:bg-gray-800/30 font-semibold"
+                            >
+                              {subLink.title}
+                            </Link>
+                          </SheetClose>
+                        </li>
+                      ))}
+                    </React.Fragment>
+                  ))}
+                  <li>
+                    <SheetClose asChild>
+                      <Link
+                        href="/contact"
+                        className="block bg-white text-it-dark-900 px-4 py-2 rounded hover:bg-gray-200 transition-colors duration-300 font-medium"
+                      >
+                        Schedule a Consultation
+                      </Link>
+                    </SheetClose>
+                  </li>
+                </ul>
+              </div>
+            </SheetContent>
+          </Sheet>
+        </div>
+      </nav>
+    </header>
+  );
+};
 
 export default Header;
