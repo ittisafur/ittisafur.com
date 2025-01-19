@@ -7,10 +7,18 @@ const Landing = () => {
     const filterFeaturedWorks = PortfolioAPI.data.portfolio.filter(
         (work) => work.breakthrough === true
     );
-    console.log({ filterFeaturedWorks });
-    // const renderFeaturedWorks = () => {
-    //
-    // }
+
+    const renderFeaturedWorks = () => {
+      if (!filterFeaturedWorks.length) return <Fragment />
+      
+      const dataset = filterFeaturedWorks.map((content, index) => {
+          return (
+              <div>{content.title}</div>
+          ) 
+        })
+
+      return dataset;
+    }
     return (
         <Fragment>
             <section className="min-h-screen flex flex-col pt-0.5 md:pt-4 md:justify-center">
@@ -33,7 +41,6 @@ const Landing = () => {
 
         <div className="block lg:hidden py-12 lg:py-0">
           <GlowingButton href="/contact" className="text-it-white min-w-56">
-
 Let&apos;s Talk
           </GlowingButton>
         </div>
@@ -43,7 +50,10 @@ Let&apos;s Talk
             </section>
 
             <section>
-                <div className="flex flex-col"></div>
+                <div className="flex flex-col">
+      {renderFeaturedWorks()}
+
+        </div>
             </section>
         </Fragment>
     );
