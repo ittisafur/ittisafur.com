@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import SocialButtons from '../Socials';
 import { PortfolioAPI } from '@/utlis/dummy-data';
+import GlowingButton from '../ui/glowing-button';
 
 const Landing = () => {
     const filterFeaturedWorks = PortfolioAPI.data.portfolio.filter(
@@ -29,6 +30,13 @@ const Landing = () => {
                         and see how I can help propel your business forward!
                     </p>
                 </div>
+
+        <div className="block lg:hidden py-12 lg:py-0">
+          <GlowingButton href="/contact" className="text-it-white min-w-56">
+
+Let&apos;s Talk
+          </GlowingButton>
+        </div>
                 <div className="mt-8 md:mt-24 lg:mt-52">
                     <SocialButtons />
                 </div>
