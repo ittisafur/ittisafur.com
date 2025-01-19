@@ -7,6 +7,7 @@ import { usePathname } from 'next/navigation';
 import { ChevronDown } from 'lucide-react';
 import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetTitle } from '@/components/ui/sheet';
 import { cn } from "@/lib/utils";
+import GlowingButton from '../ui/glowing-button';
 
 type SubLink = {
   title: string;
@@ -198,7 +199,7 @@ const Header = () => {
       )}
     >
       <nav className="container mx-auto flex items-center justify-between p-3">
-        <Link href="/" className="flex items-center relative w-28 h-28">
+        <Link href="/" className="flex items-center relative w-24 h-24">
           <Image
             src={'/assets/svg/logo-white.svg'}
             alt="Logo"
@@ -215,17 +216,10 @@ const Header = () => {
 
         {/* CTA Button */}
         <div className="hidden lg:flex">
-          <Link
-            href="/contact"
-            className={cn(
-              "border-2 rounded px-4 py-2 transition-colors duration-300 font-bold",
-              isScrolled
-                ? "border-gray-300 text-it-white hover:bg-it-white hover:text-it-dark-900 hover:border-it-white"
-                : "border-it-white text-it-white hover:bg-it-white hover:text-it-dark-900"
-            )}
-          >
-            Schedule a Consultation
-          </Link>
+          <GlowingButton href="/contact" className="text-it-white min-w-56">
+
+Let&apos;s Talk
+          </GlowingButton>
         </div>
 
         {/* Mobile Menu */}
@@ -306,12 +300,9 @@ const Header = () => {
                   ))}
                   <li>
                     <SheetClose asChild>
-                      <Link
-                        href="/contact"
-                        className="block bg-white text-it-dark-900 px-4 py-2 rounded hover:bg-gray-200 transition-colors duration-300 font-medium"
-                      >
-                        Schedule a Consultation
-                      </Link>
+                      <GlowingButton href="/contact" className="text-it-white min-w-56">
+Let&apos;s Talk
+                      </GlowingButton>
                     </SheetClose>
                   </li>
                 </ul>

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className="py-4">
       &copy; All rights reserved.
     </footer>
   )
