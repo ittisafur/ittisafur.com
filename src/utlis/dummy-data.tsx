@@ -52,10 +52,6 @@ const PortfolioAPI = {
                         icon: '/assets/svg/chartjs-stack.svg',
                     },
                     {
-                        title: 'Playwright',
-                        icon: '/assets/svg/playwright-stack.svg',
-                    },
-                    {
                         title: 'GCP',
                         icon: '/assets/svg/gcp-stack.svg',
                     },
@@ -131,10 +127,6 @@ const PortfolioAPI = {
                         icon: '/assets/svg/chartjs-stack.svg',
                     },
                     {
-                        title: 'Playwright',
-                        icon: '/assets/svg/playwright-stack.svg',
-                    },
-                    {
                         title: 'GCP',
                         icon: '/assets/svg/gcp-stack.svg',
                     },
@@ -207,10 +199,6 @@ const PortfolioAPI = {
                     {
                         title: 'React Query',
                         icon: '/assets/svg/react-query-stack.svg',
-                    },
-                    {
-                        title: 'Playwright',
-                        icon: '/assets/svg/playwright-stack.svg',
                     },
                     {
                         title: 'Yarn Workspace',
