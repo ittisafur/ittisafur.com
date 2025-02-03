@@ -1,10 +1,10 @@
-import Landing from "@/components/Landing";
-import { Fragment } from "react";
+import Landing from '@/components/Landing';
+import { Fragment } from 'react';
 
 export default function Home() {
-  return (
-    <Fragment>
-      <Landing />
-    </Fragment>
-  );
+    return (
+        <Fragment>
+            <Landing />
+        </Fragment>
+    );
 }
