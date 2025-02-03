@@ -2,4 +2,4 @@
 
 bun prettier
 bun lint
-bun build
+bun run build
