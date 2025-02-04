@@ -45,7 +45,6 @@ const Landing = async () => {
         const portfolioItems = data?.portfolios?.[0]?.Portfolio || [];
         const recommendedWorks = getRecommendedWorks(portfolioItems);
 
-        console.log({ data });
         const renderRecommendedWorks = () => {
             if (!recommendedWorks.length) return <Fragment />;
 
