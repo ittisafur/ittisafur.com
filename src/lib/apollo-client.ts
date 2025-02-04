@@ -39,26 +39,3 @@ export const { getClient, query, PreloadQuery } = registerApolloClient(() => {
         },
     });
 });
-
-// Usage example in your component:
-/*
-const YourComponent = async () => {
-    const client = getClient();
-    try {
-        const { data, error } = await client.query({
-            query: YOUR_QUERY,
-        });
-        
-        if (error) {
-            console.error('GraphQL Error:', error);
-            throw error;
-        }
-        
-        return <div>{JSON.stringify(data)}</div>;
-        
-    } catch (err) {
-        console.error('Query Error:', err);
-        return <div>Error: {err.message}</div>;
-    }
-};
-*/

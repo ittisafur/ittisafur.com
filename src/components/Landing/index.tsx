@@ -45,6 +45,7 @@ const Landing = async () => {
         const portfolioItems = data?.portfolios?.[0]?.Portfolio || [];
         const recommendedWorks = getRecommendedWorks(portfolioItems);
 
+        console.log({ data });
         const renderRecommendedWorks = () => {
             if (!recommendedWorks.length) return <Fragment />;
 
@@ -62,7 +63,7 @@ const Landing = async () => {
                             <div className="flex flex-col lg:flex-row items-center gap-6 p-6">
                                 <div className="relative w-48 h-48 md:w-52 md:h-52 lg:w-80 lg:h-80 flex-shrink-0 group overflow-hidden rounded-lg">
                                     <Image
-                                        src={`${process.env.NEXT_PUBLIC_MEDIA_API ? process.env.NEXT_PUBLIC_MEDIA_API : 'https://endpoints.ittisafur.com'}${content.thumbnail.url}`}
+                                        src={`${content.thumbnail.url}`}
                                         fill
                                         alt={content.title}
                                         className="object-cover transition-all duration-500 ease-in-out filter saturate-[0.3] brightness-[0.9] group-hover:saturate-100 group-hover:brightness-100 group-hover:scale-105"

@@ -110,7 +110,7 @@ const StackIcon: React.FC<StackIconProps> = ({
                 className={`relative ${iconSize} hover:scale-110 transition-transform duration-300 ${className}`}
             >
                 <Image
-                    src={`${process.env.NEXT_PUBLIC_MEDIA_API ? process.env.NEXT_PUBLIC_MEDIA_API : 'https://endpoints.ittisafur.com'}${iconUrl}`}
+                    src={`${iconUrl}`}
                     alt={tech.title}
                     className="w-full h-full object-contain dark:invert"
                     fill
