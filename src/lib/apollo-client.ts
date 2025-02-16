@@ -23,10 +23,10 @@ export const { getClient, query, PreloadQuery } = registerApolloClient(() => {
         link: new HttpLink({
             uri: process.env.NEXT_PUBLIC_API || 'https://endpoints.ittisafur.com/graphql',
             fetchOptions: {
-                cache: 'no-store', // Disable HTTP cache
-                next: { revalidate: 0 }, // Disable Next.js cache
+                // cache: 'no-store',
+                next: { revalidate: 20 },
             },
-            credentials: 'same-origin', // Include credentials if needed
+            // credentials: 'same-origin', // Include credentials if needed
             headers: {
                 'Content-Type': 'application/json',
             },

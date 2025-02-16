@@ -45,7 +45,7 @@ export default function RootLayout({
                 <ApolloWrapper>
                     <Header />
                     <main className="min-h-screen pt-[var(--header-height)] bg-it-dark-900 ">
-                        <div className="py-8">{children}</div>
+                        <div>{children}</div>
                     </main>
                     <Footer />
                 </ApolloWrapper>

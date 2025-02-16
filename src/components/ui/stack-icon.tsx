@@ -106,35 +106,39 @@ const StackIcon: React.FC<StackIconProps> = ({
 
     if (iconUrl) {
         return (
-            <div
-                className={`relative ${iconSize} hover:scale-110 transition-transform duration-300 ${className}`}
-            >
-                <Image
-                    src={`${iconUrl}`}
-                    alt={tech.title}
-                    className="w-full h-full object-contain dark:invert"
-                    fill
-                />
+            <div className="flex flex-col justify-center items-center">
+                <div
+                    className={`relative ${iconSize} hover:scale-110 transition-transform duration-300 ${className} -mt-1 `}
+                >
+                    <Image
+                        src={`${iconUrl}`}
+                        alt={tech.title}
+                        className="w-full h-full object-contain"
+                        fill
+                    />
+                </div>
+
                 {showLabel && (
-                    <span className="text-sm font-medium text-muted-foreground">{tech.title}</span>
+                    <span className="text-xs uppercase font-semibold mt-2">{tech.title}</span>
                 )}
             </div>
         );
     }
 
     return (
-        <div className={`flex items-center gap-2 ${className}`}>
-            <svg
-                role="img"
-                viewBox="0 0 24 24"
-                className={`${iconSize} ${showLabel ? '' : 'hover:scale-110'} transition-transform duration-300`}
-                fill="currentColor"
-            >
-                <path d={simpleIcon?.path} />
-            </svg>
-            {showLabel && (
-                <span className="text-sm font-medium text-muted-foreground">{tech.title}</span>
-            )}
+        <div className="">
+            <div className={`flex items-center justify-center gap-2 ${className}`}>
+                <svg
+                    role="img"
+                    viewBox="0 0 24 24"
+                    className={`${iconSize} hover:scale-110 transition-transform duration-300`}
+                    fill="currentColor"
+                >
+                    <path d={simpleIcon?.path} />
+                </svg>
+            </div>
+
+            {showLabel && <span className="text-xs uppercase font-semibold">{tech.title}</span>}
         </div>
     );
 };
@@ -146,7 +150,9 @@ const StackGrid: React.FC<StackGridProps> = ({
     iconSize = 'w-6 h-6',
 }) => {
     return (
-        <div className={`flex flex-wrap gap-3 justify-center lg:justify-start ${className}`}>
+        <div
+            className={`flex flex-wrap gap-3 justify-center lg:justify-start ${className} relative z-50`}
+        >
             {technologies.map((tech, index) => (
                 <StackIcon
                     key={`${tech.title}-${index}`}

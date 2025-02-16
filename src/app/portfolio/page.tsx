@@ -1,10 +1,11 @@
-import Landing from '@/components/Landing';
+import PortfolioLanding from '@/components/Portfolio';
+import React from 'react';
 import { generateSEO } from '@/components/SEO';
-import { Fragment } from 'react';
 import { Metadata } from 'next';
 import { getClient } from '@/lib/apollo-client';
 import { MetaData } from '@/types/metadata';
-import { GET_Landing_SEO_DATA } from '@/graphql/queries/meta';
+import { GET_Portfolio_SEO_DATA } from '@/graphql/queries/meta';
+
 
 export async function generateMetadata(): Promise<Metadata> {
     const client = getClient();
@@ -15,10 +16,11 @@ export async function generateMetadata(): Promise<Metadata> {
                 landing: { metaData: LandingSEO },
             },
         } = await client.query({
-            query: GET_Landing_SEO_DATA,
+            query: GET_Portfolio_SEO_DATA,
         });
 
         const metaData: Partial<MetaData> = LandingSEO || {};
+
 
         return generateSEO({
             title: metaData?.title || '',
@@ -30,17 +32,15 @@ export async function generateMetadata(): Promise<Metadata> {
         });
     } catch {
         return generateSEO({
-            title: '',
+            title: 'Portfolio',
             description: '',
             pathname: '/',
         });
     }
 }
 
-export default async function Home() {
-    return (
-        <Fragment>
-            <Landing />
-        </Fragment>
-    );
-}
+const Portfolio = () => {
+    return <PortfolioLanding />;
+};
+
+export default Portfolio;

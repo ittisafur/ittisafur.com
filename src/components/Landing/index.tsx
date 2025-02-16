@@ -1,15 +1,13 @@
 import React, { Fragment } from 'react';
 import SocialButtons from '../Socials';
 import GlowingButton from '../ui/glowing-button';
-import { MagicCard } from '../ui/magic-card';
 import Link from 'next/link';
-import Image from 'next/image';
-import { StackGrid } from '../ui/stack-icon';
 // import TechCloudDemo from '../ui/tech-example';
 import { getClient } from '@/lib/apollo-client';
 import { GET_Portfolio } from '@/graphql/queries/getPortfolio';
 
-import type { Portfolio } from '@/types/landing';
+import type { Portfolio } from '@/types/portfolio';
+import PortfolioShared from '../shared/Portfolio';
 
 const getRecommendedWorks = (portfolioItems: Portfolio[], limit = 6): Portfolio[] => {
     if (!portfolioItems?.length) return [];
@@ -49,51 +47,7 @@ const Landing = async () => {
             if (!recommendedWorks.length) return <Fragment />;
 
             return recommendedWorks.map((content, index) => (
-                <Link key={index} href={`/portfolio/${content.slug}`}>
-                    <MagicCard
-                        className="cursor-pointer shadow-2xl rounded-none w-full overflow-hidden"
-                        gradientColor={'#2C2C2C'}
-                        gradientSize={200}
-                        gradientOpacity={0.8}
-                        gradientFrom="#9E7AFF"
-                        gradientTo="#FE8BBB"
-                    >
-                        <div className="relative z-30">
-                            <div className="flex flex-col lg:flex-row items-center gap-6 p-6">
-                                <div className="relative w-48 h-48 md:w-52 md:h-52 lg:w-80 lg:h-80 flex-shrink-0 group overflow-hidden rounded-lg">
-                                    <Image
-                                        src={`${content.thumbnail.url}`}
-                                        fill
-                                        alt={content.title}
-                                        className="object-cover transition-all duration-500 ease-in-out filter saturate-[0.3] brightness-[0.9] group-hover:saturate-100 group-hover:brightness-100 group-hover:scale-105"
-                                        sizes="(max-width: 768px) 100vw, 256px"
-                                        priority
-                                        quality={95}
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-tr from-it-dark-800/80 via-transparent to-transparent transition-opacity duration-500 ease-in-out group-hover:opacity-0" />
-                                </div>
-                                <div className="flex-1 flex flex-col gap-4 py-2">
-                                    <div className="space-y-4 flex flex-col min-h-[15.9rem]">
-                                        <h2 className="text-2xl lg:text-3xl uppercase font-bold hover:bg-it-white hover:text-it-dark-800 transition-all ease-in duration-300 w-full text-center lg:text-auto lg:text-left lg:w-max">
-                                            {content.title}
-                                        </h2>
-                                        <p className="text-sm text-gray-300 font-inter text-center lg:text-left">
-                                            {content.summary}
-                                        </p>
-                                        <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
-                                            <StackGrid technologies={content.stack} />
-                                        </div>
-                                    </div>
-                                    <div className="flex justify-center lg:justify-start mt-8">
-                                        <div className="border-it-white border px-6 py-1.5 rounded hover:scale-95 hover:bg-it-white hover:text-it-dark-800 transition-all ease-in duration-300 font-semibold text-sm">
-                                            Read More
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </MagicCard>
-                </Link>
+                <PortfolioShared content={content} key={index} />
             ));
         };
 
@@ -102,8 +56,8 @@ const Landing = async () => {
                 <section className="min-h-screen flex flex-col pt-0.5 md:pt-4 md:justify-center">
                     <div className="flex">
                         <div className="w-max">
-                            <div className="flex flex-col font-inter gap-y-6">
-                                <p>Hey, I&apos;m</p>
+                            <div className="flex flex-col font-inter gap-y-6 text-center lg:text-left">
+                                <p>Hey, I&apos;m  </p>
                                 <h1 className="text-gradient text-4xl md:text-5xl lg:text-6xl font-figtree font-semibold tracking-wide">
                                     Ittisafur Rahman
                                 </h1>
@@ -156,7 +110,7 @@ const Landing = async () => {
                     </div>
                     <div className="my-8 flex justify-center items-center">
                         <Link href="/portfolio">
-                            <div className="border-it-white border px-20 py-2.5 rounded hover:scale-95 hover:bg-it-white hover:text-it-dark-800 transition-all ease-in duration-300 font-semibold text-base">
+                            <div className="border-it-white border px-20 py-2.5 rounded hover:scale-95 hover:bg-it-white hover:text-it-dark-800 transition-all ease-in duration-300 font-semibold text-sm lg:text-base">
                                 View All
                             </div>
                         </Link>

@@ -179,5 +179,6 @@ export default {
       addUtilities(gradientUtilities);
     }),
     animate,
+    require('@tailwindcss/typography')
   ],
 } satisfies Config;

@@ -18,45 +18,51 @@ type SubLink = {
 type NavLink = {
     name: string;
     link: string;
-    subLinks: SubLink[] | null;
+    subLinks?: SubLink[] | null;
 };
 
 const navLinks: NavLink[] = [
     {
         name: 'About',
         link: 'about',
-        subLinks: [
-            {
-                title: 'Resume',
-                link: '/about/resume',
-                description: 'View my professional experience and skills',
-            },
-        ],
+        // subLinks: [
+        //     {
+        //         title: 'Resume',
+        //         link: '/about/resume',
+        //         description: 'View my professional experience and skills',
+        //     },
+        // ],
     },
     {
         name: 'Portfolio',
         link: 'portfolio',
-        subLinks: [
-            {
-                title: 'Professional Projects',
-                link: '/portfolio/professional-experience',
-                description: 'View my professional work experience',
-            },
-            {
-                title: 'Personal Projects',
-                link: '/portfolio/personal-projects',
-                description: 'Check out my side projects and experiments',
-            },
-        ],
+        // subLinks: [
+        //     {
+        //         title: 'Professional Projects',
+        //         link: '/portfolio/professional-experience',
+        //         description: 'View my professional work experience',
+        //     },
+        //     {
+        //         title: 'Personal Projects',
+        //         link: '/portfolio/personal-projects',
+        //         description: 'Check out my side projects and experiments',
+        //     },
+        // ],
     },
+    // {
+    //     name: 'Services',
+    //     link: 'services',
+    //     subLinks: null,
+    // },
+    // {
+    //     name: 'Blog',
+    //     link: 'blog',
+    //     subLinks: null,
+    // },
+
     {
-        name: 'Services',
-        link: 'services',
-        subLinks: null,
-    },
-    {
-        name: 'Blog',
-        link: 'blog',
+        name: 'Contact',
+        link: 'contact',
         subLinks: null,
     },
 ];
@@ -236,7 +242,7 @@ const Header = () => {
                                 )}
                             >
                                 <span className="sr-only">Open menu</span>
-                                <SheetTitle className="hidden">Edit profile</SheetTitle>
+                                <SheetTitle className="hidden">Mobile Navigation</SheetTitle>
                                 <svg
                                     className="w-6 h-6"
                                     xmlns="http://www.w3.org/2000/svg"
@@ -263,8 +269,8 @@ const Header = () => {
                                         <Image
                                             src="/assets/svg/logo-white.svg"
                                             alt="Logo"
-                                            width={160}
-                                            height={80}
+                                            width={120}
+                                            height={60}
                                             className="mr-4 object-contain"
                                             priority
                                         />
