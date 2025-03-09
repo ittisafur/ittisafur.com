@@ -7,14 +7,50 @@ import styles from './index.module.scss';
 import { StackGrid } from '@/components/ui/stack-icon';
 import VideoPlayer from '@/components/VideoPlayer';
 import { notFound } from 'next/navigation';
+import { generateSEO } from '@/components/SEO';
+import { Metadata } from 'next';
+import { MetaData } from '@/types/metadata';
+import { GET_Landing_SEO_DATA } from '@/graphql/queries/meta';
 const cx = bindClassNames.bind(styles);
 
 type PortfolioParams = Promise<{ slug: string }>;
 
-// type GenerateMetadataProps = {
-//     params: PortfolioParams;
-// };
+type GenerateMetadataProps = {
+    params: PortfolioParams;
+};
 
+export async function generateMetadata({ params }: GenerateMetadataProps): Promise<Metadata> {
+    const { slug } = await params;
+    const client = getClient();
+
+    try {
+        const {
+            data: { portfolios },
+        } = await client.query({
+            query: GET_Portfolio_Single,
+            variables: {
+                slug,
+            },
+        });
+
+        const metaData: Partial<MetaData> = portfolios[0].Portfolio[0].metaData || {};
+
+        return generateSEO({
+            title: metaData?.title || '',
+            description: metaData?.description,
+            keywords: metaData?.keywords?.map((keyword) => keyword.keyword).filter(Boolean),
+            image: metaData?.image?.url,
+            pathname: '/',
+            noindex: false,
+        });
+    } catch {
+        return generateSEO({
+            title: '',
+            description: '',
+            pathname: '/',
+        });
+    }
+}
 const PortfolioSingle = async ({ params }: { params: PortfolioParams }) => {
     const { slug } = await params;
     const client = getClient();

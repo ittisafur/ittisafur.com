@@ -1,8 +1,8 @@
 import Landing from '@/components/Landing';
-import { generateSEO } from '@/components/SEO';
 import { Fragment } from 'react';
-import { Metadata } from 'next';
 import { getClient } from '@/lib/apollo-client';
+import { generateSEO } from '@/components/SEO';
+import { Metadata } from 'next';
 import { MetaData } from '@/types/metadata';
 import { GET_Landing_SEO_DATA } from '@/graphql/queries/meta';
 
