@@ -10,7 +10,6 @@ import { notFound } from 'next/navigation';
 import { generateSEO } from '@/components/SEO';
 import { Metadata } from 'next';
 import { MetaData } from '@/types/metadata';
-import { GET_Landing_SEO_DATA } from '@/graphql/queries/meta';
 const cx = bindClassNames.bind(styles);
 
 type PortfolioParams = Promise<{ slug: string }>;
