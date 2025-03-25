@@ -38,8 +38,10 @@ body {
         --header-height: 6.5rem;
         --font-figtree: 'Figtree', serif;
         --font-inter: 'Inter', serif;
-        --font-montserrat: 'Montserrat', serif;
+        --font-roboto-mono: 'Roboto Mono', monospace;
+        --font-fira-code: 'Fira Code', monospace;
     }
+
     .dark {
         --background: 0 0% 10.2%;
         --foreground: 0 0% 98%;
@@ -72,6 +74,7 @@ body {
     * {
         @apply border-border;
     }
+
     body {
         @apply bg-background text-foreground;
     }
@@ -83,4 +86,21 @@ body {
         @apply px-2.5 py-12;
         @apply md:px-4 md:py-16;
     }
+}
+
+code[class*='language-'] {
+    font-family: var(--font-fira-code), var(--font-roboto-mono), monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    text-shadow: none;
+    color: #e0e0e0;
+}
+
+/* Improve styling for inline code */
+:not(pre) > code {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.25rem;
+    font-family: var(--font-fira-code), var(--font-roboto-mono), monospace;
+    font-size: 0.9em;
 }
