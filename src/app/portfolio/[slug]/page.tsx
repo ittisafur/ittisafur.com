@@ -1,15 +1,16 @@
 import { GET_Portfolio_Single } from '@/graphql/queries/getPortfolioSingle';
 import { getClient } from '@/lib/apollo-client';
-import React from 'react';
+import React, { Fragment } from 'react';
 import Image from 'next/image';
 import bindClassNames from 'classnames/bind';
 import styles from './index.module.scss';
 import { StackGrid } from '@/components/ui/stack-icon';
-import VideoPlayer from '@/components/VideoPlayer';
 import { notFound } from 'next/navigation';
 import { generateSEO } from '@/components/SEO';
 import { Metadata } from 'next';
 import { MetaData } from '@/types/metadata';
+import HeroVideoDialog from '@/components/magicui/hero-video-dialog';
+
 const cx = bindClassNames.bind(styles);
 
 type PortfolioParams = Promise<{ slug: string }>;
@@ -50,6 +51,7 @@ export async function generateMetadata({ params }: GenerateMetadataProps): Promi
         });
     }
 }
+
 const PortfolioSingle = async ({ params }: { params: PortfolioParams }) => {
     const { slug } = await params;
     const client = getClient();
@@ -107,8 +109,29 @@ const PortfolioSingle = async ({ params }: { params: PortfolioParams }) => {
                         }}
                     />
 
-                    <VideoPlayer url={portfolio.yt_demo} />
-
+                    {portfolio.yt_demo ? (
+                        <div className="relative py-6">
+                            <h2 className="flex justify-center items-center text-3xl text-center font-bold py-3.5">
+                                Small Video Demo
+                            </h2>
+                            <HeroVideoDialog
+                                className="block dark:hidden"
+                                animationStyle="from-center"
+                                videoSrc={portfolio.yt_demo}
+                                thumbnailSrc={portfolio.thumbnail.url}
+                                thumbnailAlt={portfolio.title}
+                            />
+                            <HeroVideoDialog
+                                className="hidden dark:block"
+                                animationStyle="from-center"
+                                videoSrc={portfolio.yt_demo}
+                                thumbnailSrc={portfolio.thumbnail.url}
+                                thumbnailAlt={portfolio.title}
+                            />
+                        </div>
+                    ) : (
+                        <Fragment />
+                    )}
                     <div className="flex justify-center w-full">
                         <div className="border-it-white border px-20 py-2.5 rounded hover:scale-95 hover:bg-it-white hover:text-it-dark-800 transition-all ease-in duration-300 font-semibold text-base cursor-pointer text-center">
                             <a

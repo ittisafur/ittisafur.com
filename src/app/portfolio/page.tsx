@@ -6,21 +6,19 @@ import { getClient } from '@/lib/apollo-client';
 import { MetaData } from '@/types/metadata';
 import { GET_Portfolio_SEO_DATA } from '@/graphql/queries/meta';
 
-
 export async function generateMetadata(): Promise<Metadata> {
     const client = getClient();
 
     try {
         const {
             data: {
-                landing: { metaData: LandingSEO },
+                portfolioSeo: { metaData: PortfolioSEO },
             },
         } = await client.query({
             query: GET_Portfolio_SEO_DATA,
         });
 
-        const metaData: Partial<MetaData> = LandingSEO || {};
-
+        const metaData: Partial<MetaData> = PortfolioSEO || {};
 
         return generateSEO({
             title: metaData?.title || '',
@@ -30,7 +28,8 @@ export async function generateMetadata(): Promise<Metadata> {
             pathname: '/',
             noindex: false,
         });
-    } catch {
+    } catch (error: string | unknown) {
+        console.error('Error fetching Portfolio SEO data:', error);
         return generateSEO({
             title: 'Portfolio',
             description: '',

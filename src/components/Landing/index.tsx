@@ -57,7 +57,7 @@ const Landing = async () => {
                     <div className="flex">
                         <div className="w-max">
                             <div className="flex flex-col font-inter gap-y-6 text-center lg:text-left">
-                                <p>Hey, I&apos;m  </p>
+                                <p>Hey, I&apos;m </p>
                                 <h1 className="text-gradient text-4xl md:text-5xl lg:text-6xl font-figtree font-semibold tracking-wide">
                                     Ittisafur Rahman
                                 </h1>

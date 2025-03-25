@@ -22,17 +22,17 @@ type NavLink = {
 };
 
 const navLinks: NavLink[] = [
-    {
-        name: 'About',
-        link: 'about',
-        // subLinks: [
-        //     {
-        //         title: 'Resume',
-        //         link: '/about/resume',
-        //         description: 'View my professional experience and skills',
-        //     },
-        // ],
-    },
+    // {
+    //     name: 'About',
+    //     link: 'about',
+    // subLinks: [
+    //     {
+    //         title: 'Resume',
+    //         link: '/about/resume',
+    //         description: 'View my professional experience and skills',
+    //     },
+    // ],
+    // },
     {
         name: 'Portfolio',
         link: 'portfolio',
@@ -54,11 +54,11 @@ const navLinks: NavLink[] = [
     //     link: 'services',
     //     subLinks: null,
     // },
-    // {
-    //     name: 'Blog',
-    //     link: 'blog',
-    //     subLinks: null,
-    // },
+    {
+        name: 'Blog',
+        link: 'blog',
+        subLinks: null,
+    },
 
     {
         name: 'Contact',

@@ -23,18 +23,17 @@ export const { getClient, query, PreloadQuery } = registerApolloClient(() => {
         link: new HttpLink({
             uri: process.env.NEXT_PUBLIC_API || 'https://endpoints.ittisafur.com/graphql',
             fetchOptions: {
-                // cache: 'no-store',
                 next: { revalidate: 20 },
             },
-            // credentials: 'same-origin', // Include credentials if needed
+            // credentials: 'same-origin',
             headers: {
                 'Content-Type': 'application/json',
             },
         }),
         defaultOptions: {
             query: {
-                fetchPolicy: 'network-only', // Always fetch fresh data
-                errorPolicy: 'all', // Get both data and errors if they occur
+                fetchPolicy: 'network-only',
+                errorPolicy: 'all',
             },
             watchQuery: {
                 fetchPolicy: 'network-only',
