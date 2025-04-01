@@ -2,12 +2,13 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { ChevronDown } from 'lucide-react';
-import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetTitle } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetTrigger, SheetTitle } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
 import GlowingButton from '../ui/glowing-button';
+import { useTransitionRouter } from 'next-view-transitions';
+import { useTransition } from '@/providers/Transition';
 
 type SubLink = {
     title: string;
@@ -22,44 +23,15 @@ type NavLink = {
 };
 
 const navLinks: NavLink[] = [
-    // {
-    //     name: 'About',
-    //     link: 'about',
-    // subLinks: [
-    //     {
-    //         title: 'Resume',
-    //         link: '/about/resume',
-    //         description: 'View my professional experience and skills',
-    //     },
-    // ],
-    // },
     {
         name: 'Portfolio',
         link: 'portfolio',
-        // subLinks: [
-        //     {
-        //         title: 'Professional Projects',
-        //         link: '/portfolio/professional-experience',
-        //         description: 'View my professional work experience',
-        //     },
-        //     {
-        //         title: 'Personal Projects',
-        //         link: '/portfolio/personal-projects',
-        //         description: 'Check out my side projects and experiments',
-        //     },
-        // ],
     },
-    // {
-    //     name: 'Services',
-    //     link: 'services',
-    //     subLinks: null,
-    // },
     {
         name: 'Blog',
         link: 'blog',
         subLinks: null,
     },
-
     {
         name: 'Contact',
         link: 'contact',
@@ -67,20 +39,36 @@ const navLinks: NavLink[] = [
     },
 ];
 
-const Header = () => {
-    const [isScrolled, setIsScrolled] = useState(false);
+const Header: React.FC = () => {
+    const [isScrolled, setIsScrolled] = useState<boolean>(false);
     const [openDropdown, setOpenDropdown] = useState<string | null>(null);
     const dropdownRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
+
+    const [isSheetOpen, setIsSheetOpen] = useState(false);
     const pathname = usePathname();
 
+    const { startTransition, isTransitioning } = useTransition();
+
+    const router = useTransitionRouter();
+
+    const handleNavigation = (path: string): void => {
+        if (isTransitioning) return; // Prevent multiple transitions
+
+        startTransition(() => {
+            // The actual navigation happens after the initial fade out
+            // and SVG animation has started
+            router.push(path);
+        });
+    };
+
     useEffect(() => {
-        const handleScroll = () => {
+        const handleScroll = (): void => {
             if (typeof window !== 'undefined') {
                 setIsScrolled(window.scrollY > 10);
             }
         };
 
-        const handleClickOutside = (event: MouseEvent) => {
+        const handleClickOutside = (event: MouseEvent): void => {
             if (
                 openDropdown &&
                 dropdownRefs.current[openDropdown] &&
@@ -101,11 +89,13 @@ const Header = () => {
     }, [openDropdown]);
 
     // Fix the ref callback type
-    const setDropdownRef = (link: string) => (el: HTMLDivElement | null) => {
-        dropdownRefs.current[link] = el;
-    };
+    const setDropdownRef =
+        (link: string) =>
+        (el: HTMLDivElement | null): void => {
+            dropdownRefs.current[link] = el;
+        };
 
-    const isActiveLink = (link: string, subLinks: SubLink[] | null = null) => {
+    const isActiveLink = (link: string, subLinks: SubLink[] | null = null): boolean => {
         if (link === '' && pathname === '/') return true;
         const basePath = `/${link}`;
         if (!subLinks) {
@@ -116,11 +106,11 @@ const Header = () => {
         return isParentPath || isSubPath;
     };
 
-    const isActiveSubLink = (link: string) => {
+    const isActiveSubLink = (link: string): boolean => {
         return pathname === link;
     };
 
-    const renderNavigationItem = (item: NavLink) => {
+    const renderNavigationItem = (item: NavLink): JSX.Element => {
         if (item.subLinks) {
             return (
                 <div key={item.link} className="relative" ref={setDropdownRef(item.link)}>
@@ -139,9 +129,15 @@ const Header = () => {
                             setOpenDropdown(openDropdown === item.link ? null : item.link)
                         }
                     >
-                        <Link href={`/${item.link}`}>
+                        <a
+                            onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
+                                e.preventDefault();
+                                handleNavigation(`/${item.link}`);
+                            }}
+                            href={`/${item.link}`}
+                        >
                             <span>{item.name}</span>
-                        </Link>
+                        </a>
                         <ChevronDown
                             className={cn(
                                 'h-4 w-4 transition-transform duration-200',
@@ -149,7 +145,7 @@ const Header = () => {
                             )}
                         />
                     </div>
-                    {openDropdown === item.link && (
+                    {openDropdown === item.link && item.subLinks && (
                         <div
                             className={cn(
                                 'absolute top-full left-0 mt-2 p-4 rounded-md shadow-lg',
@@ -160,7 +156,7 @@ const Header = () => {
                             )}
                         >
                             {item.subLinks.map((subLink) => (
-                                <Link
+                                <a
                                     key={subLink.link}
                                     href={subLink.link}
                                     className={cn(
@@ -169,13 +165,17 @@ const Header = () => {
                                             ? 'bg-gray-800/70 text-white'
                                             : 'hover:bg-gray-800/50 text-gray-300 hover:text-white'
                                     )}
-                                    onClick={() => setOpenDropdown(null)}
+                                    onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
+                                        e.preventDefault();
+                                        setOpenDropdown(null);
+                                        handleNavigation(subLink.link);
+                                    }}
                                 >
                                     <div className="text-sm font-medium">{subLink.title}</div>
                                     <p className="text-sm text-gray-400 mt-1 font-normal">
                                         {subLink.description}
                                     </p>
-                                </Link>
+                                </a>
                             ))}
                         </div>
                     )}
@@ -183,7 +183,7 @@ const Header = () => {
             );
         }
         return (
-            <Link
+            <a
                 key={item.link}
                 href={`/${item.link}`}
                 className={cn(
@@ -196,9 +196,14 @@ const Header = () => {
                           ? 'bg-white/10'
                           : 'hover:text-gray-200 hover:bg-white/5'
                 )}
+                onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
+                    e.preventDefault();
+                    setOpenDropdown(null);
+                    handleNavigation(`/${item.link}`);
+                }}
             >
                 {item.name}
-            </Link>
+            </a>
         );
     };
 
@@ -210,7 +215,14 @@ const Header = () => {
             )}
         >
             <nav className="container mx-auto flex items-center justify-between p-3">
-                <Link href="/" className="flex items-center relative w-24 h-24">
+                <a
+                    href="/"
+                    className="flex items-center relative w-24 h-24"
+                    onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
+                        e.preventDefault();
+                        handleNavigation('/');
+                    }}
+                >
                     <Image
                         src={'/assets/svg/logo-white.svg'}
                         alt="Logo"
@@ -218,7 +230,7 @@ const Header = () => {
                         className="mr-4 object-contain"
                         priority
                     />
-                </Link>
+                </a>
 
                 {/* Desktop Navigation */}
                 <div className="hidden lg:flex flex-1 items-center justify-center gap-4">
@@ -227,20 +239,20 @@ const Header = () => {
 
                 {/* CTA Button */}
                 <div className="hidden lg:flex">
-                    <GlowingButton href="/contact" className="text-it-white min-w-56">
+                    <GlowingButton
+                        href="/contact"
+                        className="text-it-white min-w-56"
+                        useTransition={true}
+                    >
                         Let&apos;s Talk
                     </GlowingButton>
                 </div>
 
                 {/* Mobile Menu */}
                 <div className="lg:hidden">
-                    <Sheet>
+                    <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
                         <SheetTrigger asChild>
-                            <button
-                                className={cn(
-                                    'focus:outline-none transition-colors duration-300 text-white'
-                                )}
-                            >
+                            <button className="...">
                                 <span className="sr-only">Open menu</span>
                                 <SheetTitle className="hidden">Mobile Navigation</SheetTitle>
                                 <svg
@@ -264,18 +276,24 @@ const Header = () => {
                             className="w-[300px] bg-it-dark-900 border-l border-gray-700"
                         >
                             <div className="py-4">
-                                <SheetClose asChild>
-                                    <Link href="/" className="block">
-                                        <Image
-                                            src="/assets/svg/logo-white.svg"
-                                            alt="Logo"
-                                            width={120}
-                                            height={60}
-                                            className="mr-4 object-contain"
-                                            priority
-                                        />
-                                    </Link>
-                                </SheetClose>
+                                {/* Logo (without SheetClose) */}
+                                <a
+                                    href="/"
+                                    className="block"
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        handleNavigation('/');
+                                    }}
+                                >
+                                    <Image
+                                        src="/assets/svg/logo-white.svg"
+                                        alt="Logo"
+                                        width={120}
+                                        height={60}
+                                        className="mr-4 object-contain"
+                                        priority
+                                    />
+                                </a>
                             </div>
 
                             <div className="mt-6">
@@ -283,43 +301,47 @@ const Header = () => {
                                     {navLinks.map((link) => (
                                         <React.Fragment key={link.link}>
                                             <li>
-                                                <SheetClose asChild>
-                                                    <Link
-                                                        href={`/${link.link}`}
-                                                        className={cn(
-                                                            'block py-2 px-4 capitalize transition-colors duration-300 font-semibold',
-                                                            isActiveLink(link.link)
-                                                                ? '!bg-gray-800/50 text-white'
-                                                                : 'text-gray-300 hover:text-white hover:bg-gray-800/30'
-                                                        )}
-                                                    >
-                                                        {link.name}
-                                                    </Link>
-                                                </SheetClose>
+                                                {/* No SheetClose here */}
+                                                <a
+                                                    onClick={(e) => {
+                                                        e.preventDefault();
+                                                        handleNavigation(`/${link.link}`);
+                                                    }}
+                                                    href={`/${link.link}`}
+                                                    className="block py-2 px-4 capitalize transition-colors duration-300 font-semibold"
+                                                >
+                                                    {link.name}
+                                                </a>
                                             </li>
                                             {link.subLinks?.map((subLink) => (
                                                 <li key={subLink.link} className="ml-4">
-                                                    <SheetClose asChild>
-                                                        <Link
-                                                            href={subLink.link}
-                                                            className="block py-2 px-4 text-sm text-gray-400 hover:text-white hover:bg-gray-800/30 font-semibold"
-                                                        >
-                                                            {subLink.title}
-                                                        </Link>
-                                                    </SheetClose>
+                                                    {/* No SheetClose here */}
+                                                    <a
+                                                        onClick={(e) => {
+                                                            e.preventDefault();
+                                                            handleNavigation(subLink.link);
+                                                        }}
+                                                        href={subLink.link}
+                                                        className="block py-2 px-4 text-sm text-gray-400 hover:text-white hover:bg-gray-800/30 font-semibold"
+                                                    >
+                                                        {subLink.title}
+                                                    </a>
                                                 </li>
                                             ))}
                                         </React.Fragment>
                                     ))}
                                     <li>
-                                        <SheetClose asChild>
-                                            <GlowingButton
-                                                href="/contact"
-                                                className="text-it-white min-w-56"
-                                            >
-                                                Let&apos;s Talk
-                                            </GlowingButton>
-                                        </SheetClose>
+                                        {/* For the GlowingButton */}
+                                        <GlowingButton
+                                            href="/contact"
+                                            className="text-it-white min-w-56"
+                                            onClick={(e) => {
+                                                e.preventDefault();
+                                                handleNavigation('/contact');
+                                            }}
+                                        >
+                                            Let&apos;s Talk
+                                        </GlowingButton>
                                     </li>
                                 </ul>
                             </div>
