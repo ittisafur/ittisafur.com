@@ -3,154 +3,230 @@
 @tailwind utilities;
 
 body {
-    @apply bg-it-dark-900;
-    @apply text-it-white;
-    @apply font-inter;
+  @apply bg-it-dark-900;
+  @apply text-it-white;
+  @apply font-inter;
 }
 
 @layer base {
-    :root {
-        --background: 0 0% 10.2%;
-        --foreground: 0 0% 3.9%;
-        --card: 0 0% 100%;
-        --card-foreground: 0 0% 3.9%;
-        --popover: 0 0% 100%;
-        --popover-foreground: 0 0% 3.9%;
-        --primary: 0 0% 9%;
-        --primary-foreground: 0 0% 98%;
-        --secondary: 0 0% 96.1%;
-        --secondary-foreground: 0 0% 9%;
-        --muted: 0 0% 96.1%;
-        --muted-foreground: 0 0% 45.1%;
-        --accent: 0 0% 96.1%;
-        --accent-foreground: 0 0% 9%;
-        --destructive: 0 84.2% 60.2%;
-        --destructive-foreground: 0 0% 98%;
-        --border: 0 0% 89.8%;
-        --input: 0 0% 89.8%;
-        --ring: 0 0% 3.9%;
-        --chart-1: 12 76% 61%;
-        --chart-2: 173 58% 39%;
-        --chart-3: 197 37% 24%;
-        --chart-4: 43 74% 66%;
-        --chart-5: 27 87% 67%;
-        --radius: 0.5rem;
-        --header-height: 6.5rem;
-        --font-figtree: 'Figtree', serif;
-        --font-inter: 'Inter', serif;
-        --font-roboto-mono: 'Roboto Mono', monospace;
-        --font-fira-code: 'Fira Code', monospace;
-    }
+  :root {
+    --background: 0 0% 10.2%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+    --header-height: 6.5rem;
+    --font-figtree: 'Figtree', serif;
+    --font-inter: 'Inter', serif;
+    --font-roboto-mono: 'Roboto Mono', monospace;
+    --font-fira-code: 'Fira Code', monospace;
+  }
 
-    .dark {
-        --background: 0 0% 10.2%;
-        --foreground: 0 0% 98%;
-        --card: 0 0% 3.9%;
-        --card-foreground: 0 0% 98%;
-        --popover: 0 0% 3.9%;
-        --popover-foreground: 0 0% 98%;
-        --primary: 0 0% 98%;
-        --primary-foreground: 0 0% 9%;
-        --secondary: 0 0% 14.9%;
-        --secondary-foreground: 0 0% 98%;
-        --muted: 0 0% 14.9%;
-        --muted-foreground: 0 0% 63.9%;
-        --accent: 0 0% 14.9%;
-        --accent-foreground: 0 0% 98%;
-        --destructive: 0 62.8% 30.6%;
-        --destructive-foreground: 0 0% 98%;
-        --border: 0 0% 14.9%;
-        --input: 0 0% 14.9%;
-        --ring: 0 0% 83.1%;
-        --chart-1: 220 70% 50%;
-        --chart-2: 160 60% 45%;
-        --chart-3: 30 80% 55%;
-        --chart-4: 280 65% 60%;
-        --chart-5: 340 75% 55%;
-    }
+  .dark {
+    --background: 0 0% 10.2%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
 }
 
 @layer base {
-    * {
-        @apply border-border;
-    }
+  * {
+    @apply border-border;
+  }
 
-    body {
-        @apply bg-background text-foreground;
-    }
+  body {
+    @apply bg-background text-foreground;
+  }
 
-    footer,
-    section {
-        @apply container;
-        @apply mx-auto;
-        @apply px-2.5 py-12;
-        @apply md:px-4 md:py-16;
-    }
+  footer,
+  section {
+    @apply container;
+    @apply mx-auto;
+    @apply px-2.5 py-12;
+    @apply md:px-4 md:py-16;
+  }
 }
 
 code[class*='language-'] {
-    font-family: var(--font-fira-code), var(--font-roboto-mono), monospace;
-    font-size: 0.9rem;
-    line-height: 1.5;
-    text-shadow: none;
-    color: #e0e0e0;
+  font-family: var(--font-fira-code), var(--font-roboto-mono), monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  text-shadow: none;
+  color: #e0e0e0;
 }
 
 /* Improve styling for inline code */
-:not(pre) > code {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 0.2rem 0.4rem;
-    border-radius: 0.25rem;
-    font-family: var(--font-fira-code), var(--font-roboto-mono), monospace;
-    font-size: 0.9em;
+:not(pre)>code {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
+  font-family: var(--font-fira-code), var(--font-roboto-mono), monospace;
+  font-size: 0.9em;
 }
 
 /* View Transitions API styles */
 ::view-transition-group(root) {
-    animation-duration: 0.7s;
+  animation-duration: 0.7s;
 }
 
 ::view-transition-old(root) {
-    /* Fade out animation */
-    animation: 0.7s cubic-bezier(0.4, 0, 0.2, 1) both fade-out;
+  /* Fade out animation */
+  animation: 0.7s cubic-bezier(0.4, 0, 0.2, 1) both fade-out;
 }
 
 ::view-transition-new(root) {
-    /* Fade in animation */
-    animation: 0.7s cubic-bezier(0.4, 0, 0.2, 1) 0.6s both fade-in;
+  /* Fade in animation */
+  animation: 0.7s cubic-bezier(0.4, 0, 0.2, 1) 0.6s both fade-in;
 }
 
 /* Define the animations for transitions */
 @keyframes fade-out {
-    from {
-        opacity: 1;
-    }
+  from {
+    opacity: 1;
+  }
 
-    to {
-        opacity: 0;
-    }
+  to {
+    opacity: 0;
+  }
 }
 
 @keyframes fade-in {
-    from {
-        opacity: 0;
-    }
+  from {
+    opacity: 0;
+  }
 
-    to {
-        opacity: 1;
-    }
+  to {
+    opacity: 1;
+  }
 }
 
 /* Class that will be added during transitions */
 .page-transitioning {
-    overflow: hidden !important;
-    /* Prevent scrolling during transition */
+  overflow: hidden !important;
+  /* Prevent scrolling during transition */
 
-    /* Optimize for animations */
-    will-change: opacity;
+  /* Optimize for animations */
+  will-change: opacity;
 }
 
 /* Prevent interaction during transitions */
 .page-transitioning * {
-    pointer-events: none;
+  pointer-events: none;
+}
+
+
+/* Initial state for elements with data-animate attribute */
+[data-animate] {
+  opacity: 0 !important;
+  will-change: transform, opacity;
+}
+
+/* Class added by GSAP after animation is applied */
+.animated {
+  opacity: 1 !important;
+}
+
+/* Style for animated characters */
+.char {
+  display: inline-block;
+  transform-origin: bottom;
+}
+
+/* Style for animated words */
+.word {
+  display: inline-block;
+  margin-right: 0.25em;
+  white-space: nowrap;
+}
+
+/* Add invisible class to prevent flickering during hydration */
+.invisible-until-animated {
+  visibility: hidden;
+}
+
+/* JavaScript enabled styles */
+html.js [data-animate] {
+  visibility: hidden;
+}
+
+html.js [data-animate].animated {
+  visibility: visible;
+}
+
+/* No JavaScript fallback */
+html:not(.js) [data-animate] {
+  opacity: 1 !important;
+}
+
+/* Gradient text handling */
+.text-gradient {
+  /* Make sure the gradient stays visible during animation */
+  opacity: 1 !important;
+}
+
+/* For animation purposes, we need the span to inherit the gradient */
+.gradient-char {
+  background-image: inherit;
+  background-clip: inherit;
+  -webkit-background-clip: inherit;
+  color: inherit;
+  -webkit-text-fill-color: inherit;
+  background-size: inherit;
+  background-position: inherit;
+}
+
+/* Ensure h1 is initially visible but children are hidden */
+h1.text-gradient[data-animate] {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Explicit styling for the gradient text characters during animation */
+.text-gradient .char {
+  background-image: inherit;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
 }

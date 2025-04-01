@@ -1,11 +1,13 @@
 'use client';
 
-import SmoothScroll from '@/components/SmoothScroll';
 import { Fragment } from 'react';
+import SmoothScroll from '@/components/SmoothScroll';
 import { ViewTransitions } from 'next-view-transitions';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import Transition from '@/providers/Transition';
+import { TransitionProvider } from '@/providers/Transition';
+import AnimationProvider from '@/providers/AnimationProvider';
+import AnimationInitializer from '@/providers/AnimationProvider/AnimationInitializer';
 
 interface RootLayoutClientProps {
     children: React.ReactNode;
@@ -15,15 +17,18 @@ export default function RootLayoutClient({ children }: RootLayoutClientProps): J
     return (
         <Fragment>
             <SmoothScroll>
-                <Transition>
-                    <ViewTransitions>
-                        <Header />
-                        <main className="min-h-screen pt-[var(--header-height)] bg-it-dark-900">
-                            <div id="page-content">{children}</div>
-                        </main>
-                        <Footer />
-                    </ViewTransitions>
-                </Transition>
+                <TransitionProvider>
+                    <AnimationProvider>
+                        <ViewTransitions>
+                            <Header />
+                            <main className="min-h-screen pt-[var(--header-height)] bg-it-dark-900">
+                                <div id="page-content">{children}</div>
+                            </main>
+                            <Footer />
+                            <AnimationInitializer />
+                        </ViewTransitions>
+                    </AnimationProvider>
+                </TransitionProvider>
             </SmoothScroll>
         </Fragment>
     );
