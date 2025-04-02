@@ -1,6 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+
+import { useTransitionRouter } from 'next-view-transitions';
+import { useTransition } from '@/providers/Transition';
 // import { siGithub, siX } from 'simple-icons';
 
 // const socials = [
@@ -23,12 +26,32 @@ import Image from 'next/image';
 
 const Footer = () => {
     const date = new Date().getFullYear();
+
+    const { startTransition, isTransitioning } = useTransition();
+
+    const router = useTransitionRouter();
+
+    const handleNavigation = (path: string): void => {
+        if (isTransitioning) return; // Prevent multiple transitions
+
+        startTransition(() => {
+            // The actual navigation happens after the initial fade out
+            // and SVG animation has started
+            router.push(path);
+        });
+    };
     return (
         <footer className="p-4">
             <hr className="border-muted-foreground w-full" />
             <div className="flex flex-col lg:flex-row justify-between items-center py-8">
                 <div>
-                    <Link href="/" className="flex items-center relative w-24 h-24 ">
+                    <a href="/" 
+
+                            onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
+                                e.preventDefault();
+                                handleNavigation(`/`);
+                            }}
+            className="flex items-center relative w-24 h-24 ">
                         <Image
                             src={'/assets/svg/logo-white.svg'}
                             alt="Logo"
@@ -36,7 +59,7 @@ const Footer = () => {
                             className="mr-4 object-contain"
                             priority
                         />
-                    </Link>
+                    </a>
 
                     {/* <div className="flex flex-col items-center lg:items-baseline"> */}
                     {/*     <div className="underline flex flex-col"> */}
@@ -57,24 +80,36 @@ const Footer = () => {
                     <div className="flex flex-col items-baseline">
                         <h3 className="font-semibold text-sm underline mb-1.5">Links</h3>
                         <div className="flex flex-col text-muted-foreground text-sm space-y-0.5">
-                            <Link
-                                href="/about"
-                                className="hover:text-it-white transition-all ease-in duration-300"
-                            >
-                                About
-                            </Link>
-                            <Link
+                            {/* <a */}
+                            {/*     onClick={(e: React.MouseEvent<HTMLAnchorElement>) => { */}
+                            {/*         e.preventDefault(); */}
+                            {/*         handleNavigation(`/about`); */}
+                            {/*     }} */}
+                            {/*     href="/about" */}
+                            {/*     className="hover:text-it-white transition-all ease-in duration-300" */}
+                            {/* > */}
+                            {/*     About */}
+                            {/* </a> */}
+                            <a
                                 href="/portfolio"
                                 className="hover:text-it-white transition-all ease-in duration-300"
+                                onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
+                                    e.preventDefault();
+                                    handleNavigation(`/portfolio`);
+                                }}
                             >
                                 Portfolio
-                            </Link>
-                            <Link
+                            </a>
+                            <a
                                 href="/contact"
                                 className="hover:text-it-white transition-all ease-in duration-300"
+                                onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
+                                    e.preventDefault();
+                                    handleNavigation(`/contact`);
+                                }}
                             >
                                 Contact
-                            </Link>
+                            </a>
                         </div>
                     </div>
                 </div>

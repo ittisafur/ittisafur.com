@@ -230,3 +230,62 @@ h1.text-gradient[data-animate] {
   color: transparent;
   -webkit-text-fill-color: transparent;
 }
+
+
+/* Base styles for blog content elements */
+.blog-content img {
+  transition: transform 0.4s ease;
+}
+
+.blog-content h2,
+.blog-content h3,
+.blog-content h4 {
+  transition: color 0.3s ease;
+}
+
+.blog-content h2:hover,
+.blog-content h3:hover,
+.blog-content h4:hover {
+  color: rgba(147, 197, 253, 1);
+  /* Light blue hover color */
+}
+
+.blog-content blockquote {
+  border-left: 4px solid rgba(59, 130, 246, 0.6);
+  transition: border-color 0.3s ease;
+}
+
+.blog-content blockquote:hover {
+  border-left: 4px solid rgba(59, 130, 246, 1);
+}
+
+/* Enhanced styles for code blocks */
+.blog-content pre {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.blog-content pre:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+/* Animation for links */
+.blog-content a {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.blog-content a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(59, 130, 246, 0.8);
+  transition: width 0.3s ease;
+}
+
+.blog-content a:hover::after {
+  width: 100%;
+}

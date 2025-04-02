@@ -37,6 +37,16 @@ interface RootLayoutProps {
     children: React.ReactNode;
 }
 
+export const metadata = {
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon.svg', type: 'image/svg+xml' }
+    ],
+    apple: { url: '/apple-icon.png', sizes: '180x180' },
+  },
+};
+
 export default function RootLayout({ children }: Readonly<RootLayoutProps>): React.ReactElement {
     return (
         <html lang="en">

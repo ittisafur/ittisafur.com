@@ -63,9 +63,6 @@ const Landing = async () => {
                                 
                                 <h1 
                                     className="text-gradient text-4xl md:text-5xl lg:text-6xl font-figtree font-semibold tracking-wide"
-                                    data-animate 
-data-animate-order="2" 
-  data-animate-type="line-by-line"
                                 >
                                     Ittisafur Rahman
                                 </h1>
