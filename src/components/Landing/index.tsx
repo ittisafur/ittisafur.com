@@ -2,7 +2,6 @@ import React, { Fragment } from 'react';
 import SocialButtons from '../Socials';
 import GlowingButton from '../ui/glowing-button';
 import Link from 'next/link';
-// import TechCloudDemo from '../ui/tech-example';
 import { getClient } from '@/lib/apollo-client';
 import { GET_Portfolio } from '@/graphql/queries/getPortfolio';
 
@@ -57,11 +56,22 @@ const Landing = async () => {
                     <div className="flex">
                         <div className="w-max">
                             <div className="flex flex-col font-inter gap-y-6 text-center lg:text-left">
-                                <p>Hey, I&apos;m </p>
-                                <h1 className="text-gradient text-4xl md:text-5xl lg:text-6xl font-figtree font-semibold tracking-wide">
+                                {/* Add data-animate attribute to elements we want to animate */}
+                                <p data-animate data-animate-order="1" data-animate-type="line-by-line">
+                                    Hey, I&apos;m 
+                                </p>
+                                
+                                <h1 
+                                    className="text-gradient text-4xl md:text-5xl lg:text-6xl font-figtree font-semibold tracking-wide"
+                                >
                                     Ittisafur Rahman
                                 </h1>
-                                <p>
+                                
+                                <p 
+                                    data-animate 
+                                    data-animate-order="3" 
+                                    data-animate-type="line-by-line"
+                                >
                                     I&apos;m a seasoned Full Stack Developer with over six years of
                                     experience, starting my tech journey in 2013 with HTML/CSS out
                                     of curiosity. From 2017 I&apos;ve worked as a freelancer. Since
@@ -80,35 +90,36 @@ const Landing = async () => {
                                     Let&apos;s Talk
                                 </GlowingButton>
                             </div>
-                            <div className="mt-8 md:mt-24 lg:mt-52">
+                            <div 
+                                className="mt-8 md:mt-24 lg:mt-52"
+                            >
                                 <SocialButtons />
                             </div>
                         </div>
-
-                        {/* <div className="relative flex size-full max-w-lg items-center justify-center overflow-hidden rounded-lg border bg-background"> */}
-                        {/* <IconCloud */}
-                        {/*     icons={technologies.map((tech) => { */}
-                        {/*         const Icon = () => ( */}
-                        {/*             <div className="w-10 h-10 text-white flex items-center justify-center"> */}
-                        {/*                 <TechCloud technologies={[tech]} /> */}
-                        {/*             </div> */}
-                        {/*         ); */}
-                        {/*         return <Icon key={tech.title} />; */}
-                        {/*     })} */}
-                        {/* /> */}
-                        {/* <TechCloudDemo /> */}
-                        {/* </div> */}
                     </div>
                 </section>
 
                 <section>
-                    <h2 className="text-gradient flex justify-center items-center mb-10 font-figtree uppercase font-semibold text-3xl lg:text-5xl w-full mx-auto text-center">
+                    <h2 
+                        className="text-gradient flex justify-center items-center mb-10 font-figtree uppercase font-semibold text-3xl lg:text-5xl w-full mx-auto text-center"
+                        data-animate
+                        data-animate-order="4"
+                        data-animate-type="blur-to-sharp"
+                    >
                         Featured Projects
                     </h2>
-                    <div className="gap-4 grid grid-cols-1 xl:grid-cols-2">
+                    <div 
+                        className="gap-4 grid grid-cols-1 xl:grid-cols-2"
+                        data-animate
+                        data-animate-order="6"
+                    >
                         {renderRecommendedWorks()}
                     </div>
-                    <div className="my-8 flex justify-center items-center">
+                    <div 
+                        className="my-8 flex justify-center items-center"
+                        data-animate
+                        data-animate-order="7"
+                    >
                         <Link href="/portfolio">
                             <div className="border-it-white border px-20 py-2.5 rounded hover:scale-95 hover:bg-it-white hover:text-it-dark-800 transition-all ease-in duration-300 font-semibold text-sm lg:text-base">
                                 View All

@@ -1,9 +1,10 @@
+import React from 'react';
 import { Inter, Figtree, Roboto_Mono, Fira_Code } from 'next/font/google';
 import './globals.scss';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 import { ApolloWrapper } from '@/lib/ApolloProvider';
+import RootLayoutClient from '@/components/Client/RootLayoutClient';
 
+// Font configurations
 const figtree = Figtree({
     subsets: ['latin'],
     display: 'swap',
@@ -32,22 +33,28 @@ const firaCode = Fira_Code({
     variable: '--font-fira-code',
 });
 
-export default function RootLayout({
-    children,
-}: Readonly<{
+interface RootLayoutProps {
     children: React.ReactNode;
-}>) {
+}
+
+export const metadata = {
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon.svg', type: 'image/svg+xml' }
+    ],
+    apple: { url: '/apple-icon.png', sizes: '180x180' },
+  },
+};
+
+export default function RootLayout({ children }: Readonly<RootLayoutProps>): React.ReactElement {
     return (
         <html lang="en">
             <body
                 className={`${inter.variable} ${figtree.variable} ${robotoMono.variable} ${firaCode.variable} antialiased`}
             >
                 <ApolloWrapper>
-                    <Header />
-                    <main className="min-h-screen pt-[var(--header-height)] bg-it-dark-900 ">
-                        <div>{children}</div>
-                    </main>
-                    <Footer />
+                    <RootLayoutClient>{children}</RootLayoutClient>
                 </ApolloWrapper>
             </body>
         </html>
