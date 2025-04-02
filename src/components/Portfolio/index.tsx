@@ -21,15 +21,13 @@ const PortfolioLanding = async () => {
 
     return (
         <div className="container mx-auto px-4">
-<div 
+            <div
                 className="container mx-auto mb-16 text-center"
                 data-animate
                 data-animate-order="1"
                 data-animate-type="blur-to-sharp"
             >
-                <p className="text-xs tracking-widest uppercase mb-4 opacity-70">
-                    Featured Work
-                </p>
+                <p className="text-xs tracking-widest uppercase mb-4 opacity-70">Featured Work</p>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold uppercase tracking-wider mb-2">
                     Creative <span className="text-gray-400">Projects</span>
                 </h1>
