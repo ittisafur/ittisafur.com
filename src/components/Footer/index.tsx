@@ -45,13 +45,14 @@ const Footer = () => {
             <hr className="border-muted-foreground w-full" />
             <div className="flex flex-col lg:flex-row justify-between items-center py-8">
                 <div>
-                    <a href="/" 
-
-                            onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
-                                e.preventDefault();
-                                handleNavigation(`/`);
-                            }}
-            className="flex items-center relative w-24 h-24 ">
+                    <a
+                        href="/"
+                        onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
+                            e.preventDefault();
+                            handleNavigation(`/`);
+                        }}
+                        className="flex items-center relative w-24 h-24 "
+                    >
                         <Image
                             src={'/assets/svg/logo-white.svg'}
                             alt="Logo"

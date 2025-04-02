@@ -1,15 +1,43 @@
+'use client';
+
 import React, { FC } from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
 import type { Portfolio } from '@/types/portfolio';
 import { MagicCard } from '@/components/ui/magic-card';
 import { StackGrid } from '@/components/ui/stack-icon';
+import { useTransitionRouter } from 'next-view-transitions';
+import { useTransition } from '@/providers/Transition';
+
+import { usePortfolioTracking } from '@/hooks/useAnalytics';
 
 const PortfolioShared: FC<{
     content: Portfolio;
 }> = ({ content }) => {
+    usePortfolioTracking(content);
+
+    const { startTransition, isTransitioning } = useTransition();
+
+    const router = useTransitionRouter();
+
+    const handleNavigation = (path: string): void => {
+        if (isTransitioning) return; // Prevent multiple transitions
+
+        startTransition(() => {
+            // The actual navigation happens after the initial fade out
+            // and SVG animation has started
+            router.push(path);
+        });
+    };
+
     return (
-        <Link key={content.id} href={`/portfolio/${content.slug}`}>
+        <a
+            key={content.id}
+            href={`/portfolio/${content.slug}`}
+            onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
+                e.preventDefault();
+                handleNavigation(`/portfolio/${content.slug}`);
+            }}
+        >
             <MagicCard
                 className="cursor-pointer shadow-2xl rounded-none w-full overflow-hidden"
                 gradientColor={'#2C2C2C'}
@@ -21,15 +49,17 @@ const PortfolioShared: FC<{
                 <div className="relative z-30">
                     <div className="flex flex-col lg:flex-row items-center gap-6 p-6">
                         <div className="relative w-full h-48 md:w-full md:h-64 lg:w-80 lg:h-80 flex-shrink-0 group overflow-hidden rounded-md">
-                            <Image
-                                src={`${content.thumbnail.url}`}
-                                fill
-                                alt={content.title}
-                                className="object-cover transition-all duration-500 ease-in-out filter saturate-[0.3] brightness-[0.9] group-hover:saturate-100 group-hover:brightness-100 group-hover:scale-105"
-                                sizes="(max-width: 768px) 100vw, 256px"
-                                priority
-                                quality={95}
-                            />
+                            {content.thumbnail && (
+                                <Image
+                                    src={`${content?.thumbnail.url} `}
+                                    fill
+                                    alt={content.title}
+                                    className="object-cover transition-all duration-500 ease-in-out filter saturate-[0.3] brightness-[0.9] group-hover:saturate-100 group-hover:brightness-100 group-hover:scale-105"
+                                    sizes="(max-width: 768px) 100vw, 256px"
+                                    priority
+                                    quality={95}
+                                />
+                            )}
                             <div className="absolute inset-0 bg-gradient-to-tr from-it-dark-800/80 via-transparent to-transparent transition-opacity duration-500 ease-in-out group-hover:opacity-0" />
                         </div>
                         <div className="flex-1 flex flex-col gap-4 py-2">
@@ -53,7 +83,7 @@ const PortfolioShared: FC<{
                     </div>
                 </div>
             </MagicCard>
-        </Link>
+        </a>
     );
 };
 

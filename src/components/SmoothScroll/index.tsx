@@ -13,7 +13,10 @@ export function useScrollTo() {
     // Explicitly type the return from useLenis()
     const lenis = useLenis();
 
-    const scrollTo = (target: string | number | HTMLElement, options: ScrollToOptions = {}): void => {
+    const scrollTo = (
+        target: string | number | HTMLElement,
+        options: ScrollToOptions = {}
+    ): void => {
         if (lenis) {
             lenis.scrollTo(target, {
                 offset: -100, // Account for header

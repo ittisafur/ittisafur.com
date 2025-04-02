@@ -13,10 +13,12 @@ const BlogLanding = async () => {
 
     return (
         <div className="w-full bg-[#111111] text-[#F0F0F0] py-16 px-4 md:px-8">
-            <div className="container mx-auto mb-16 text-center" 
+            <div
+                className="container mx-auto mb-16 text-center"
                 data-animate
                 data-animate-order="1"
-                data-animate-type="blur-to-sharp">
+                data-animate-type="blur-to-sharp"
+            >
                 <p className="text-xs tracking-widest uppercase mb-4 opacity-70">
                     Latest Blog Entries
                 </p>

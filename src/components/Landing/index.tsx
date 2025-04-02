@@ -11,16 +11,18 @@ import PortfolioShared from '../shared/Portfolio';
 const getRecommendedWorks = (portfolioItems: Portfolio[], limit = 6): Portfolio[] => {
     if (!portfolioItems?.length) return [];
 
-    return portfolioItems
+    // Create a copy of the array before sorting
+    return [...portfolioItems]
         .sort((a, b) => {
             const getScore = (item: Portfolio): number => {
                 let score = 0;
-                if (item.isFeatured) score += 4;
-                if (item.isBreakThrough) score += 2;
-                if (item.isSideProject) score += 1;
+                // Use optional chaining to safely handle null/undefined values
+                if (item?.isFeatured) score += 4;
+                if (item?.isBreakThrough) score += 2;
+                if (item?.isSideProject) score += 1;
 
-                if (item.isFeatured && item.isBreakThrough) score += 2;
-                if (item.isBreakThrough && item.isSideProject) score += 1;
+                if (item?.isFeatured && item?.isBreakThrough) score += 2;
+                if (item?.isBreakThrough && item?.isSideProject) score += 1;
 
                 return score;
             };
@@ -57,19 +59,21 @@ const Landing = async () => {
                         <div className="w-max">
                             <div className="flex flex-col font-inter gap-y-6 text-center lg:text-left">
                                 {/* Add data-animate attribute to elements we want to animate */}
-                                <p data-animate data-animate-order="1" data-animate-type="line-by-line">
-                                    Hey, I&apos;m 
-                                </p>
-                                
-                                <h1 
-                                    className="text-gradient text-4xl md:text-5xl lg:text-6xl font-figtree font-semibold tracking-wide"
+                                <p
+                                    data-animate
+                                    data-animate-order="1"
+                                    data-animate-type="line-by-line"
                                 >
+                                    Hey, I&apos;m
+                                </p>
+
+                                <h1 className="text-gradient text-4xl md:text-5xl lg:text-6xl font-figtree font-semibold tracking-wide">
                                     Ittisafur Rahman
                                 </h1>
-                                
-                                <p 
-                                    data-animate 
-                                    data-animate-order="3" 
+
+                                <p
+                                    data-animate
+                                    data-animate-order="3"
                                     data-animate-type="line-by-line"
                                 >
                                     I&apos;m a seasoned Full Stack Developer with over six years of
@@ -90,9 +94,7 @@ const Landing = async () => {
                                     Let&apos;s Talk
                                 </GlowingButton>
                             </div>
-                            <div 
-                                className="mt-8 md:mt-24 lg:mt-52"
-                            >
+                            <div className="mt-8 md:mt-24 lg:mt-52">
                                 <SocialButtons />
                             </div>
                         </div>
@@ -100,7 +102,7 @@ const Landing = async () => {
                 </section>
 
                 <section>
-                    <h2 
+                    <h2
                         className="text-gradient flex justify-center items-center mb-10 font-figtree uppercase font-semibold text-3xl lg:text-5xl w-full mx-auto text-center"
                         data-animate
                         data-animate-order="4"
@@ -108,14 +110,14 @@ const Landing = async () => {
                     >
                         Featured Projects
                     </h2>
-                    <div 
+                    <div
                         className="gap-4 grid grid-cols-1 xl:grid-cols-2"
                         data-animate
                         data-animate-order="6"
                     >
                         {renderRecommendedWorks()}
                     </div>
-                    <div 
+                    <div
                         className="my-8 flex justify-center items-center"
                         data-animate
                         data-animate-order="7"

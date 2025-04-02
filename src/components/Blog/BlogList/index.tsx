@@ -4,7 +4,7 @@ import React from 'react';
 import { useTransition } from '@/providers/Transition';
 import { useRouter } from 'next/navigation';
 import type { Blog } from '@/types/blog';
-import BlogCard from '../BlogCard'
+import BlogCard from '../BlogCard';
 
 const BlogList = ({ blogItems }: { blogItems: Blog[] }) => {
     const { startTransition, isTransitioning } = useTransition();
@@ -36,23 +36,23 @@ const BlogList = ({ blogItems }: { blogItems: Blog[] }) => {
     }
 
     return (
-        <div 
+        <div
             className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
             data-animate
             data-animate-order="2"
             data-animate-type="zoom-fade"
         >
             {blogItems.map((item: Blog, index: number) => (
-                <div 
+                <div
                     key={item.slug + index}
                     data-animate
                     data-animate-order={index + 3}
                     data-animate-type="zoom-fade"
                 >
-                    <BlogCard 
-                        item={item} 
-                        formatDate={formatDate} 
-                        handleNavigation={handleNavigation} 
+                    <BlogCard
+                        item={item}
+                        formatDate={formatDate}
+                        handleNavigation={handleNavigation}
                     />
                 </div>
             ))}
@@ -61,4 +61,3 @@ const BlogList = ({ blogItems }: { blogItems: Blog[] }) => {
 };
 
 export default BlogList;
-

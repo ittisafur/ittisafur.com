@@ -72,7 +72,7 @@ const BlogSingle = async ({ params }: { params: BlogParams }) => {
         }
 
         const readingTime = calculateReadingTime(blog.content);
-        
+
         // Pre-format the date instead of passing the function
         const formattedDate = new Date(blog.publishedAt).toLocaleDateString('en-US', {
             month: 'long',
@@ -81,9 +81,9 @@ const BlogSingle = async ({ params }: { params: BlogParams }) => {
         });
 
         return (
-            <BlogSingleContent 
-                blog={blog} 
-                readingTime={readingTime} 
+            <BlogSingleContent
+                blog={blog}
+                readingTime={readingTime}
                 formattedDate={formattedDate}
             />
         );
