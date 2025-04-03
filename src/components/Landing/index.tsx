@@ -47,9 +47,9 @@ const Landing = async () => {
         const renderRecommendedWorks = () => {
             if (!recommendedWorks.length) return <Fragment />;
 
-            return recommendedWorks.map((content, index) => (
-                <PortfolioShared content={content} key={index} />
-            ));
+            return recommendedWorks
+                .slice(0, 4)
+                .map((content, index) => <PortfolioShared content={content} key={index} />);
         };
 
         return (

@@ -8,7 +8,7 @@ export function usePortfolioTracking(portfolio: Portfolio) {
     useEffect(() => {
         if (portfolio) {
             trackPortfolioView({
-                id: portfolio.id,
+                id: portfolio.id || portfolio.slug,
                 title: portfolio.title,
                 slug: portfolio.slug,
                 stack: portfolio.stack,

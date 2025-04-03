@@ -70,9 +70,11 @@ const PortfolioShared: FC<{
                                 <p className="text-sm text-gray-300 font-inter text-center lg:text-left">
                                     {content.summary}
                                 </p>
-                                <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
-                                    <StackGrid technologies={content.stack} />
-                                </div>
+                                {content.stack && (
+                                    <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
+                                        <StackGrid technologies={content.stack} />
+                                    </div>
+                                )}
                             </div>
                             <div className="flex justify-center lg:justify-start mt-2.5">
                                 <div className="border-it-white border px-6 py-1.5 rounded hover:scale-95 hover:bg-it-white hover:text-it-dark-800 transition-all ease-in duration-300 font-semibold text-sm">

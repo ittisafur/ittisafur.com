@@ -1,0 +1,156 @@
+.internal-link {
+    position: relative;
+    overflow: hidden;
+}
+
+.internal-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: rgba(59, 130, 246, 0.8);
+    transition: width 0.3s ease;
+}
+
+.internal-link:hover::after {
+    width: 100%;
+}
+
+/* Styling for animated content */
+.portfolio-content img {
+    transition: transform 0.4s ease;
+    border-radius: 0.5rem;
+}
+
+.portfolio-content img:hover {
+    transform: scale(1.02);
+}
+
+/* Animated heading underlines */
+.heading-underline {
+    transition: width 0.4s ease;
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes blurToSharp {
+    from {
+        filter: blur(8px);
+        opacity: 0;
+    }
+
+    to {
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomFade {
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+[data-animate] {
+    opacity: 0;
+}
+
+[data-animate].animated {
+    animation: fadeIn 0.6s forwards;
+}
+
+[data-animate-type='blur-to-sharp'].animated {
+    animation: blurToSharp 0.8s forwards;
+}
+
+[data-animate-type='zoom-fade'].animated {
+    animation: zoomFade 0.8s forwards;
+}
+
+[data-animate-type='line-by-line'].animated {
+    animation: slideUp 0.6s forwards;
+}
+
+/* Stack grid styling */
+.stack-grid-item {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.stack-grid-item:hover {
+    transform: translateY(-5px);
+    box-shadow:
+        0 10px 15px -3px rgba(0, 0, 0, 0.1),
+        0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Video dialog styling */
+.video-dialog-trigger {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.video-dialog-trigger:hover {
+    transform: scale(1.02);
+}
+
+.video-dialog-trigger::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    transition: background 0.3s ease;
+}
+
+.video-dialog-trigger:hover::before {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.video-play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+.video-dialog-trigger:hover .video-play-icon {
+    transform: translate(-50%, -50%) scale(1.1);
+}
