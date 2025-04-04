@@ -101,6 +101,17 @@ const Footer = () => {
                             >
                                 Portfolio
                             </a>
+
+                            <a
+                                href="/blog"
+                                className="hover:text-it-white transition-all ease-in duration-300"
+                                onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
+                                    e.preventDefault();
+                                    handleNavigation(`/blog`);
+                                }}
+                            >
+                                Blog
+                            </a>
                             <a
                                 href="/contact"
                                 className="hover:text-it-white transition-all ease-in duration-300"

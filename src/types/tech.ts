@@ -24,15 +24,18 @@ interface StackIconProps {
     showLabel?: boolean;
 }
 
+type GridLimit = 'small' | 'medium' | 'large';
+
 interface StackGridProps {
     technologies: StackItem[];
     className?: string;
     showLabels?: boolean;
     iconSize?: string;
+    limit?: GridLimit;
 }
 
 interface TechCloudProps {
     technologies: StackItem[];
 }
 
-export type { Icon, StackItem, StackIconProps, StackGridProps, TechCloudProps };
+export type { Icon, StackItem, StackIconProps, StackGridProps, TechCloudProps, GridLimit };

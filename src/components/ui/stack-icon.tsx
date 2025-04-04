@@ -3,7 +3,6 @@
 import React from 'react';
 import * as SimpleIcons from 'simple-icons';
 import type { SimpleIcon } from 'simple-icons';
-// import { IconCloud } from "@/components/ui/icon-cloud";
 import Image from 'next/image';
 import type { StackIconProps, StackGridProps } from '@/types/tech';
 
@@ -65,31 +64,6 @@ const getSimpleIcon = (name: string): SimpleIcon | undefined => {
     return SimpleIcons[iconKey] as SimpleIcon;
 };
 
-// const TechCloud: React.FC<TechCloudProps> = ({ technologies }) => {
-//   if (!technologies?.length) return null;
-
-//   const uniqueTitles = Array.from(new Set(technologies.map(tech => tech.title)));
-
-//   const icons = uniqueTitles.map(title => {
-//     const icon = getSimpleIcon(title);
-//     if (!icon) return null;
-
-//     const IconComponent = () => (
-//       <div>
-//         <svg width="100" height="100" viewBox="0 0 24 24" fill="currentColor">
-//           <path d={icon.path} />
-//         </svg>
-//       </div>
-//     );
-//     return <IconComponent key={title} />;
-//   }).filter(Boolean);
-
-//   return (
-//     <div className="relative w-full h-full flex items-center justify-center">
-//       <IconCloud icons={icons} />
-//     </div>
-//   );
-// };
 const StackIcon: React.FC<StackIconProps> = ({
     tech,
     className = '',
@@ -143,15 +117,55 @@ const StackIcon: React.FC<StackIconProps> = ({
     );
 };
 
+/**
+ * Grid component for displaying technology stack icons
+ * @param technologies - Array of technology objects to display
+ * @param className - Additional CSS classes for the grid container
+ * @param showLabels - Whether to show labels below icons
+ * @param iconSize - Size classes for the icons
+ * @param limit - Optional layout option: 'small' (5 per row), 'medium' (8 per row), 'large' (12 per row), or undefined for flex layout
+ */
 const StackGrid: React.FC<StackGridProps> = ({
     technologies,
     className = '',
     showLabels = false,
     iconSize = 'w-6 h-6',
+    limit,
 }) => {
+    // Determine flex layout based on the limit parameter
+    const getIconsClasses = (index: number): string => {
+        if (!limit) return ''; // No special classes for default flex layout
+
+        // Determine if this icon is in the first row
+        const isFirstRow =
+            (limit === 'small' && index < 5) ||
+            (limit === 'medium' && index < 6) ||
+            (limit === 'large' && index < 8);
+
+        return isFirstRow ? 'first-row' : '';
+    };
+
+    // Set up container classes based on the limit
+    let containerClasses: string;
+
+    switch (limit) {
+        case 'small':
+            containerClasses = 'grid grid-cols-5 md:grid-cols-5 gap-4 auto-rows-auto';
+            break;
+        case 'medium':
+            containerClasses = 'grid grid-cols-4 md:grid-cols-8 gap-4 auto-rows-auto';
+            break;
+        case 'large':
+            containerClasses =
+                'grid grid-cols-4 md:grid-cols-6 lg:grid-cols-12 gap-4 auto-rows-auto';
+            break;
+        default:
+            containerClasses = 'flex flex-wrap gap-3';
+    }
+
     return (
         <div
-            className={`flex flex-wrap gap-3 justify-center lg:justify-start ${className} relative z-50`}
+            className={`${containerClasses} justify-center lg:justify-start ${className} relative z-50`}
         >
             {technologies.map((tech, index) => (
                 <StackIcon
@@ -159,6 +173,7 @@ const StackGrid: React.FC<StackGridProps> = ({
                     tech={tech}
                     showLabel={showLabels}
                     iconSize={iconSize}
+                    className={getIconsClasses(index)}
                 />
             ))}
         </div>

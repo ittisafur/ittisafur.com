@@ -102,7 +102,7 @@ const PortfolioShared: FC<{
 
                                 {content.stack && (
                                     <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
-                                        <StackGrid technologies={content.stack} />
+                                        <StackGrid technologies={content.stack} limit="medium" />
                                     </div>
                                 )}
                             </div>
