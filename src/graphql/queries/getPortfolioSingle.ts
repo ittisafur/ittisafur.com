@@ -15,7 +15,7 @@ export const GET_Portfolio_Single = gql`
                 isFeatured
                 isSideProject
                 isWorking
-isFreelance
+                isFreelance
                 metaData {
                     description
                     image {

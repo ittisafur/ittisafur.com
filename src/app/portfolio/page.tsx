@@ -41,7 +41,7 @@ const Portfolio = async () => {
     const { data } = await client.query({
         query: GET_Portfolio,
     });
-    
+
     // Extract portfolio items from GraphQL response
     const portfolioItems = data?.portfolios?.[0]?.Portfolio || [];
 

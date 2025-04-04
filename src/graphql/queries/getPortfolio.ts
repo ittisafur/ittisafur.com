@@ -53,11 +53,11 @@ export const GET_Portfolio = gql`
                     width
                 }
                 id
-endDate
-      hasDesign
-      isWorking
-      startDate
-isFreelance
+                endDate
+                hasDesign
+                isWorking
+                startDate
+                isFreelance
             }
         }
     }
