@@ -65,7 +65,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ item, formatDate, handleNavigation 
                     href={`/blog/${item.slug}`}
                 >
                     <h2
-                        className="text-2xl font-bold mb-4 uppercase tracking-wide hover:text-blue-300 transition-colors duration-300"
+                        className="text-2xl font-bold mb-4 uppercase tracking-wide hover:text-blue-300 transition-colors duration-300 line-clamp-2"
                         data-animate
                         data-animate-type="blur-to-sharp"
                     >

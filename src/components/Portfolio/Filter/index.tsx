@@ -108,7 +108,7 @@ const PortfolioFilter: React.FC<PortfolioFilterProps> = ({
                             onClick={() => onFilterChange('contract')}
                         >
                             <Icon name="file-contract" className="w-4 h-4" />
-                            <span>Contract / Freelance</span>
+                            <span>Contract </span>
                             <Badge variant="secondary" className="ml-auto text-xs">
                                 {counts['contract']}
                             </Badge>

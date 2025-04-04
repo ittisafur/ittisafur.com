@@ -12,8 +12,10 @@ import { useAnimation } from '@/providers/AnimationProvider';
 import DOMPurify from 'isomorphic-dompurify';
 import gsap from 'gsap';
 
-// Import the portfolio types
 import type { Portfolio as PortfolioType } from '@/types/portfolio';
+
+import PortfolioGallery from '../PortfolioGallery';
+import PortfolioMetadataSection from '../PortfolioMetadataSection';
 
 // Define a type for SCSS modules
 interface StylesModule {
@@ -282,12 +284,18 @@ const PortfolioSingleContent: React.FC<PortfolioSingleContentProps> = ({ portfol
 
                     {/* Stack and summary */}
                     <div className={cx('content')}>
-                        {portfolio.stack && (
-                            <div className={cx('stack')} data-animate data-animate-order="5">
-                                <h1 className={cx('head')}>Stack</h1>
-                                <StackGrid technologies={portfolio?.stack} showLabels={true} />
-                            </div>
-                        )}
+                        <div className={cx('stack')} data-animate data-animate-order="5">
+                            {portfolio.stack && portfolio.stack.length > 0 && (
+                                <Fragment>
+                                    <h1 className={cx('head')}>Stack</h1>
+                                    <StackGrid
+                                        technologies={portfolio?.stack}
+                                        showLabels={true}
+                                        limit="small"
+                                    />
+                                </Fragment>
+                            )}
+                        </div>
                         <div className={cx('summary')} data-animate data-animate-order="6">
                             <h2 className={cx('head')}>Summary</h2>
                             <p>{portfolio.summary}</p>
@@ -296,10 +304,17 @@ const PortfolioSingleContent: React.FC<PortfolioSingleContentProps> = ({ portfol
                 </div>
             </div>
 
+            <div className="container mx-auto px-4 py-8">
+                <PortfolioMetadataSection portfolio={portfolio} />
+            </div>
+            {portfolio.gallery && portfolio.gallery.length > 0 && (
+                <PortfolioGallery gallery={portfolio.gallery} title={portfolio.title} />
+            )}
+
             {/* Detailed information */}
             <div className="container mx-auto py-8 px-4">
                 <h2
-                    className="py-4 text-xl uppercase text-center font-bold"
+                    className="py-4 text-xl uppercase font-bold"
                     data-animate
                     data-animate-order="7"
                 >
