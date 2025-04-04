@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url><loc>http://localhost:1337/portfolio</loc><lastmod>2025-04-04T06:01:33.990Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:1337/contact</loc><lastmod>2025-04-04T06:01:33.990Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:1337/blog/category</loc><lastmod>2025-04-04T06:01:33.990Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:1337/blog/tag</loc><lastmod>2025-04-04T06:01:33.990Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:1337</loc><lastmod>2025-04-04T06:01:33.990Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:1337/blog</loc><lastmod>2025-04-04T06:01:33.990Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:1337/portfolio/arete-health</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>http://localhost:1337/portfolio/kanarys</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>http://localhost:1337/portfolio/raush</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>http://localhost:1337/portfolio/wearekitty</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>http://localhost:1337/portfolio/think-studio</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>http://localhost:1337/portfolio/rehash-ltd</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>http://localhost:1337/portfolio/movie-indexer</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>http://localhost:1337/portfolio/banana-boys-club</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>http://localhost:1337/blog/i-wanted-a-website-that-felt-me-so-i-built-one</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:1337/blog/what-was-it-like-working-at-kanarys</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:1337/blog/overcoming-postgre-sql-migration-challenges-in-healthcare-strapi-development</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:1337/blog/react-query-the-speed-boost-your-travel-app-needs</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:1337/blog/second-blog</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:1337/blog/modern-frontend-development-in-2025-state-of-the-art</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:1337/blog/from-static-to-dynamic-transforming-video-discovery-with-graph-ql-and-next-js</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+</urlset>

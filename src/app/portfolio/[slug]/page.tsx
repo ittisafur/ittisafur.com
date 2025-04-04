@@ -80,3 +80,4 @@ const PortfolioSingle = async ({ params }: { params: PortfolioParams }) => {
 };
 
 export default PortfolioSingle;
+

@@ -7,8 +7,9 @@ import { MagicCard } from '@/components/ui/magic-card';
 import { StackGrid } from '@/components/ui/stack-icon';
 import { useTransitionRouter } from 'next-view-transitions';
 import { useTransition } from '@/providers/Transition';
-
+import { getJobType, getTenure } from '@/utils/portfolio';
 import { usePortfolioTracking } from '@/hooks/useAnalytics';
+import { Icon } from '@/components/ui/icon';
 
 const PortfolioShared: FC<{
     content: Portfolio;
@@ -16,8 +17,11 @@ const PortfolioShared: FC<{
     usePortfolioTracking(content);
 
     const { startTransition, isTransitioning } = useTransition();
-
     const router = useTransitionRouter();
+    const jobType = getJobType(content);
+    const tenure = getTenure(content);
+
+    console.log({ content });
 
     const handleNavigation = (path: string): void => {
         if (isTransitioning) return; // Prevent multiple transitions
@@ -64,12 +68,38 @@ const PortfolioShared: FC<{
                         </div>
                         <div className="flex-1 flex flex-col gap-4 py-2">
                             <div className="space-y-4 flex flex-col min-h-[15.9rem]">
-                                <h2 className="text-2xl lg:text-3xl uppercase font-bold hover:bg-it-white hover:text-it-dark-800 transition-all ease-in duration-300 w-full text-center lg:text-auto lg:text-left lg:w-max">
-                                    {content.title}
-                                </h2>
+                                <div className="space-y-2">
+                                    <h2 className="text-2xl lg:text-3xl uppercase font-bold hover:bg-it-white hover:text-it-dark-800 transition-all ease-in duration-300 w-full text-center lg:text-auto lg:text-left lg:w-max">
+                                        {content.title}
+                                    </h2>
+
+                                    {/* Project metadata with job type badge and tenure text */}
+                                    <div className="flex flex-wrap items-center gap-3 justify-center lg:justify-start">
+                                        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-gray-500/30">
+                                            <Icon name={jobType.icon} className="w-3.5 h-3.5" />
+                                            <span className="text-sm font-medium">
+                                                {jobType.label}
+                                            </span>
+                                        </div>
+
+                                        {tenure && (
+                                            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-gray-500/30">
+                                                <Icon
+                                                    name="calendar"
+                                                    className="w-3.5 h-3.5 mr-1"
+                                                />
+                                                <span className="text-sm font-medium">
+                                                    {tenure}
+                                                </span>
+                                            </div>
+                                        )}
+                                    </div>
+                                </div>
+
                                 <p className="text-sm text-gray-300 font-inter text-center lg:text-left">
                                     {content.summary}
                                 </p>
+
                                 {content.stack && (
                                     <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
                                         <StackGrid technologies={content.stack} />
