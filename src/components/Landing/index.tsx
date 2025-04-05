@@ -94,7 +94,7 @@ const Landing = async () => {
                                     Let&apos;s Talk
                                 </GlowingButton>
                             </div>
-                            <div className="mt-8 md:mt-24 lg:mt-52">
+                            <div className="mt-8 md:mt-24 lg:mt-52 hidden lg:flex">
                                 <SocialButtons />
                             </div>
                         </div>

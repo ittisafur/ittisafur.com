@@ -1,10 +1,25 @@
 'use client';
 
-import Link from 'next/link';
 import { useEffect, useState } from 'react';
+
+import { useTransitionRouter } from 'next-view-transitions';
+import { useTransition } from '@/providers/Transition';
 
 export default function NotFound() {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+    const { startTransition, isTransitioning } = useTransition();
+    const router = useTransitionRouter();
+
+    const handleNavigation = (path: string): void => {
+        if (isTransitioning) return; // Prevent multiple transitions
+
+        startTransition(() => {
+            // The actual navigation happens after the initial fade out
+            // and SVG animation has started
+            router.push(path);
+        });
+    };
 
     useEffect(() => {
         const handleMouseMove = (e: MouseEvent) => {
@@ -50,8 +65,12 @@ export default function NotFound() {
                     location.
                 </p>
 
-                <Link
+                <a
                     href="/"
+                    onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
+                        e.preventDefault();
+                        handleNavigation(`/`);
+                    }}
                     className="inline-block font-medium border-[#F0F0F0] border px-8 py-3 rounded 
                    hover:scale-95 hover:bg-[#F0F0F0] hover:text-[#1A1A1A] 
                    transition-all ease-in duration-300 text-base group"
@@ -60,7 +79,7 @@ export default function NotFound() {
                     <span className="group-hover:translate-x-1 inline-block transition-transform">
                         →
                     </span>
-                </Link>
+                </a>
             </div>
 
             <div className="mt-10 text-xs text-gray-500 tracking-wider uppercase">
