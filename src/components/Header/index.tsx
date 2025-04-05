@@ -282,6 +282,7 @@ const Header: React.FC = () => {
                                     className="block"
                                     onClick={(e) => {
                                         e.preventDefault();
+                                        setIsSheetOpen(false);
                                         handleNavigation('/');
                                     }}
                                 >
@@ -305,6 +306,8 @@ const Header: React.FC = () => {
                                                 <a
                                                     onClick={(e) => {
                                                         e.preventDefault();
+
+                                                        setIsSheetOpen(false);
                                                         handleNavigation(`/${link.link}`);
                                                     }}
                                                     href={`/${link.link}`}
@@ -319,6 +322,8 @@ const Header: React.FC = () => {
                                                     <a
                                                         onClick={(e) => {
                                                             e.preventDefault();
+
+                                                            setIsSheetOpen(false);
                                                             handleNavigation(subLink.link);
                                                         }}
                                                         href={subLink.link}
@@ -337,6 +342,8 @@ const Header: React.FC = () => {
                                             className="text-it-white min-w-56"
                                             onClick={(e) => {
                                                 e.preventDefault();
+
+                                                setIsSheetOpen(false);
                                                 handleNavigation('/contact');
                                             }}
                                         >

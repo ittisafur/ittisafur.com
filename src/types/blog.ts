@@ -2,12 +2,14 @@ export interface Category {
     name: string;
     slug: string;
     blog?: BlogDocID[];
+    count?: number | string;
 }
 
 export interface Tag {
     name: string;
     slug: string;
     blog?: BlogDocID[];
+    count?: number | string;
 }
 
 interface Image {
