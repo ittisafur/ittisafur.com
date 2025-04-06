@@ -9,11 +9,13 @@ import { useTransition } from '@/providers/Transition';
 import { useRouter } from 'next/navigation';
 import gsap from 'gsap';
 import type { Blog } from '@/types/blog';
+import { BionicReadingToggle } from '@/components/BionicReadingToggle';
+import { BionicReadingContent } from '@/components/BionicReadingContent';
 
 interface BlogSingleContentProps {
     blog: Blog;
     readingTime: number;
-    formattedDate: string; // Changed from formatDate function to pre-formatted string
+    formattedDate: string;
 }
 
 const BlogSingleContent: React.FC<BlogSingleContentProps> = ({
@@ -25,7 +27,7 @@ const BlogSingleContent: React.FC<BlogSingleContentProps> = ({
     const { startTransition } = useTransition();
     const router = useRouter();
 
-    // Memoize the setupBlogContentAnimations function with useCallback
+    // Same setupBlogContentAnimations function as before
     const setupBlogContentAnimations = useCallback(() => {
         // Wait for content to be rendered
         setTimeout(() => {
@@ -117,7 +119,7 @@ const BlogSingleContent: React.FC<BlogSingleContentProps> = ({
                 });
             });
         }, 1000);
-    }, [animateElements]); // Include animateElements in the dependency array
+    }, [animateElements]);
 
     // Run animations when component mounts
     useEffect(() => {
@@ -130,7 +132,7 @@ const BlogSingleContent: React.FC<BlogSingleContentProps> = ({
         }, 200);
 
         return () => clearTimeout(timer);
-    }, [animateElements, setupBlogContentAnimations]); // Both dependencies are now properly handled
+    }, [animateElements, setupBlogContentAnimations]);
 
     // Handle navigation with transitions
     const handleNavigation = (path: string) => {
@@ -288,9 +290,7 @@ const BlogSingleContent: React.FC<BlogSingleContentProps> = ({
                                     <span className="uppercase text-xs tracking-wider text-gray-400 block">
                                         Published
                                     </span>
-                                    <span className="text-sm font-medium">
-                                        {formattedDate} {/* Use the pre-formatted date */}
-                                    </span>
+                                    <span className="text-sm font-medium">{formattedDate}</span>
                                 </div>
                             </div>
 
@@ -307,6 +307,40 @@ const BlogSingleContent: React.FC<BlogSingleContentProps> = ({
                                     </span>
                                 </div>
                             </div>
+
+                            {/* Add Bionic Reading Toggle here */}
+                            <div className="flex items-center">
+                                <div className="bg-[rgba(30,30,30,0.6)] p-2 rounded-full mr-3">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="h-4 w-4 text-blue-400"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth={2}
+                                            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                                        />
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth={2}
+                                            d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                                        />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <span className="uppercase text-xs tracking-wider text-gray-400 block">
+                                        Reading Mode
+                                    </span>
+                                    <div className="mt-1">
+                                        <BionicReadingToggle />
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </header>
@@ -318,8 +352,13 @@ const BlogSingleContent: React.FC<BlogSingleContentProps> = ({
                      prose-h2:text-2xl prose-h3:text-xl
                      prose-a:text-blue-400 prose-a:no-underline hover:prose-a:text-blue-300
                      prose-img:rounded-xl"
-                        dangerouslySetInnerHTML={{ __html: blog.content as string }}
-                    />
+                    >
+                        <BionicReadingContent
+                            content={blog.content as string}
+                            isHtml={true}
+                            className=""
+                        />
+                    </div>
                 </article>
             </div>
         </div>
