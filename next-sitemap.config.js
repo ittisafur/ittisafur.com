@@ -6,7 +6,7 @@ const fetch = require('cross-fetch');
 const createSitemapClient = () => {
   return new ApolloClient({
     link: new HttpLink({
-      uri: process.env.NEXT_PUBLIC_API || 'https://endpoints.ittisafur.com/graphql',
+      uri: process.env.NEXT_PUBLIC_API || 'https://backend-production-83a5b.up.railway.app/graphql',
       fetch,
     }),
     cache: new InMemoryCache(),

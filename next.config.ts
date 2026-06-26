@@ -1,7 +1,7 @@
 import { withNextVideo } from "next-video/process";
 import type { NextConfig } from 'next';
 
-const strapiUrl = process.env.NEXT_PUBLIC_MEDIA_API || 'http://localhost:1337';
+const strapiUrl = process.env.NEXT_PUBLIC_MEDIA_API || 'https://backend-production-83a5b.up.railway.app';
 
 const url = new URL(strapiUrl);
 const nextConfig: NextConfig = {

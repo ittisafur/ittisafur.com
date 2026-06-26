@@ -21,7 +21,7 @@ export const { getClient, query, PreloadQuery } = registerApolloClient(() => {
             },
         }),
         link: new HttpLink({
-            uri: process.env.NEXT_PUBLIC_API || 'https://endpoints.ittisafur.com/graphql',
+            uri: process.env.NEXT_PUBLIC_API || 'https://backend-production-83a5b.up.railway.app/graphql',
             fetchOptions: {
                 next: { revalidate: 20 },
             },
