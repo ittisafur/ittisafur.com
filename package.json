@@ -2,6 +2,9 @@
   "name": "ittisafur.com",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "24.x"
+  },
   "scripts": {
     "dev": "next dev --turbopack & npx next-video sync -w",
     "build": "next build",
@@ -58,7 +61,7 @@
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4.1.2",
     "@tailwindcss/typography": "0.5.14",
-    "@types/node": "^20",
+    "@types/node": "^24",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "cross-fetch": "^4.1.0",

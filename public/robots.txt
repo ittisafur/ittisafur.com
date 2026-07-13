@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://ittisafur.com
+Host: https://endpoints.ittisafur.com
 
 # Sitemaps
-Sitemap: https://ittisafur.com/sitemap.xml
+Sitemap: https://endpoints.ittisafur.com/sitemap.xml
